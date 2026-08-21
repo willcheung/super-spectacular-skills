@@ -1,6 +1,6 @@
 # No AI Slop Writing Skill
 
-A portable [Agent Skill](https://agentskills.io) for turning rambling thoughts, notes, or drafts into clear, natural writing without flattening the writer's voice.
+A portable [Agent Skill](https://agentskills.io) for interviewing, drafting, developing, and editing clear, natural writing without flattening the writer's voice.
 
 It catches the usual AI-writing habits: fake insights, tidy rhetorical formulas, corporate filler, repeated punchlines, and endings that try too hard to sound profound. When a real voice is present, it protects the facts, uncertainty, humor, and odd little details that make it recognizable.
 
@@ -9,12 +9,13 @@ It catches the usual AI-writing habits: fake insights, tidy rhetorical formulas,
 - Writes new copy from a brief, notes, source material, or task context
 - Develops a ramble, voice transcript, or brain dump into a coherent piece
 - Asks focused questions when an important blank requires the user's experience or opinion
+- Uses a two-to-three-question shadow interview before substantial new long-form writing in Will Cheung's voice
 - Expands supported ideas and keeps brainstormed possibilities clearly labeled
 - Edits an existing draft without sanding away the writer's voice
 - Protects supplied names, numbers, dates, results, and limitations
 - Avoids inventing personal experiences, opinions, or endorsements
 - Flags claims the supplied material does not support
-- Works with articles, newsletters, social posts, notes, emails, and similar copy
+- Works with essays, articles, newsletters, social posts, notes, emails, and similar copy
 
 ## Inputs
 
@@ -24,9 +25,9 @@ It catches the usual AI-writing habits: fake insights, tidy rhetorical formulas,
 | Draft | No | Existing meaning, structure, and voice to preserve |
 | Brief or task | No | The goal, topic, or requested piece |
 | Notes or sources | No | Facts and details the agent can safely use |
-| Voice samples | No | Extra guidance on vocabulary, rhythm, and humor |
+| Voice samples | No | Extra guidance on vocabulary, rhythm, humor, and point of view |
 
-Provide at least one starting input: a ramble, draft, brief, notes, source material, or a clear task. The repository does not contain copies of anyone's articles. It includes an optional voice profile derived from four public, mostly handwritten Will Cheung articles; other users receive the general workflow unless they explicitly request that profile.
+Provide at least one starting input: a ramble, draft, brief, notes, source material, or a clear task. The repository does not contain copies of anyone's articles. It includes an optional voice profile derived from public, mostly handwritten Will Cheung articles; other users receive the general workflow unless they explicitly request that profile.
 
 ## Install
 
@@ -36,7 +37,7 @@ For Codex:
 
 ```sh
 git clone https://github.com/willcheung/no-ai-slop-writing-skill.git \
-  "$HOME/.agents/skills/conversational-no-ai-slop"
+  "$HOME/.agents/skills/no-ai-slop-writing-skill"
 ```
 
 Other agents may use a different skills directory or invocation syntax. Follow that agent's installation documentation.
@@ -46,13 +47,13 @@ Other agents may use a different skills directory or invocation syntax. Follow t
 Create something from a brief:
 
 ```text
-Use conversational-no-ai-slop to write a short newsletter about why I stopped using daily productivity summaries. Keep it dry and conversational. I usually forgot the summaries within an hour.
+Use no-ai-slop-writing-skill to write a short newsletter about why I stopped using daily productivity summaries. Keep it dry and conversational. I usually forgot the summaries within an hour.
 ```
 
 Develop a rambling thought:
 
 ```text
-Use conversational-no-ai-slop to turn this ramble into an article. Fill in connections that are supported by what I said. If an important example, fact, or opinion is missing, ask me a few focused questions before drafting. Don't make it up.
+Use no-ai-slop-writing-skill to turn this ramble into an article. Fill in connections that are supported by what I said. If an important example, fact, or opinion is missing, ask me a few focused questions before drafting. Don't make it up.
 
 [ramble or transcript]
 ```
@@ -60,7 +61,7 @@ Use conversational-no-ai-slop to turn this ramble into an article. Fill in conne
 Edit an existing draft:
 
 ```text
-Use conversational-no-ai-slop to edit this post. Preserve my uncertainty and don't invent stronger results.
+Use no-ai-slop-writing-skill to edit this post. Preserve my uncertainty and don't invent stronger results.
 
 [draft]
 ```
@@ -68,12 +69,26 @@ Use conversational-no-ai-slop to edit this post. Preserve my uncertainty and don
 Use the bundled Will Cheung voice profile:
 
 ```text
-Use conversational-no-ai-slop to develop this ramble in Will Cheung's voice. Preserve my small word choices and natural roughness. Ask me about any missing personal detail instead of inventing it.
+Use no-ai-slop-writing-skill to develop this ramble in Will Cheung's voice. Preserve my small word choices and natural roughness. Ask me about any missing personal detail instead of inventing it.
 
 [ramble]
 ```
 
 Voice samples and source material are optional. If the ramble already contains enough information, the agent should proceed. If the missing material must come from the writer, it should ask instead of guessing.
+
+### Interview-led long-form writing for Will
+
+For a substantial new essay, article, newsletter, or thought piece in Will Cheung's voice, the skill starts with one round of two or three probing questions. The questions retrieve specific memories, decisions, tradeoffs, technical mechanisms, and opinions before the agent writes the final piece. It does not produce the questions and final draft in the same response.
+
+The optional Will profile includes his tech leadership and founder-operator background, his pragmatic “middle-aged dad energy,” and his perspective on vibe coding. It uses those details only when relevant and never invents a personal story or opinion. Finished writing in Will's voice avoids rhetorical questions, named-company prestige signals, exact former titles, and assumptions about the reader's work or life situation.
+
+For a piece equivalent to a 15–20 minute read or narration, the skill targets roughly 2,000–2,500 words unless another length is requested. A four-part shape—personal opening, industry insight, optional operator depth, and practical action—is available when it fits the material. It is not imposed on short posts, emails, ordinary edits, or topics that need a different structure.
+
+Example:
+
+```text
+Use no-ai-slop-writing-skill to help me write a long-form article in Will Cheung's voice about why learning to direct AI tools matters more than memorizing syntax for many practical projects. Interview me before drafting.
+```
 
 ## Automatic use and persistent voice
 
@@ -82,7 +97,7 @@ Compatible agents may invoke the skill automatically when a request matches its 
 For Will Cheung, use this instruction:
 
 ```text
-Whenever I say I'm writing, drafting, or developing a post, article, newsletter, or social copy, automatically use conversational-no-ai-slop and load references/will-cheung-voice.md. Treat me as Will Cheung and write in my voice unless I explicitly request another voice.
+Whenever I say I'm writing, drafting, or developing a post, article, newsletter, or social copy, automatically use no-ai-slop-writing-skill and load references/will-cheung-voice.md. For substantial new long-form writing, also load references/will-interview-led-writing.md and interview me before drafting. Treat me as Will Cheung and write in my voice unless I explicitly request another voice.
 ```
 
 Put the instruction in the writing project's persistent instructions when it should apply only there. Put it in the agent's global user instructions when it should apply to every writing task. The skill remains portable: other users get the general workflow or can provide their own samples rather than inheriting Will's profile.
@@ -95,9 +110,10 @@ The `agents/openai.yaml` file adds optional OpenAI interface metadata. It does n
 
 ## What's inside
 
-- `SKILL.md` contains develop, edit, and draft modes, plus the workflow, factual guardrails, and the no-AI-slop check.
+- `SKILL.md` contains develop, edit, draft, and interview-led modes, plus the workflow, factual guardrails, and the no-AI-slop check.
 - `references/conversational-guide.md` contains detailed voice guidance and examples.
 - `references/will-cheung-voice.md` contains an optional profile of Will's recurring language decisions and nuances across samples from 2016–2025, not copies of the source articles.
+- `references/will-interview-led-writing.md` contains Will's interview-first long-form workflow, relevant background, voice constraints, and optional article architecture.
 - `agents/openai.yaml` provides optional OpenAI display metadata.
 
 ## Contributing

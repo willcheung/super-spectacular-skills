@@ -1,4 +1,4 @@
 interface:
-  display_name: "Conversational No-AI-Slop"
-  short_description: "Turn rambles and drafts into natural copy"
-  default_prompt: "Use $conversational-no-ai-slop to develop these thoughts into natural copy, asking me about important gaps instead of making them up."
+  display_name: "No AI Slop Writing Skill"
+  short_description: "Interview, draft, and edit in a human voice"
+  default_prompt: "Use $no-ai-slop-writing-skill to develop this into natural writing in my voice. Interview me for the important stories and opinions instead of making them up."

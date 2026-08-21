@@ -44,7 +44,7 @@ Use contractions. Prefer “doesn't,” “it's,” “I'd,” and “can't” u
 - Start with “And,” “But,” or “So” when it continues the thought naturally.
 - Use a fragment after a complete sentence when the fragment delivers an honest reaction. One is enough.
 - Allow an occasional parenthetical for a caveat, correction, or self-aware joke.
-- Use a rhetorical question when it is a real decision point, not as a manufactured hook.
+- State decision points and unresolved tensions directly. Do not use rhetorical questions in finished writing for Will.
 - Repeat a key word when a person would repeat it aloud. Do not replace every repetition with a synonym.
 - Keep minor looseness that carries spoken rhythm, but do not manufacture grammatical mistakes.
 
@@ -52,7 +52,7 @@ Use contractions. Prefer “doesn't,” “it's,” “I'd,” and “can't” u
 
 - Keep the original assumption and later correction when both matter. Do not rewrite hindsight so the writer appears to have known the answer all along.
 - Make contrasts feel like self-correction, not a polished “not X, but Y” slogan.
-- Preserve actual uncertainty. Questions such as “Was the market not ready?” or “What would you do?” work when the answer is still open.
+- Preserve actual uncertainty in direct language. For example: “I still don't know whether the market was ready.” Do not manufacture certainty or turn uncertainty into a rhetorical question.
 - Use autobiographical specifics when supplied, including unglamorous jobs, family context, doubts, and bad first plans. Do not generalize them into a generic founder lesson.
 - Let regret, embarrassment, relief, or excitement appear in plain language. The older writing is often sincere and reflective; do not make every moment a joke.
 
@@ -102,7 +102,7 @@ If one of these is missing and the piece depends on it, ask. Do not invent a mor
 - Do not force a confession into every opening.
 - Do not turn every observation into setup, punchline, lesson.
 - Do not copy favorite metaphors or phrases from the samples.
-- Do not overuse exclamation points, emojis, parentheses, or rhetorical questions.
+- Do not overuse exclamation points, emojis, or parentheses. Do not use rhetorical questions in finished writing.
 - Do not preserve a typo or grammar error merely because it appeared in an older article.
 - Do not make the writer sound more certain, technical, cynical, or excited than the source supports.
 

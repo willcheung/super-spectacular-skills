@@ -1,21 +1,24 @@
 ---
-name: conversational-no-ai-slop
-description: Write, develop, or edit posts, articles, newsletters, social copy, emails, and other natural writing from rambling thoughts, voice transcripts, brain dumps, incomplete notes, briefs, or drafts. Use when a user says they want to write a post, asks to write as themselves or in their voice, wants help brainstorming or expanding thoughts, or wants writing made less stiff, corporate, formulaic, or full of AI slop. Fill supported gaps, ask about unsupported gaps, and preserve supplied meaning, facts, humor, uncertainty, and personal voice without inventing personal details or opinions.
+name: no-ai-slop-writing-skill
+description: Interview, develop, draft, or edit posts, essays, articles, newsletters, social copy, emails, and other natural writing from thoughts, transcripts, notes, briefs, or drafts. Use when a user wants to write in their own voice, uncover stronger material through probing questions, expand an idea, or remove stiff, corporate, formulaic AI slop. Preserve supplied meaning, facts, humor, uncertainty, and personal voice without inventing personal details or opinions.
 ---
 
-# Conversational No-AI-Slop
+# No AI Slop Writing Skill
 
 Make the writing sound like a person on a good day, not like a brand performing humanity.
 
 Before writing or editing, read [references/conversational-guide.md](references/conversational-guide.md) completely. When the user explicitly requests Will Cheung's voice, identifies themself as the writer of the bundled samples, or asks to “write as me” while active instructions identify them as Will, also read [references/will-cheung-voice.md](references/will-cheung-voice.md) completely. Do not apply that profile to other writers by default.
+
+For interview-led long-form writing in Will's voice, also read [references/will-interview-led-writing.md](references/will-interview-led-writing.md) completely. This reference governs the required interview round, relevant background, voice constraints, and optional long-form architecture. It does not force every short post, edit, or unrelated piece into the same structure.
 
 ## Choose a mode
 
 - **Develop:** When the user supplies a ramble, transcript, brain dump, or incomplete notes, find the idea inside it and develop it collaboratively.
 - **Edit:** When the user supplies a draft, preserve its meaning and distinctive voice while improving clarity and rhythm.
 - **Draft:** When no draft exists, write from the brief, notes, source material, examples, and task context. Do not require a draft or a writing sample.
+- **Interview-led:** When Will requests a substantial new article, essay, newsletter, or similarly long piece in his voice, interview him for the memories, judgment, and operator detail that generic drafting cannot supply. Ask the questions before producing the final piece.
 
-Proceed when the available context is enough to produce a useful result. Ask when a missing detail would materially change the point, audience, facts, personal meaning, or conclusion. Never fill a user-owned gap with a plausible invention.
+Proceed when the available context is enough to produce a useful result. Ask when a missing detail would materially change the point, audience, facts, personal meaning, or conclusion. Never fill a user-owned gap with a plausible invention. In interview-led mode, the interview is part of the requested product, not a sign that the brief is inadequate.
 
 ## Develop a ramble
 
