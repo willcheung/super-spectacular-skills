@@ -36,7 +36,7 @@ This repository follows the open [Agent Skills specification](https://agentskill
 For Codex:
 
 ```sh
-git clone https://github.com/OWNER/no-ai-slop-writing-skill.git \
+git clone https://github.com/willcheung/no-ai-slop-writing-skill.git \
   "$HOME/.agents/skills/no-ai-slop-writing-skill"
 ```
 
@@ -65,6 +65,16 @@ Use no-ai-slop-writing-skill to edit this post. Preserve my uncertainty and don'
 
 [draft]
 ```
+
+### A small before-and-after
+
+The skill does not make writing more formal. It keeps the point and restores the kind of rhythm someone might use out loud.
+
+> **Before:** The tool generated a daily summary. However, I forgot most of it almost immediately.
+>
+> **After:** The tool made me a daily summary. Great. But I forgot most of it like an hour later.
+
+This example is also used in the bundled [conversational writing guide](references/conversational-guide.md); it demonstrates an editing choice, not a measured product result.
 
 Use the bundled writer voice profile:
 
