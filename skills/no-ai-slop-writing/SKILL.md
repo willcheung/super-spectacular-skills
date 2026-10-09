@@ -1,20 +1,17 @@
 ---
 name: no-ai-slop-writing
-description: Interview, develop, draft, or edit blog posts, Substack newsletters, articles, essays, video scripts (YouTube Shorts, TikTok, Reels, long-form YouTube), social copy, and emails from thoughts, transcripts, notes, briefs, or drafts. Use whenever someone wants writing that sounds like them instead of AI, wants a ramble or voice memo turned into a post or script, or wants stiff, corporate, formulaic AI slop removed. Includes Will Cheung's (Vibe Coding Dad) voice profile for when he asks to "write as me". Preserves supplied meaning, facts, humor, uncertainty, and voice without inventing personal details or opinions.
+description: Interview, develop, draft, or edit posts, essays, articles, newsletters, blog posts, video scripts (Shorts, TikTok, Reels, YouTube), social copy, emails, and other natural writing from thoughts, transcripts, notes, briefs, or drafts. Use when a user wants to write in their own voice, uncover stronger material through probing questions, expand an idea, or remove stiff, corporate, formulaic AI slop. Preserve supplied meaning, facts, humor, uncertainty, and personal voice without inventing personal details or opinions. Includes the voice profile of Will Cheung (Vibe Coding Dad) for when he asks to write as himself.
 ---
 
 # No AI Slop Writing
 
 Make the writing sound like a person on a good day, not like a brand performing humanity.
 
-Before writing or editing, read [references/conversational-guide.md](references/conversational-guide.md) completely. Then read what the job needs:
+Before writing or editing, read [references/conversational-guide.md](references/conversational-guide.md) completely. When the user explicitly requests the bundled writer profile (Will Cheung's), identifies themself as its writer, or asks to “write as me” while active instructions identify the profile as theirs, also read [references/writer-voice-profile.md](references/writer-voice-profile.md) completely. Do not apply that profile to other writers by default.
 
-| When | Read |
-|---|---|
-| Will Cheung (Vibe Coding Dad) is asking: "write as me", "my voice", his blog or channel | [references/writer-voice-profile.md](references/writer-voice-profile.md), completely. Never apply it to other writers. |
-| A blog post, newsletter, or article | [references/blog-posts.md](references/blog-posts.md) |
-| A video script: Short, Reel, TikTok, or YouTube | [references/video-scripts.md](references/video-scripts.md) |
-| A substantial new long-form piece in Will's voice | [references/interview-led-writing.md](references/interview-led-writing.md): the interview round, background, and voice constraints. It does not force short posts, edits, or scripts into the same structure. |
+For interview-led long-form writing using the bundled writer profile, also read [references/interview-led-writing.md](references/interview-led-writing.md) completely. This reference governs the required interview round, relevant background, voice constraints, and optional long-form architecture. It does not force every short post, edit, or unrelated piece into the same structure.
+
+For a blog post, newsletter, or article, also read [references/blog-posts.md](references/blog-posts.md) for the post shape. For a video script (Short, Reel, TikTok, or YouTube), also read [references/video-scripts.md](references/video-scripts.md). These cover format only; voice still comes from the writer's own material or the profile.
 
 ## Choose a mode
 

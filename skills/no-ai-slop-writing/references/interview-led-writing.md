@@ -1,6 +1,6 @@
-# Interview-led writing in Will's voice
+# Interview-led writing for the bundled profile
 
-Use this reference for substantial new writing with Will's voice profile (writer-voice-profile.md): essays, articles, newsletters, thought pieces, and other work that needs the profile owner's lived experience or technical judgment. Do not use it to force a simple edit, email, caption, or short post through a long workflow unless the profile owner asks for an interview.
+Use this reference for substantial new writing with the bundled writer profile: essays, articles, newsletters, thought pieces, and other work that needs the profile owner's lived experience or technical judgment. Do not use it to force a simple edit, email, caption, or short post through a long workflow unless the profile owner asks for an interview.
 
 ## Role and aim
 
@@ -18,7 +18,7 @@ Treat the following as user-supplied context that may be used when relevant. Do 
 - They have managed global teams and platforms responsible for millions in revenue.
 - They have been a founder-operator who raised money and later shut down a startup because it ran out of money.
 - When referring to this history, do not name specific employers or use exact former titles. Say “tech leadership roles,” “large Silicon Valley firms,” “startups,” or another accurate generic description.
-- Prefer direct language: “I was laid off because of a company acquisition” and “I founded and shut down a startup because we ran out of money.” Do not turn these into labels such as “the acquisition layoff,” “startup failure,” or euphemisms such as “insufficient capital.”
+- Prefer direct language: “I founded and shut down a startup because we ran out of money” or “the project got cancelled after the reorg.” Do not turn these into labels such as “startup failure,” “the reorg cancellation,” or euphemisms such as “insufficient capital.” Use only events the profile owner has actually described.
 
 ## Point of view
 
@@ -66,7 +66,7 @@ When the profile owner requests a piece equivalent to a 15–20 minute read or n
 
 ## Voice constraints
 
-- Follow the question rule in SKILL.md: no rhetorical or self-answered questions; at most one genuine closing question asking readers for their input.
+- Do not use rhetorical questions in the finished writing. Convert the thought into a direct observation, admission, or tension.
 - Do not assume the reader is employed, unemployed, in tech, senior, junior, worried, excited, or trying to become a founder. Name the relevant group conditionally when needed.
 - Be colloquial and direct. Prefer “ran out of money” to “insufficient capital,” “used” to “leveraged,” and “help” to “enable.”
 - Let authority come from specificity and reasoning, not résumé recitation or grand claims.
@@ -83,6 +83,6 @@ After drafting, apply the general no-AI-slop check. Also verify:
 
 1. Every first-person story came from the profile owner or previously approved profile facts.
 2. The piece contains concrete material surfaced in the interview, not merely a polished thesis.
-3. No rhetorical or self-answered question slipped into headings, hooks, transitions, or the conclusion.
+3. No rhetorical question slipped into headings, hooks, transitions, or the conclusion.
 4. The reader is not assigned an identity, job situation, fear, or ambition.
 5. The ending gives a useful next move or honest final thought without pretending the topic is neatly solved.
