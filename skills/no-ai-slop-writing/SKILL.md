@@ -1,21 +1,27 @@
 ---
 name: no-ai-slop-writing
-description: Interview, develop, draft, or edit posts, essays, articles, newsletters, social copy, emails, and other natural writing from thoughts, transcripts, notes, briefs, or drafts. Use when a user wants to write in their own voice, uncover stronger material through probing questions, expand an idea, or remove stiff, corporate, formulaic AI slop. Preserve supplied meaning, facts, humor, uncertainty, and personal voice without inventing personal details or opinions.
+description: Interview, develop, draft, or edit blog posts, Substack newsletters, articles, essays, video scripts (YouTube Shorts, TikTok, Reels, long-form YouTube), social copy, and emails from thoughts, transcripts, notes, briefs, or drafts. Use whenever someone wants writing that sounds like them instead of AI, wants a ramble or voice memo turned into a post or script, or wants stiff, corporate, formulaic AI slop removed. Includes Will Cheung's (Vibe Coding Dad) voice profile for when he asks to "write as me". Preserves supplied meaning, facts, humor, uncertainty, and voice without inventing personal details or opinions.
 ---
 
 # No AI Slop Writing
 
 Make the writing sound like a person on a good day, not like a brand performing humanity.
 
-Before writing or editing, read [references/conversational-guide.md](references/conversational-guide.md) completely. When the user explicitly requests the bundled writer profile, identifies themself as its writer, or asks to “write as me” while active instructions identify the profile as theirs, also read [references/writer-voice-profile.md](references/writer-voice-profile.md) completely. Do not apply that profile to other writers by default.
+Before writing or editing, read [references/conversational-guide.md](references/conversational-guide.md) completely. Then read what the job needs:
 
-For interview-led long-form writing using the bundled writer profile, also read [references/interview-led-writing.md](references/interview-led-writing.md) completely. This reference governs the required interview round, relevant background, voice constraints, and optional long-form architecture. It does not force every short post, edit, or unrelated piece into the same structure.
+| When | Read |
+|---|---|
+| Will Cheung (Vibe Coding Dad) is asking: "write as me", "my voice", his blog or channel | [references/writer-voice-profile.md](references/writer-voice-profile.md), completely. Never apply it to other writers. |
+| A blog post, newsletter, or article | [references/blog-posts.md](references/blog-posts.md) |
+| A video script: Short, Reel, TikTok, or YouTube | [references/video-scripts.md](references/video-scripts.md) |
+| A substantial new long-form piece in Will's voice | [references/interview-led-writing.md](references/interview-led-writing.md): the interview round, background, and voice constraints. It does not force short posts, edits, or scripts into the same structure. |
 
 ## Choose a mode
 
 - **Develop:** When the user supplies a ramble, transcript, brain dump, or incomplete notes, find the idea inside it and develop it collaboratively.
 - **Edit:** When the user supplies a draft, preserve its meaning and distinctive voice while improving clarity and rhythm.
 - **Draft:** When no draft exists, write from the brief, notes, source material, examples, and task context. Do not require a draft or a writing sample.
+- **Script:** When the user wants something to be spoken on camera, write lines for the ear, marked with on-screen notes, using video-scripts.md. A ramble or raw-footage transcript can become a script; keep their real words.
 - **Interview-led:** When the profile owner requests a substantial new article, essay, newsletter, or similarly long piece in their voice, interview them for the memories, judgment, and operator detail that generic drafting cannot supply. Ask the questions before producing the final piece.
 
 Proceed when the available context is enough to produce a useful result. Ask when a missing detail would materially change the point, audience, facts, personal meaning, or conclusion. Never fill a user-owned gap with a plausible invention. In interview-led mode, the interview is part of the requested product, not a sign that the brief is inadequate.

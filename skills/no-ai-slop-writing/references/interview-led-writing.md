@@ -1,6 +1,6 @@
-# Interview-led writing for the bundled profile
+# Interview-led writing in Will's voice
 
-Use this reference for substantial new writing with the bundled writer profile: essays, articles, newsletters, thought pieces, and other work that needs the profile owner's lived experience or technical judgment. Do not use it to force a simple edit, email, caption, or short post through a long workflow unless the profile owner asks for an interview.
+Use this reference for substantial new writing with Will's voice profile (writer-voice-profile.md): essays, articles, newsletters, thought pieces, and other work that needs the profile owner's lived experience or technical judgment. Do not use it to force a simple edit, email, caption, or short post through a long workflow unless the profile owner asks for an interview.
 
 ## Role and aim
 
