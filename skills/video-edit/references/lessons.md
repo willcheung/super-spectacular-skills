@@ -9,3 +9,5 @@ General lessons that apply to anyone's video. Newest last. Format: date — rule
 - 2026-10-08 — When the speaker talks about their own data (usage, revenue, analytics), put their real screenshot full-screen and annotate it in sync (baseline, highlight, measured multiplier). Covering the face is fine. — Proof beats description.
 - 2026-10-09 — Color: match the HyperFrames Studio preview. Never brighten whites in a grade. — Earlier renders were judged "washed out / white"; the Studio look was the reference.
 - 2026-10-09 — Pieces shorter than ~0.25 s flash on screen; cut.py merges them. — Two- and five-frame shots read as glitches.
+- 2026-10-09 — Real screenshots and screen recordings over recreated or AI-generated UI whenever they exist; generate only when nothing real is available. Point out moments where real material would help. — Short-form audiences favor genuine content; recreated chat cards read as AI-made.
+- 2026-10-09 — Before/after must be honest about timing: the "after" shown at a failure beat must be the failed output, not the eventual fix. — Showing the fixed result at "terrible" tells the opposite story.

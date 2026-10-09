@@ -74,6 +74,8 @@ Copy [templates/short-example.html](templates/short-example.html) to `PROJECT_DI
 python3 scripts/sync_data.py PROJECT_DIR
 ```
 
+Before designing graphics, list the moments where **real material** would beat a generated graphic (the creator's screenshots, screen recordings, dashboards, chat threads, posts they're reacting to, their blog post's images) and ask for them, or pull them from sources the creator points you to. Real footage of the thing reads as genuine; recreated UI reads as AI-generated, and short-form audiences notice. Generate a graphic only when nothing real exists or the point is conceptual (a thesis line, a counter, a meme beat). See style.md, "Real material first".
+
 Plan overlays from the cut transcript's word times: each overlay lands on the word that motivates it (a "3 HOURS" timer starts on "three hours"; a stamp slams on "terrible"). See style.md for which beat gets which treatment.
 
 ### 6. Check, snapshot, preview
@@ -103,6 +105,7 @@ Render only after the user approves the preview. Then check the verify output: b
 
 ## Honesty rules
 
+- Prefer the real screenshot or recording over a recreation. If you must rebuild something for legibility, say so to the creator and keep the real one as the first choice.
 - Don't fabricate posts, tweets, or quotes and present them as real. Illustrative reactions are fine only when obviously generic, and say so to the user. Prefer real screenshots the user provides or you capture.
 - Numbers on screen must come from the footage or the user's data. If you derive one (like "~9× a normal day" measured from a chart's bar heights), say how.
 - Report what you verified and what you didn't. If a render had warnings, mention them.

@@ -28,13 +28,27 @@ These are the defaults that came out of real edits and real notes. They aim at o
 |---|---|
 | Hook line | Card at 0:00 restating the tension in fewer words ("I gave the 'AGI' model a 3-hour job.") — visible on the first frame |
 | A duration or count ("three hours", "10 more hours") | Counter that ticks to the number (pre-rendered steps, not text tweens; seek-safe) |
-| A verdict ("disappointing", "terrible") | Rubber stamp slams in, slightly rotated, plus a punch-in |
+| A verdict ("disappointing", "terrible") | Rubber stamp slams in, slightly rotated, plus a punch-in; over real proof of the failure when available (the agent's "done" + the creator's bug report) |
 | The thesis / one-line takeaway | Full-screen notebook takeover, words stacked and revealed on their spoken times |
 | A claim about data the user has (usage, revenue, analytics) | Full-screen takeover of their real screenshot, annotated in sync with speech: baseline line, highlight box, measured multiplier |
-| The thing being asked ("I said: make me more money") | Prompt card with lines appearing as spoken |
+| The thing being asked ("I said: make me more money") | The real prompt/spec/chat message if it exists (zoomed); otherwise a prompt card with lines appearing as spoken |
 | Numbered lessons/steps | "LESSON N" chip card per lesson |
 | An obviously sarcastic/ironic line | Meme beat: full-frame top/bottom meme text, vignette, punch-in, a small flipping 🙃-style face. Caption off. Hold ~1 s past the line, delay the next card |
 | Call to action | Handle card on the word "follow" |
+
+## Real material first
+
+Real screenshots and screen recordings beat generated graphics whenever they exist. They read as genuine, and TikTok/Instagram audiences scroll past things that look AI-made. Generated graphics are great for what has no real source: a thesis line, a counter, a stamp, a meme beat, a chart you build from real numbers.
+
+Making real material work at phone size:
+
+- **Screen recordings** are the best proof: full-screen takeover, cover the face. Speed up long scrolls (3–4×) so a wall of text reads as "a lot", play the key moment at 1–2×, then hold the last frame (`tpad=stop_mode=clone`) and push in on the line that matters with an outline box. Pre-cut the clip with FFmpeg to exactly the beat's length; mute it.
+- **Screenshots** of chat threads or docs: show the whole thing for a beat (it proves it's real), then zoom into the one line. A full Slack message at phone width is unreadable; never just shrink it.
+- **Outline boxes** go inside the zoom wrapper so they scale with the image. Measure positions from the actual frame (character widths are a good guide) and snapshot to check; they're easy to land half a word off.
+- **Posts on X** the creator embedded or referenced: show them as faithful cards (real name, handle, date, avatar, exact text, truncation marked with "…"). Highlight the phrase being talked about.
+- macOS names screen recordings with a narrow no-break space before AM/PM; glob the filename instead of typing it.
+
+Ask the creator for real material at these moments, typically: the tool/agent saying it's done, the creator's own reaction or bug report, before/after of the result, dashboards or usage/billing pages, the post they're reacting to, the spec or prompt they used.
 
 ## Things that read as AI slop on video
 
