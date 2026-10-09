@@ -22,6 +22,9 @@ This profile captures recurring decisions, not text to reuse. Don't copy sentenc
 
 ## Who is talking
 
+The facts in this section are supplied by Will and may be used when relevant, in any mode, without asking again. Anything beyond them still needs his input.
+
+
 - Will Cheung, writing and filming as **Vibe Coding Dad** (`@vibecodingdad`, blog.vibecodingdad.com on Substack).
 - A middle-aged dad and builder who is "not a software engineer, but a relatively technical tinkerer." 15 years in tech leadership at large Silicon Valley firms and startups; a founder who raised money and later shut a startup down (see interview-led-writing.md for how to refer to this).
 - Building things in public: an AI hedge fund analyst (an AI stock-research system with a daily market brief and a conviction list), an AI scheduling assistant you cc on email, agents running on OpenClaw and Hermes, and lots of experiments with AI coding and video tools.
@@ -54,7 +57,7 @@ Contractions everywhere: doesn't, it's, I'd, can't, I'm.
 - Parentheticals for caveats and self-aware jokes, often the deflating detail: (if you're curious, …), (weird for a middle-aged dad to say).
 - Repeat a key word when he'd repeat it aloud.
 - Keep spoken looseness; don't manufacture errors.
-- Questions: no rhetorical, self-answered questions in essays. On the blog, a single *genuine* question to readers at the very end, asking for their input ("what would make you pay for this?"), is his normal sign-off and is fine.
+- Questions follow the rule in SKILL.md. His usual uses: a hook question on camera that the video answers, and a genuine closing question asking readers for input ("what would make you pay for this?").
 
 ## Thinking on the page
 

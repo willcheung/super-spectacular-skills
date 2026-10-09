@@ -6,12 +6,12 @@ A collection of portable [Agent Skills](https://agentskills.io) for creators: wr
 
 | Skill | What it does |
 |---|---|
-| [no-ai-slop-writing](skills/no-ai-slop-writing/) | Interview, draft, develop, and edit posts, essays, and newsletters in your own voice, without AI-slop habits |
+| [no-ai-slop-writing](skills/no-ai-slop-writing/) | Blog posts, newsletters, and video scripts (Shorts and YouTube) that sound like you, not AI. Ships with Will's (Vibe Coding Dad) voice profile |
 | [video-edit](skills/video-edit/) | Turn raw talking-head clips into an edited Short or YouTube video: story, jump cuts, color, zooms, captions, cards, render |
 
 ## Install
 
-Clone once, then link the skills you want into your agent's skills directory.
+Clone once, then link the skills you want into your agent's skills directory. The loops below assume the clone lives at `~/super-spectacular-skills`; change the path if you clone elsewhere. If a skill folder with the same name already exists there as a real directory (not a link), remove or rename it first, or `ln` will put the link inside it.
 
 ```sh
 git clone https://github.com/willcheung/super-spectacular-skills.git ~/super-spectacular-skills
@@ -21,14 +21,14 @@ Claude Code:
 
 ```sh
 mkdir -p ~/.claude/skills
-for s in ~/super-spectacular-skills/skills/*/; do ln -sfn "$s" ~/.claude/skills/"$(basename "$s")"; done
+for s in ~/super-spectacular-skills/skills/*/; do ln -sfn "${s%/}" ~/.claude/skills/"$(basename "$s")"; done
 ```
 
 Codex:
 
 ```sh
 mkdir -p ~/.agents/skills
-for s in ~/super-spectacular-skills/skills/*/; do ln -sfn "$s" ~/.agents/skills/"$(basename "$s")"; done
+for s in ~/super-spectacular-skills/skills/*/; do ln -sfn "${s%/}" ~/.agents/skills/"$(basename "$s")"; done
 ```
 
 Linking (instead of copying) means `git pull` updates every installed skill, and lessons a skill learns are saved back into the repo.

@@ -49,6 +49,10 @@ Proceed when the available context is enough to produce a useful result. Ask whe
 9. Run the no-AI-slop check below without polishing away authentic rough edges.
 10. Read it aloud mentally. If it sounds like a marketer trying to sound casual, rewrite it.
 
+## Questions
+
+One rule everywhere: no rhetorical or self-answered questions ("Is it perfect? No."). A *genuine* question is fine when it's real: a spoken hook that the video goes on to answer, or one closing question that asks readers for their input. Never more than one per piece in prose.
+
 ## Factual guardrails
 
 - Protect supplied names, numbers, dates, mechanisms, results, and limitations.
@@ -68,7 +72,7 @@ Watch for these patterns. Remove or vary them when they are automatic, repeated,
 - Repeated binary “not X, but Y” constructions
 - Throat-clearing such as “here's the thing”
 - Faux insights such as “what everyone gets wrong”
-- Formulaic colon reveals and self-answered rhetorical questions
+- Formulaic colon reveals and self-answered or rhetorical questions (see Questions)
 - Generic takeaways that could belong to anyone
 - Repeated punchline fragments and robotic paragraph symmetry
 - Importance puffery, fake-profound endings, and recap conclusions

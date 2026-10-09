@@ -3,13 +3,14 @@
 
 Usage: python3 cut.py edit.json
 
-edit.json (paths relative to the file):
+edit.json (paths relative to the file; the # comments are for illustration only, JSON has none):
 {
   "raw_dir": "../raw",                 # folder with the source clips
   "out_dir": "assets",                 # writes cut.mp4 here
   "width": 1080, "height": 1920,       # 1080x1920 for Shorts, 1920x1080 for long-form
   "fps": 30,
   "warmth": "light",                   # none | light | medium (taste grade on top)
+  "handle": "@yourhandle",             # optional; sync_data.py puts it on the end card
   "segments": [                        # [label, clip, start_s, end_s] on the source clip
     ["hook", "IMG_7825", 14.66, 25.70]
   ]
@@ -27,6 +28,7 @@ SKILL = Path(__file__).resolve().parent.parent
 LUT = SKILL / "assets" / "iphone_hlg_to_sdr.cube"
 SR, HOP = 16000, 160              # 10ms analysis frames
 MAX_GAP, KEEP_GAP = 0.30, 0.14    # pauses longer than MAX_GAP shrink to KEEP_GAP
+MIN_PIECE = 0.25                  # shorter pieces flash on screen; merge them into a neighbour
 SNAP = 0.15                       # search window (s) for snapping boundaries
 WARMTH = {
     "none": "",
@@ -34,6 +36,11 @@ WARMTH = {
     "medium": "colorbalance=rm=0.05:gm=-0.01:bm=-0.06:rh=0.02:bh=-0.03,eq=saturation=1.22:contrast=1.06",
 }
 SDR_TAGS = "setparams=color_primaries=bt709:color_trc=bt709:colorspace=bt709:range=tv"
+
+
+def ff_escape(path):
+    """Quote a path for an FFmpeg filter option value."""
+    return str(path).replace("\\", "\\\\").replace("'", "\\'").replace(":", "\\:")
 
 
 def find_clip(raw, name):
@@ -57,7 +64,7 @@ def is_hlg(path):
 def color_chain(path, w, h, warmth):
     if is_hlg(path):
         base = (f"scale={w}:{h}:in_color_matrix=bt2020:in_range=tv:out_range=pc,format=gbrp,"
-                f"lut3d=file={LUT}:interp=tetrahedral,"
+                f"lut3d=file='{ff_escape(LUT)}':interp=tetrahedral,"
                 f"scale=out_color_matrix=bt709:in_range=pc:out_range=tv,format=yuv420p,{SDR_TAGS}")
     else:
         base = f"scale={w}:{h},format=yuv420p,{SDR_TAGS}"
@@ -92,7 +99,14 @@ def keep_ranges(rms, start, end):
                 cur = int((i / 100 - pad) * 100)
             quiet = None
     ranges.append((cur / 100, end))
-    return [(a, b) for a, b in ranges if b - a > 0.05]
+    # merge flash-length pieces into a neighbour (keeps their audio, drops the cut)
+    merged = []
+    for a, b in ranges:
+        if merged and (b - a < MIN_PIECE or merged[-1][1] - merged[-1][0] < MIN_PIECE):
+            merged[-1] = (merged[-1][0], b)
+        else:
+            merged.append((a, b))
+    return merged
 
 
 def main(cfg_path):

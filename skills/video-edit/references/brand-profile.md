@@ -18,3 +18,9 @@ This profile belongs to the repository owner. Apply it only when the owner is th
 | Never | pure `#000`/`#fff`, blue/green/purple accents, neon gradients |
 
 The full design system, if available locally, lives in the owner's `videos/design.md`.
+
+## Owner preferences (from notes on past edits)
+
+- 2026-10-08 — No music or sound effects unless asked.
+- 2026-10-09 — Slightly warm color (`"warmth": "light"` in edit.json).
+- 2026-10-09 — Handle is `@vibecodingdad` (no dot). Put it in edit.json as `"handle": "@vibecodingdad"`.

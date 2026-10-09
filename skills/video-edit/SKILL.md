@@ -22,7 +22,7 @@ Read these as you reach each stage, not all up front:
 | Deciding Short vs long-form | [references/formats.md](references/formats.md) |
 | Footage is iPhone HDR, or color looks washed out/off | [references/color.md](references/color.md) |
 | Before writing any brand element (handle, colors, end card) | [references/brand-profile.md](references/brand-profile.md) — only for its owner; ask other users for theirs |
-| Every time, before building | [references/lessons.md](references/lessons.md) — notes from past edits; obey them |
+| Every time, before building | [references/lessons.md](references/lessons.md) — general lessons from past edits; obey them. The owner's personal preferences live in brand-profile.md. |
 
 Before writing composition HTML, load the `hyperframes` skill and follow its composition contract. This skill decides *what* goes on screen; HyperFrames decides *how* a composition must be built.
 
@@ -30,7 +30,7 @@ Before writing composition HTML, load the `hyperframes` skill and follow its com
 
 ### 1. Inspect the footage
 
-For each clip: duration, orientation (a `rotation=-90` side-data tag means a landscape-coded file is really portrait), and `color_transfer` (`arib-std-b67` = iPhone HDR/HLG). Build a small contact sheet per clip so you know who is on camera and where their face sits. Check free disk space (`df -h ~`): a render needs several GB of temp space, and HDR renders far more.
+For each clip: duration, orientation (a `rotation=-90` side-data tag means a landscape-coded file is really portrait), and `color_transfer` (`arib-std-b67` = iPhone HDR/HLG). Look at a few frames per clip (`python3 scripts/verify.py CLIP` writes a contact sheet next to it) so you know who is on camera and where their face sits. Check free disk space (`df -h ~`): a render needs several GB of temp space, and HDR renders far more.
 
 ### 2. Transcribe each clip separately
 
@@ -49,12 +49,18 @@ Read every transcript before choosing anything. Raw talking-head footage has ret
 - **Cut asides that don't serve the arc** (a coffee run, a detail only the speaker cares about). Mention what you dropped so the user can veto.
 - **Keep the speaker's words.** You choose and order; you never paraphrase or invent lines.
 
-Write `edit.json` next to the project (format in the `cut.py` docstring): `[label, clip, start, end]` per segment, in viewing order.
+Scaffold the project first, into a new folder (`init` refuses a folder that already has files):
+
+```bash
+npx hyperframes init PROJECT_DIR --non-interactive
+```
+
+Then write `PROJECT_DIR/edit.json` (format in the `cut.py` docstring): `[label, clip, start, end]` per segment, in viewing order, plus `raw_dir` and, for the creator's own videos, `handle`. Everything after this reads and writes inside `PROJECT_DIR`.
 
 ### 4. Cut, then verify the cut by ear
 
 ```bash
-python3 scripts/cut.py edit.json
+python3 scripts/cut.py PROJECT_DIR/edit.json
 python3 scripts/transcribe.py cut PROJECT_DIR
 ```
 
@@ -62,7 +68,7 @@ Read the cut's transcript start to finish. Look for stray fragments at segment s
 
 ### 5. Build the dress
 
-Scaffold once: `npx hyperframes init PROJECT --non-interactive`. Start from [templates/short-example.html](templates/short-example.html): a complete, working Short (camera engine, caption engine, card/stamp/counter/takeover/meme components) with `__WORDS__`/`__CUTS__` placeholders. Replace its overlay content with this video's beats; keep the engines. Then:
+Copy [templates/short-example.html](templates/short-example.html) to `PROJECT_DIR/index.html`: a complete, working Short (camera engine, caption engine, card/stamp/counter/takeover/meme components) with `__WORDS__`/`__CUTS__`/`__HANDLE__` placeholders. Its overlays are the worked example's content; they reference `assets/usage.png`, which isn't bundled, so swap in this video's proof or delete that section. Replace its overlay content with this video's beats; keep the engines. Then:
 
 ```bash
 python3 scripts/sync_data.py PROJECT_DIR
@@ -76,7 +82,7 @@ Run `npm run check` (fix every error; resolve contrast warnings), snapshot the m
 
 ### 7. Take notes, revise, learn
 
-The user reviews and gives notes, often with timestamps. Apply them. For any note that reflects a *preference* rather than a one-off fix ("I don't use sound", "captions too big", "my handle is…"), add it to `references/lessons.md` in the skill (dated, one line, with why). This feedback loop is the point of the skill: the same note should never be needed twice.
+The user reviews and gives notes, often with timestamps. Apply them. For any note that reflects a *preference* rather than a one-off fix ("I don't use sound", "captions too big", "my handle is…"), add it to the skill (dated, one line, with why): general lessons go in `references/lessons.md`; one creator's taste goes in their profile (the owner's is `references/brand-profile.md`). This feedback loop is the point of the skill: the same note should never be needed twice.
 
 ### 8. Render and verify
 

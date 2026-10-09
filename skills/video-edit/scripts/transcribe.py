@@ -3,7 +3,7 @@
 
 Usage:
   python3 transcribe.py clips RAW_DIR OUT_DIR   # every clip -> OUT_DIR/<clip>/transcript.json
-  python3 transcribe.py cut PROJECT_DIR         # assets/cut.mp4 -> assets/transcript.json
+  python3 transcribe.py cut PROJECT_DIR         # assets/cut.mp4 -> PROJECT_DIR/transcript.json
   python3 transcribe.py words TRANSCRIPT.json [FROM_S] [TO_S]
 
 `hyperframes transcribe` always writes transcript.json into its project dir, so
@@ -19,8 +19,10 @@ EXTS = {".mov", ".mp4", ".m4v"}
 
 def run(src, out_dir):
     out_dir.mkdir(parents=True, exist_ok=True)
-    subprocess.run(["npx", "hyperframes", "transcribe", str(src), "-d", str(out_dir)],
-                   check=True, capture_output=True)
+    r = subprocess.run(["npx", "hyperframes", "transcribe", str(src), "-d", str(out_dir)],
+                       capture_output=True, text=True)
+    if r.returncode:
+        sys.exit(f"transcribe failed for {src}:\n{r.stderr[-2000:] or r.stdout[-2000:]}")
 
 
 def lines(path, a=0.0, b=1e9):
@@ -48,9 +50,9 @@ if __name__ == "__main__":
     elif mode == "cut":
         proj = Path(sys.argv[2])
         run(proj / "assets" / "cut.mp4", proj)
-        t = proj / "assets" / "transcript.json"
+        t = proj / "transcript.json"
         if not t.exists():
-            t = proj / "transcript.json"
+            t = proj / "assets" / "transcript.json"
         print(lines(t))
     elif mode == "words":
         print(lines(sys.argv[2], *(float(v) for v in sys.argv[3:5])))

@@ -83,7 +83,7 @@ Voice samples and source material are optional. If the ramble already contains e
 
 For a substantial new essay, article, newsletter, or thought piece in Will's voice, the skill starts with one round of two or three probing questions. The questions combine Andrew Ross Sorkin-inspired analytical pressure-testing with David Marchese-inspired human curiosity. The skill uses those high-level interviewing qualities without imitating either person's prose or persona. It retrieves specific memories, decisions, tradeoffs, technical mechanisms, and opinions before writing the final piece, and does not produce the questions and final draft in the same response.
 
-Will's profile includes tech leadership and founder-operator background, pragmatic “middle-aged dad energy,” and a perspective on vibe coding. It uses those details only when relevant and never invents a personal story or opinion. Finished writing with the profile avoids rhetorical questions, named-company prestige signals, exact former titles, and assumptions about the reader's work or life situation.
+Will's profile includes tech leadership and founder-operator background, pragmatic “middle-aged dad energy,” and a perspective on vibe coding. It uses those details only when relevant and never invents a personal story or opinion. Finished writing with the profile avoids rhetorical or self-answered questions (a genuine hook or closing question is fine), named-company prestige signals, exact former titles, and assumptions about the reader's work or life situation.
 
 For a piece equivalent to a 15–20 minute read or narration, the skill targets roughly 2,000–2,500 words unless another length is requested. A four-part shape—personal opening, industry insight, optional operator depth, and practical action—is available when it fits the material. It is not imposed on short posts, emails, ordinary edits, or topics that need a different structure.
 
@@ -95,7 +95,7 @@ Use no-ai-slop-writing to help me write a long-form article in my voice about wh
 
 ## Automatic use and persistent voice
 
-Compatible agents may invoke the skill automatically when a request matches its description. The description includes phrases such as “write a post,” “write as me,” and “in my voice” to make that match more reliable. Because implicit skill selection is still an agent decision, use a persistent project or global instruction when the voice must always be applied.
+Compatible agents may invoke the skill automatically when a request matches its description. The description names blog posts, newsletters, video scripts, rambles, and “write as me” to make that match more reliable. Because implicit skill selection is still an agent decision, use a persistent project or global instruction when the voice must always be applied.
 
 For Will, use this instruction:
 
@@ -107,7 +107,7 @@ Put the instruction in the writing project's persistent instructions when it sho
 
 ## Compatibility
 
-The core skill is vendor-neutral and has no scripts, external tools, or runtime dependencies. Any agent that supports the Agent Skills format can load `SKILL.md` and its reference file. Agents without native skill support can still follow `SKILL.md` as a prompt or instruction file.
+The core skill is vendor-neutral and has no scripts, external tools, or runtime dependencies. Any agent that supports the Agent Skills format can load `SKILL.md` and its reference files. Agents without native skill support can still follow `SKILL.md` as a prompt or instruction file.
 
 The `agents/openai.yaml` file adds optional OpenAI interface metadata. It does not change the core workflow and other agents can ignore it.
 

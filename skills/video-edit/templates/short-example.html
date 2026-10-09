@@ -4,7 +4,7 @@
   stepper, card/stamp/takeover/meme components); replace every overlay's text and timing with the new video's.
   Not bundled: assets/cut.mp4 (made by scripts/cut.py) and assets/usage.png (the creator's usage screenshot
   used by the #tokens takeover; swap in real proof for the new video or delete that section).
-  __WORDS__ / __CUTS__ are filled by scripts/sync_data.py.
+  __WORDS__ / __CUTS__ / __HANDLE__ are filled by scripts/sync_data.py (handle from edit.json).
 -->
 <html lang="en">
   <head>
@@ -183,7 +183,7 @@
           <div class="tw" id="tw4">BETTER</div>
           <div class="tw" id="tw5">RESULTS.</div>
         </div>
-        <div id="thesis-handle">@vibecodingdad</div>
+        <div id="thesis-handle">__HANDLE__</div>
       </section>
 
       <!-- 3: hype -->
@@ -290,7 +290,7 @@
       <section id="cta" class="clip" data-start="61.19" data-duration="3.02" data-track-index="1">
         <div class="card">
           <span class="chip">Daily AI builds + tips</span>
-          <div class="handle">@vibecodingdad</div>
+          <div class="handle">__HANDLE__</div>
           <div class="sub">Follow along.</div>
         </div>
       </section>
@@ -301,7 +301,7 @@
 
     <script>
       const D = 64.21;
-      // [text, start, end] from assets/transcript.json (cut timeline)
+      // [text, start, end] from the cut's transcript.json (cut timeline)
       const WORDS = __WORDS__;
       // jump-cut points from cuts.json
       const CUTS = __CUTS__;

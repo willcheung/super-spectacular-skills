@@ -11,7 +11,7 @@ One skill, two formats. Decide from what the user asks for; if they don't say, i
 | Captions | big word-by-word, center | smaller lower-third, or off (YouTube CC exists) |
 | Structure | hook → thesis → story → lessons → CTA | cold open → intro → chapters (with chapter cards) → recap → end screen |
 | Extra deliverables | — | chapter timestamps for the description |
-| Sound | per lessons.md (this user: none) | consider a quiet bed; silence under 10+ minutes of talking feels empty — ask |
+| Sound | per the creator's preference (ask; the owner's is in brand-profile.md) | consider a quiet bed; silence under 10+ minutes of talking feels empty — ask |
 
 ## How long-form is built differently
 

@@ -66,7 +66,7 @@ When the profile owner requests a piece equivalent to a 15–20 minute read or n
 
 ## Voice constraints
 
-- Do not use rhetorical questions in the finished writing. Convert the thought into a direct observation, admission, or tension.
+- Follow the question rule in SKILL.md: no rhetorical or self-answered questions; at most one genuine closing question asking readers for their input.
 - Do not assume the reader is employed, unemployed, in tech, senior, junior, worried, excited, or trying to become a founder. Name the relevant group conditionally when needed.
 - Be colloquial and direct. Prefer “ran out of money” to “insufficient capital,” “used” to “leveraged,” and “help” to “enable.”
 - Let authority come from specificity and reasoning, not résumé recitation or grand claims.
@@ -83,6 +83,6 @@ After drafting, apply the general no-AI-slop check. Also verify:
 
 1. Every first-person story came from the profile owner or previously approved profile facts.
 2. The piece contains concrete material surfaced in the interview, not merely a polished thesis.
-3. No rhetorical question slipped into headings, hooks, transitions, or the conclusion.
+3. No rhetorical or self-answered question slipped into headings, hooks, transitions, or the conclusion.
 4. The reader is not assigned an identity, job situation, fear, or ambition.
 5. The ending gives a useful next move or honest final thought without pretending the topic is neatly solved.

@@ -3,6 +3,7 @@
 ## Contents
 
 - [Sound spoken, not polished](#sound-spoken-not-polished)
+- [Examples](#examples)
 - [Preserve the person](#preserve-the-person)
 - [From ramble to draft](#from-ramble-to-draft)
 - [Avoid fake casual](#avoid-fake-casual)

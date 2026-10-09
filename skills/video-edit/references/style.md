@@ -1,6 +1,6 @@
 # Style rules
 
-These are the defaults that came out of real edits and real notes. They aim at one thing: a viewer who would otherwise scroll keeps watching. When a rule here conflicts with `lessons.md`, lessons win (they're newer and more specific).
+These are the defaults that came out of real edits and real notes. They aim at one thing: a viewer who would otherwise scroll keeps watching. When a rule here conflicts with `lessons.md`, lessons win (they're newer and more specific). For the owner's own videos, `brand-profile.md` preferences win over both.
 
 ## Pacing
 
