@@ -18,7 +18,7 @@ Treat the following as user-supplied context that may be used when relevant. Do 
 - They have managed global teams and platforms responsible for millions in revenue.
 - They have been a founder-operator who raised money and later shut down a startup because it ran out of money.
 - When referring to this history, do not name specific employers or use exact former titles. Say “tech leadership roles,” “large Silicon Valley firms,” “startups,” or another accurate generic description.
-- Prefer direct language: “I founded and shut down a startup because we ran out of money” or “the project got cancelled after the reorg.” Do not turn these into labels such as “startup failure,” “the reorg cancellation,” or euphemisms such as “insufficient capital.” Use only events the profile owner has actually described.
+- Prefer direct language: “I founded and shut down a startup because we ran out of money” or, from one of his Shorts, “I actually have to spend another 10 more hours trying to fix it.” Do not turn these into labels such as “startup failure,” “the remediation phase,” or euphemisms such as “insufficient capital” and “additional iteration was required.” Use only events the profile owner has actually described.
 
 ## Point of view
 
