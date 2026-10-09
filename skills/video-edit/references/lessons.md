@@ -11,3 +11,4 @@ General lessons that apply to anyone's video. Newest last. Format: date — rule
 - 2026-10-09 — Pieces shorter than ~0.25 s flash on screen; cut.py merges them. — Two- and five-frame shots read as glitches.
 - 2026-10-09 — Real screenshots and screen recordings over recreated or AI-generated UI whenever they exist; generate only when nothing real is available. Point out moments where real material would help. — Short-form audiences favor genuine content; recreated chat cards read as AI-made.
 - 2026-10-09 — Before/after must be honest about timing: the "after" shown at a failure beat must be the failed output, not the eventual fix. — Showing the fixed result at "terrible" tells the opposite story.
+- 2026-10-09 — Numbered lessons build up in one card (1 → 1,2 → 1,2,3) instead of a separate card per lesson. — The growing list reads as a checklist and ends on a complete, save-worthy frame.

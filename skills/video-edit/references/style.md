@@ -32,7 +32,7 @@ These are the defaults that came out of real edits and real notes. They aim at o
 | The thesis / one-line takeaway | Full-screen notebook takeover, words stacked and revealed on their spoken times |
 | A claim about data the user has (usage, revenue, analytics) | Full-screen takeover of their real screenshot, annotated in sync with speech: baseline line, highlight box, measured multiplier |
 | The thing being asked ("I said: make me more money") | The real prompt/spec/chat message if it exists (zoomed); otherwise a prompt card with lines appearing as spoken |
-| Numbered lessons/steps | "LESSON N" chip card per lesson |
+| Numbered lessons/steps | One card that builds: lesson 1 alone, then 1 (dimmed) + 2, then 1 + 2 (dimmed) + 3, each row landing on its spoken line. Hide it during any meme beat in between and bring it back with the next row. Viewers see the whole list forming, which makes the final frame save-worthy |
 | An obviously sarcastic/ironic line | Meme beat: full-frame top/bottom meme text, vignette, punch-in, a small flipping 🙃-style face. Caption off. Hold ~1 s past the line, delay the next card |
 | Call to action | Handle card on the word "follow" |
 
