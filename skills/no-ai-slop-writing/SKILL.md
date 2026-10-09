@@ -1,9 +1,9 @@
 ---
-name: no-ai-slop-writing-skill
+name: no-ai-slop-writing
 description: Interview, develop, draft, or edit posts, essays, articles, newsletters, social copy, emails, and other natural writing from thoughts, transcripts, notes, briefs, or drafts. Use when a user wants to write in their own voice, uncover stronger material through probing questions, expand an idea, or remove stiff, corporate, formulaic AI slop. Preserve supplied meaning, facts, humor, uncertainty, and personal voice without inventing personal details or opinions.
 ---
 
-# No AI Slop Writing Skill
+# No AI Slop Writing
 
 Make the writing sound like a person on a good day, not like a brand performing humanity.
 

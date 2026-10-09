@@ -1,4 +1,0 @@
-interface:
-  display_name: "No AI Slop Writing Skill"
-  short_description: "Interview, draft, and edit in a human voice"
-  default_prompt: "Use $no-ai-slop-writing-skill to develop this into natural writing in my voice. Interview me for the important stories and opinions instead of making them up."
