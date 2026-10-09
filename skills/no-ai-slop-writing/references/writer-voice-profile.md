@@ -24,7 +24,6 @@ This profile captures recurring decisions, not text to reuse. Don't copy sentenc
 
 The facts in this section are supplied by Will and may be used when relevant, in any mode, without asking again. Anything beyond them still needs his input.
 
-
 - Will Cheung, writing and filming as **Vibe Coding Dad** (`@vibecodingdad`, blog.vibecodingdad.com on Substack).
 - A middle-aged dad and builder who is "not a software engineer, but a relatively technical tinkerer." 15 years in tech leadership at large Silicon Valley firms and startups; a founder who raised money and later shut a startup down (see interview-led-writing.md for how to refer to this).
 - Building things in public: an AI hedge fund analyst (an AI stock-research system with a daily market brief and a conviction list), an AI scheduling assistant you cc on email, agents running on OpenClaw and Hermes, and lots of experiments with AI coding and video tools.

@@ -99,10 +99,18 @@ def keep_ranges(rms, start, end):
                 cur = int((i / 100 - pad) * 100)
             quiet = None
     ranges.append((cur / 100, end))
-    # merge flash-length pieces into a neighbour (keeps their audio, drops the cut)
+    # Flash-length pieces (< MIN_PIECE) read as glitches. At a segment's edges they're
+    # almost always a click or breath: drop them. In the middle, join one to its
+    # neighbour only when the gap between them is short, so no dead air comes back;
+    # otherwise keep it (it may be a real one-syllable word).
+    short = lambda r: r[1] - r[0] < MIN_PIECE
+    while len(ranges) > 1 and short(ranges[0]):
+        ranges.pop(0)
+    while len(ranges) > 1 and short(ranges[-1]):
+        ranges.pop()
     merged = []
     for a, b in ranges:
-        if merged and (b - a < MIN_PIECE or merged[-1][1] - merged[-1][0] < MIN_PIECE):
+        if merged and (short((a, b)) or short(merged[-1])) and a - merged[-1][1] <= MAX_GAP:
             merged[-1] = (merged[-1][0], b)
         else:
             merged.append((a, b))

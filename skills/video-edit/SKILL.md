@@ -30,7 +30,7 @@ Before writing composition HTML, load the `hyperframes` skill and follow its com
 
 ### 1. Inspect the footage
 
-For each clip: duration, orientation (a `rotation=-90` side-data tag means a landscape-coded file is really portrait), and `color_transfer` (`arib-std-b67` = iPhone HDR/HLG). Look at a few frames per clip (`python3 scripts/verify.py CLIP` writes a contact sheet next to it) so you know who is on camera and where their face sits. Check free disk space (`df -h ~`): a render needs several GB of temp space, and HDR renders far more.
+For each clip: duration, orientation (a `rotation=-90` side-data tag means a landscape-coded file is really portrait), and `color_transfer` (`arib-std-b67` = iPhone HDR/HLG). Look at a few frames per clip (`python3 scripts/verify.py --source --out WORK_DIR CLIP` writes a contact sheet into WORK_DIR, never into the footage folder) so you know who is on camera and where their face sits. Check free disk space (`df -h ~`): a render needs several GB of temp space, and HDR renders far more.
 
 ### 2. Transcribe each clip separately
 

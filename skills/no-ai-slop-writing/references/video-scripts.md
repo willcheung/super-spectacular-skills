@@ -9,7 +9,7 @@ A script here is a recording guide, not a teleprompter essay. Creators usually r
 | Beat | Time | Job |
 |---|---|---|
 | Hook | 0–3 s | A verdict, a number, or a genuine question the video then answers. No greeting, no "in this video". |
-| Thesis | 3–8 s | The one idea, in one sentence ("Bigger, smarter models don't mean better results."). Then "Here's what I mean." |
+| Thesis | 3–8 s | The one idea, in one sentence ("Bigger, smarter models don't mean better results."), then a short signpost into the story (Will's: "Here's what I mean.") |
 | Story / proof | 8–45 s | What the speaker tried, what they said to the AI, what happened, with the numbers. One concrete moment beats three vague ones. |
 | Lessons | 45–65 s | Numbered lessons the speaker actually drew (often 2–3; fewer if that's all the source supports), each one sentence + one specific reason. |
 | CTA | last 3–5 s | The creator's sign-off (Will's: "Follow along for more builds and more AI tips."). Lead straight into it; no "this is the kind of stuff…" warm-up. |
