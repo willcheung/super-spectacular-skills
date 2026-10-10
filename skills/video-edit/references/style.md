@@ -11,8 +11,8 @@ These are the defaults that came out of real edits and real notes. They aim at o
 
 ## Layout (9:16, 1080×1920)
 
-- **Top band (y ≈ 110–500): cards.** The face lives in the middle; the shirt area below holds captions. Cards may overlap hair, never eyes.
-- **Captions at y ≈ 1250–1510**, centered, over the chest. Shorts UI covers roughly the bottom 400 px and a strip on the right; keep key content inside the 80% title-safe box.
+- **Top band (y ≈ 140–520): cards.** Start top cards at y ≈ 140. Higher (≈ 120) gets clipped by Instagram's 3:4 profile-grid cover and Facebook's top UI; much lower (≈ 250) starts covering the face. 140 is the owner's chosen balance: the card's top edge may lose a sliver on the grid cover, but the card stays readable and the face stays clear. The face lives in the middle and the shirt area below holds captions. Cards may overlap hair, never eyes.
+- **Captions at y ≈ 1250–1510**, centered, over the chest (inside the 3:4 grid crop too). Shorts UI covers roughly the bottom 400 px and a strip on the right; keep key content inside the 80% title-safe box.
 - **Full-screen takeovers** are allowed when a visual is the point (a chart, a screenshot, the thesis line). They may cover the face. Keep captions running over them unless the takeover already shows the words.
 
 ## Captions
