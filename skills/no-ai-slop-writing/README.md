@@ -15,7 +15,7 @@ It catches the usual AI-writing habits: fake insights, tidy rhetorical formulas,
 - Protects supplied names, numbers, dates, results, and limitations
 - Avoids inventing personal experiences, opinions, or endorsements
 - Flags claims the supplied material does not support
-- Writes video scripts for Shorts, Reels, TikTok, and long-form YouTube, with on-screen notes the `video-edit` skill can use
+- Writes video scripts for Shorts, Reels, TikTok, and long-form YouTube, with on-screen notes the `make-my-video-awesome` skill can use
 - Shapes Substack-style build logs and takes: title, plain headings, pro tips, an honest verdict
 - Works with essays, articles, newsletters, social posts, notes, emails, and similar copy
 

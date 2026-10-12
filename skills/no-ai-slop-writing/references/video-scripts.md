@@ -2,7 +2,7 @@
 
 Scripts are written to be *said*. Read every line out loud in your head; if it's something nobody would say to a friend, rewrite it. Voice comes from the speaker's own material; for Will, use the "How he talks on camera" section of writer-voice-profile.md.
 
-A script here is a recording guide, not a teleprompter essay. Creators usually record in chunks and re-take lines, and the `video-edit` skill picks the best takes afterwards, so short, separable lines make the edit better.
+A script here is a recording guide, not a teleprompter essay. Creators usually record in chunks and re-take lines, and the `make-my-video-awesome` skill picks the best takes afterwards, so short, separable lines make the edit better.
 
 ## Short (30–75 seconds)
 

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Video Edit"
+  short_description: "Raw talking-head clips to an edited Short or YouTube video"
+  default_prompt: "Use $make-my-video-awesome to edit the raw clips in this folder into a scroll-stopping Short. Pick the best takes, cut the dead air, and add zooms, captions, and cards. Show me the preview before rendering."

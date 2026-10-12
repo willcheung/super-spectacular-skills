@@ -7,7 +7,7 @@ A collection of portable [Agent Skills](https://agentskills.io) for writing, vid
 | Skill | What it does |
 |---|---|
 | [no-ai-slop-writing](skills/no-ai-slop-writing/) | Blog posts, newsletters, and video scripts (Shorts and YouTube) that sound like you, not AI. Ships with Will's (Vibe Coding Dad) voice profile |
-| [video-edit](skills/video-edit/) | Turn raw talking-head clips into an edited Short or YouTube video: story, jump cuts, color, zooms, captions, cards, render |
+| [make-my-video-awesome](skills/make-my-video-awesome/) | Turn raw talking-head clips into an edited Short or YouTube video: story, jump cuts, color, zooms, captions, cards, render |
 | [retirement-dashboard](skills/retirement-dashboard/) | See when you could retire, how much you would need from savings each month, and what might remain after college and retirement. Compare spending, taxes, inflation, and market downturns in an editable dashboard. All examples are fictional. |
 | [compounding-wiki](skills/compounding-wiki/) | Turn sources into reusable, evidence-backed research memory. Preserve provenance, contradictions, and honest freshness. Includes a fictional worked example. |
 

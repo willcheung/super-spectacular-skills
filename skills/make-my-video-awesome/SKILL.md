@@ -1,5 +1,5 @@
 ---
-name: video-edit
+name: make-my-video-awesome
 description: Edit raw talking-head footage (phone or camera clips of someone speaking to camera) into a finished, scroll-stopping video — YouTube Shorts, TikTok, Reels, or long-form YouTube. Picks the best takes from the transcript, removes mistakes and dead air with tight jump cuts, fixes iPhone HDR color, then adds punch-in zooms, word-by-word captions, kinetic cards, screenshot takeovers, and meme beats with HyperFrames, and renders an MP4. Use this whenever the user points at a folder of raw clips, says "edit this", "cut this into a short", "make this a YouTube video", gives timestamped notes on an edit ("at 0:19 the stamp covers my face"), or wants their video editing style applied, even if they never say "skill" or "HyperFrames".
 ---
 

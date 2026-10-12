@@ -21,7 +21,7 @@ You record and give notes. The agent does the rest:
 ## Use it
 
 ```text
-Use video-edit on the raw clips in ~/videos/astra. Make a scroll-stopping Short.
+Use make-my-video-awesome on the raw clips in ~/videos/astra. Make a scroll-stopping Short.
 ```
 
 ```text
@@ -30,7 +30,7 @@ At 0:50 I say "during" out of nowhere, cut it. When I say "everyone's job is saf
 ```
 
 ```text
-Use video-edit to turn these 12 clips into a 10-minute YouTube video with chapters.
+Use make-my-video-awesome to turn these 12 clips into a 10-minute YouTube video with chapters.
 ```
 
 ## What's inside
