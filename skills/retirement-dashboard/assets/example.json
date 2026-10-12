@@ -1,0 +1,30 @@
+{
+  "schema_version":1,"currency":"USD","start_year":2027,"horizon_years":36,
+  "adults":[{"id":"adult_a","age_at_start":50},{"id":"adult_b","age_at_start":48}],
+  "accounts":[
+    {"id":"investments_a","type":"brokerage","balance":1400000,"unavailable":0,"available_year":2027,"duplicate_of":null,"cost_basis":null,"gain_fraction":null,"status":"illustrative","source":"Fictional example"},
+    {"id":"investments_b","type":"brokerage","balance":750000,"unavailable":0,"available_year":2027,"duplicate_of":null,"status":"illustrative","source":"Fictional example"},
+    {"id":"cash_a","type":"cash","balance":450000,"unavailable":0,"available_year":2027,"duplicate_of":null,"status":"illustrative","source":"Fictional example"}
+  ],
+  "home":{"value":900000,"debt":300000,"mortgage_monthly":1600,"mortgage_end_year":2044,"nonmortgage_monthly":500},
+  "incomes":[
+    {"id":"income_a","adult_id":"adult_a","gross_annual":180000,"growth_rate":0.02,"start_year":2027,"stop_year":2032,"optimize_stop":true,"pretax_annual":0,"benefits_annual":0},
+    {"id":"income_b","adult_id":"adult_b","gross_annual":90000,"growth_rate":0,"start_year":2027,"stop_year":2027,"optimize_stop":false,"pretax_annual":0,"benefits_annual":0}
+  ],
+  "other_income":[],
+  "spending":{"inflation":0.03,"phases":[{"start_year":2027,"monthly":8500,"includes_housing":true,"healthcare_extra_annual":0},{"start_year":2033,"monthly":6500,"includes_housing":true,"healthcare_extra_annual":0}]},
+  "children":[{"id":"child_a","age_at_start":14,"college_start_year":2031,"years":4,"plan":"private","fund_id":"education_a"},{"id":"child_b","age_at_start":12,"college_start_year":2033,"years":4,"plan":"private","fund_id":null}],
+  "college":{"price_year":2027,"inflation":0.04,"credit_funds":true,"plans":{"public":{"tuition":16000,"room_board":18000,"other":4000},"private":{"tuition":55000,"room_board":20000,"other":5000},"high_private":{"tuition":65000,"room_board":25000,"other":7000}}},
+  "college_funds":[{"id":"education_a","balance":40000,"growth_rate":0,"account_id":null}],
+  "tax":{"salary":{"mode":"effective","total_effective_rate":0.30,"note":"Synthetic total wage-tax allowance including income/payroll taxes"},"withdrawal_effective_rate":0.12,"withdrawal_note":"Synthetic combined allowance; basis unresolved"},
+  "scenarios":[
+    {"id":"slow","label":"Slow growth 3%","long_run_return":0.03,"returns":[],"reverse_returns":false},
+    {"id":"base","label":"Base 5.5%","long_run_return":0.055,"returns":[],"reverse_returns":false},
+    {"id":"middle","label":"Middle 6.5%","long_run_return":0.065,"returns":[],"reverse_returns":false},
+    {"id":"favorable","label":"Favorable 7.5%","long_run_return":0.075,"returns":[],"reverse_returns":false},
+    {"id":"early","label":"Early recession","long_run_return":0.045,"returns":[-0.30,-0.10,0.15,0.10],"reverse_returns":false,"inflations":[0.045,0.045,0.045]},
+    {"id":"late","label":"Late recession","long_run_return":0.045,"returns":[-0.30,-0.10,0.15,0.10],"reverse_returns":true,"inflations":[0.045,0.045,0.045]}
+  ],
+  "events":[],"comparison_stop_year":2032,"reserve_real":250000,
+  "metadata":{"data_status":"fictional","unresolved":["Actual spending","Account basis","Healthcare coverage","Current jurisdiction tax rules"],"sources":[]}
+}

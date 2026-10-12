@@ -1,0 +1,904 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Retirement dashboard input",
+  "description": "Generic planning variables. Cross-field constraints are additionally checked by scripts/model.mjs.",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "currency": {
+      "type": "string",
+      "pattern": "^[A-Z]{3}$"
+    },
+    "start_year": {
+      "type": "integer",
+      "minimum": 1900,
+      "maximum": 2300
+    },
+    "horizon_years": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 100
+    },
+    "adults": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/adult"
+      },
+      "minItems": 1
+    },
+    "accounts": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/account"
+      },
+      "minItems": 0
+    },
+    "home": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "number",
+          "minimum": 0
+        },
+        "debt": {
+          "type": "number",
+          "minimum": 0
+        },
+        "mortgage_monthly": {
+          "type": "number",
+          "minimum": 0
+        },
+        "mortgage_end_year": {
+          "type": "integer",
+          "minimum": 1900,
+          "maximum": 2300
+        },
+        "nonmortgage_monthly": {
+          "type": "number",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "value",
+        "debt",
+        "mortgage_monthly",
+        "mortgage_end_year",
+        "nonmortgage_monthly"
+      ],
+      "additionalProperties": false
+    },
+    "incomes": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/income"
+      },
+      "minItems": 0
+    },
+    "other_income": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/otherIncome"
+      },
+      "minItems": 0
+    },
+    "spending": {
+      "type": "object",
+      "properties": {
+        "inflation": {
+          "type": "number",
+          "minimum": -0.5,
+          "maximum": 1
+        },
+        "phases": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/phase"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "inflation",
+        "phases"
+      ],
+      "additionalProperties": false
+    },
+    "children": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/child"
+      },
+      "minItems": 0
+    },
+    "college": {
+      "type": "object",
+      "properties": {
+        "price_year": {
+          "type": "integer",
+          "minimum": 1900,
+          "maximum": 2300
+        },
+        "inflation": {
+          "type": "number",
+          "minimum": -0.5,
+          "maximum": 1
+        },
+        "credit_funds": {
+          "type": "boolean"
+        },
+        "plans": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "tuition": {
+                "type": "number",
+                "minimum": 0
+              },
+              "room_board": {
+                "type": "number",
+                "minimum": 0
+              },
+              "other": {
+                "type": "number",
+                "minimum": 0
+              }
+            },
+            "required": [
+              "tuition",
+              "room_board",
+              "other"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "price_year",
+        "inflation",
+        "credit_funds",
+        "plans"
+      ],
+      "additionalProperties": false
+    },
+    "college_funds": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/fund"
+      },
+      "minItems": 0
+    },
+    "tax": {
+      "type": "object",
+      "properties": {
+        "salary": {
+          "oneOf": [
+            {
+              "type": "object",
+              "properties": {
+                "mode": {
+                  "const": "effective"
+                },
+                "total_effective_rate": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 0.95
+                },
+                "note": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "mode",
+                "total_effective_rate"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "mode": {
+                  "const": "progressive"
+                },
+                "index_rate": {
+                  "type": "number",
+                  "minimum": -0.5,
+                  "maximum": 1
+                },
+                "national": {
+                  "type": "object",
+                  "properties": {
+                    "deduction": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "brackets": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "up_to": {
+                            "anyOf": [
+                              {
+                                "type": "number",
+                                "minimum": 0
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          },
+                          "rate": {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 1
+                          }
+                        },
+                        "required": [
+                          "up_to",
+                          "rate"
+                        ],
+                        "additionalProperties": false
+                      },
+                      "minItems": 1
+                    },
+                    "surtaxes": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "threshold": {
+                            "type": "number",
+                            "minimum": 0
+                          },
+                          "rate": {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 1
+                          },
+                          "indexed": {
+                            "type": "boolean"
+                          }
+                        },
+                        "required": [
+                          "threshold",
+                          "rate"
+                        ],
+                        "additionalProperties": false
+                      },
+                      "minItems": 0
+                    }
+                  },
+                  "required": [
+                    "deduction",
+                    "brackets"
+                  ],
+                  "additionalProperties": false
+                },
+                "state": {
+                  "type": "object",
+                  "properties": {
+                    "deduction": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "brackets": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "up_to": {
+                            "anyOf": [
+                              {
+                                "type": "number",
+                                "minimum": 0
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          },
+                          "rate": {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 1
+                          }
+                        },
+                        "required": [
+                          "up_to",
+                          "rate"
+                        ],
+                        "additionalProperties": false
+                      },
+                      "minItems": 1
+                    },
+                    "surtaxes": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "threshold": {
+                            "type": "number",
+                            "minimum": 0
+                          },
+                          "rate": {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 1
+                          },
+                          "indexed": {
+                            "type": "boolean"
+                          }
+                        },
+                        "required": [
+                          "threshold",
+                          "rate"
+                        ],
+                        "additionalProperties": false
+                      },
+                      "minItems": 0
+                    }
+                  },
+                  "required": [
+                    "deduction",
+                    "brackets"
+                  ],
+                  "additionalProperties": false
+                },
+                "payroll": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "rate": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 1
+                      },
+                      "cap": {
+                        "anyOf": [
+                          {
+                            "type": "number",
+                            "minimum": 0
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "threshold": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "scope": {
+                        "enum": [
+                          "per_income",
+                          "household"
+                        ]
+                      },
+                      "indexed": {
+                        "type": "boolean"
+                      }
+                    },
+                    "required": [
+                      "rate",
+                      "cap",
+                      "threshold",
+                      "scope",
+                      "indexed"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "minItems": 0
+                },
+                "note": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "mode",
+                "index_rate",
+                "national",
+                "state",
+                "payroll"
+              ],
+              "additionalProperties": false
+            }
+          ]
+        },
+        "withdrawal_effective_rate": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 0.95
+        },
+        "withdrawal_note": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "salary",
+        "withdrawal_effective_rate"
+      ],
+      "additionalProperties": false
+    },
+    "scenarios": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/scenario"
+      },
+      "minItems": 1
+    },
+    "events": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/event"
+      },
+      "minItems": 0
+    },
+    "comparison_stop_year": {
+      "type": "integer",
+      "minimum": 1900,
+      "maximum": 2300
+    },
+    "reserve_real": {
+      "type": "number",
+      "minimum": 0
+    },
+    "metadata": {
+      "type": "object",
+      "description": "Evidence and unresolved assumptions; retained but not calculation inputs",
+      "additionalProperties": true
+    }
+  },
+  "required": [
+    "schema_version",
+    "currency",
+    "start_year",
+    "horizon_years",
+    "adults",
+    "accounts",
+    "home",
+    "incomes",
+    "other_income",
+    "spending",
+    "children",
+    "college",
+    "college_funds",
+    "tax",
+    "scenarios",
+    "events",
+    "comparison_stop_year",
+    "reserve_real"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "adult": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "age_at_start": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 120
+        }
+      },
+      "required": [
+        "id",
+        "age_at_start"
+      ],
+      "additionalProperties": false
+    },
+    "account": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "type": {
+          "enum": [
+            "cash",
+            "brokerage",
+            "traditional",
+            "roth",
+            "education",
+            "other"
+          ]
+        },
+        "balance": {
+          "type": "number",
+          "minimum": 0
+        },
+        "unavailable": {
+          "type": "number",
+          "minimum": 0
+        },
+        "available_year": {
+          "type": "integer",
+          "minimum": 1900,
+          "maximum": 2300
+        },
+        "duplicate_of": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "cost_basis": {
+          "anyOf": [
+            {
+              "type": "number",
+              "minimum": 0
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "gain_fraction": {
+          "anyOf": [
+            {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "source": {
+          "type": "string"
+        },
+        "as_of": {
+          "type": "string",
+          "format": "date"
+        },
+        "status": {
+          "enum": [
+            "verified",
+            "user_supplied",
+            "provisional",
+            "illustrative"
+          ]
+        },
+        "notes": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "type",
+        "balance",
+        "unavailable",
+        "available_year",
+        "duplicate_of"
+      ],
+      "additionalProperties": false
+    },
+    "income": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "adult_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "gross_annual": {
+          "type": "number",
+          "minimum": 0
+        },
+        "growth_rate": {
+          "type": "number",
+          "minimum": -0.99,
+          "maximum": 2
+        },
+        "start_year": {
+          "type": "integer",
+          "minimum": 1900,
+          "maximum": 2300
+        },
+        "stop_year": {
+          "type": "integer",
+          "minimum": 1900,
+          "maximum": 2300
+        },
+        "optimize_stop": {
+          "type": "boolean"
+        },
+        "pretax_annual": {
+          "type": "number",
+          "minimum": 0
+        },
+        "benefits_annual": {
+          "type": "number",
+          "minimum": 0
+        },
+        "source": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "adult_id",
+        "gross_annual",
+        "growth_rate",
+        "start_year",
+        "stop_year",
+        "optimize_stop",
+        "pretax_annual",
+        "benefits_annual"
+      ],
+      "additionalProperties": false
+    },
+    "otherIncome": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "annual": {
+          "type": "number",
+          "minimum": 0
+        },
+        "growth_rate": {
+          "type": "number",
+          "minimum": -0.99,
+          "maximum": 2
+        },
+        "start_year": {
+          "type": "integer",
+          "minimum": 1900,
+          "maximum": 2300
+        },
+        "end_year": {
+          "type": "integer",
+          "minimum": 1900,
+          "maximum": 2300
+        },
+        "kind": {
+          "type": "string"
+        },
+        "source": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "annual",
+        "growth_rate",
+        "start_year",
+        "end_year"
+      ],
+      "additionalProperties": false
+    },
+    "phase": {
+      "type": "object",
+      "properties": {
+        "start_year": {
+          "type": "integer",
+          "minimum": 1900,
+          "maximum": 2300
+        },
+        "monthly": {
+          "type": "number",
+          "minimum": 0
+        },
+        "includes_housing": {
+          "type": "boolean"
+        },
+        "healthcare_extra_annual": {
+          "type": "number",
+          "minimum": 0
+        },
+        "label": {
+          "type": "string"
+        },
+        "source": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "start_year",
+        "monthly",
+        "includes_housing",
+        "healthcare_extra_annual"
+      ],
+      "additionalProperties": false
+    },
+    "child": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "age_at_start": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "college_start_year": {
+          "type": "integer",
+          "minimum": 1900,
+          "maximum": 2300
+        },
+        "years": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 10
+        },
+        "plan": {
+          "type": "string",
+          "minLength": 1
+        },
+        "fund_id": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "age_at_start",
+        "college_start_year",
+        "years",
+        "plan",
+        "fund_id"
+      ],
+      "additionalProperties": false
+    },
+    "fund": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "balance": {
+          "type": "number",
+          "minimum": 0
+        },
+        "growth_rate": {
+          "type": "number",
+          "minimum": -0.99,
+          "maximum": 2
+        },
+        "account_id": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "source": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "balance",
+        "growth_rate",
+        "account_id"
+      ],
+      "additionalProperties": false
+    },
+    "scenario": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "label": {
+          "type": "string"
+        },
+        "long_run_return": {
+          "type": "number",
+          "minimum": -0.99,
+          "maximum": 2
+        },
+        "returns": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "minimum": -0.99,
+            "maximum": 2
+          },
+          "minItems": 0
+        },
+        "reverse_returns": {
+          "type": "boolean"
+        },
+        "inflation": {
+          "type": "number",
+          "minimum": -0.5,
+          "maximum": 1
+        },
+        "inflations": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "minimum": -0.5,
+            "maximum": 1
+          },
+          "minItems": 0
+        },
+        "note": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "label",
+        "long_run_return",
+        "returns",
+        "reverse_returns"
+      ],
+      "additionalProperties": false
+    },
+    "event": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "year": {
+          "type": "integer",
+          "minimum": 1900,
+          "maximum": 2300
+        },
+        "amount": {
+          "type": "number",
+          "minimum": 0
+        },
+        "kind": {
+          "enum": [
+            "inflow",
+            "outflow"
+          ]
+        },
+        "label": {
+          "type": "string"
+        },
+        "source": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "year",
+        "amount",
+        "kind"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

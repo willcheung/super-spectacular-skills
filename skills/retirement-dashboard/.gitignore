@@ -1,0 +1,7 @@
+# Keep household inputs and generated financial reports out of commits.
+local/
+demo/
+inputs.json
+*-inputs.json
+results.json
+forecast-*.csv

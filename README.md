@@ -1,6 +1,6 @@
 # Super Spectacular Skills
 
-A collection of portable [Agent Skills](https://agentskills.io) for creators: write like a person, edit video like an editor. Each skill is a folder with a `SKILL.md` that any compatible agent (Claude Code, Codex, and others) can load.
+A collection of portable [Agent Skills](https://agentskills.io) for writing, video editing, and retirement planning. Each skill is a folder with a `SKILL.md` that any compatible agent (Claude Code, Codex, and others) can load.
 
 ## Skills
 
@@ -8,6 +8,7 @@ A collection of portable [Agent Skills](https://agentskills.io) for creators: wr
 |---|---|
 | [no-ai-slop-writing](skills/no-ai-slop-writing/) | Blog posts, newsletters, and video scripts (Shorts and YouTube) that sound like you, not AI. Ships with Will's (Vibe Coding Dad) voice profile |
 | [video-edit](skills/video-edit/) | Turn raw talking-head clips into an edited Short or YouTube video: story, jump cuts, color, zooms, captions, cards, render |
+| [retirement-dashboard](skills/retirement-dashboard/) | See when you could retire, how much you would need from savings each month, and what might remain after college and retirement. Compare spending, taxes, inflation, and market downturns in an editable dashboard. All examples are fictional. |
 
 ## Install
 
