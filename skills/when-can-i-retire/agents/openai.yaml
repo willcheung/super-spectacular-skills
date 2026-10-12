@@ -1,0 +1,4 @@
+interface:
+  display_name: "When Can I Retire?"
+  short_description: "See when you could retire and how long savings might last"
+  default_prompt: "Use $when-can-i-retire to compare when we could retire, what we could afford to spend, and how college, taxes, inflation, and recessions affect our savings. Explain the charts in everyday language."

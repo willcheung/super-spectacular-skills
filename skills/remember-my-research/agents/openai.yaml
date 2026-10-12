@@ -1,0 +1,4 @@
+interface:
+  display_name: "Remember My Research"
+  short_description: "Turn sources into reusable, evidence-backed knowledge"
+  default_prompt: "Use $remember-my-research to maintain my research wiki, preserve provenance and contradictions, and explain what changed."

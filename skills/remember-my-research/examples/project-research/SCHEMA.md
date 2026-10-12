@@ -1,4 +1,4 @@
-# Compounding Wiki Schema
+# Remember My Research Schema
 
 ## Domain
 Set domain, audience, excluded subjects, and coverage policy before ingesting.
@@ -31,4 +31,8 @@ Check scope/owners; capture evidence; reconcile; retain prior views; update navi
 
 ## Privacy and maintenance
 Private by default. Public-candidate is not approval. Unknown/private/failed inputs fail closed at public handoffs. Research writes authorize no external action.
-Place the supplied scope template at `config/content-scope.json` when initializing a wiki. List real tested maintenance commands here once implemented; until then use manual acceptance checks. Compare validation against baseline. Archive with redirects and recovery copies; preserve raw provenance.
+List real tested maintenance commands here once implemented; until then use manual acceptance checks. Compare validation against baseline. Archive with redirects and recovery copies; preserve raw provenance.
+
+## Example domain and checks
+Domain: fictional community-project research. All dates are fictional scenario dates.
+Index is manually maintained. Required claims cite raw source paths. Both example entity/map types use the base fields above. No automated exporter or validators are configured.

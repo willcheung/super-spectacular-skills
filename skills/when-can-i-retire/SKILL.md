@@ -1,9 +1,9 @@
 ---
-name: retirement-dashboard
+name: when-can-i-retire
 description: Help a household understand when they could retire, what they could afford to spend, and how long their savings might last. Build an editable dashboard covering each person's salary, college costs, taxes, inflation, and market downturns, using account balances or spending records when provided.
 ---
 
-# Retirement dashboard
+# When Can I Retire?
 
 Build an editable model answering how much the household needs from investments, when each person could stop working, and what remains after college and at the chosen end age. Explain conclusions in everyday language. Treat scenario outcomes as conditional calculations, not forecasts or probabilities.
 

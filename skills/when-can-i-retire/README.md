@@ -1,4 +1,4 @@
-# Retirement planning dashboard
+# When Can I Retire?
 
 An AI skill that helps you work through a practical question: **When could I stop working, and how much could we afford to spend?** It turns your household assumptions into an editable dashboard with clear charts.
 
@@ -23,7 +23,7 @@ Install it using the [repository instructions](../../README.md#install), or poin
 Then ask:
 
 ```text
-Use retirement-dashboard to help me understand when we could retire.
+Use when-can-i-retire to help me understand when we could retire.
 Ask me for the missing details, build an editable dashboard, and compare
 retiring now with working five more years. Include college, taxes,
 inflation, slow investment growth, and early and late recessions.

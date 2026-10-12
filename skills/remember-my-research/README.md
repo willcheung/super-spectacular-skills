@@ -1,8 +1,8 @@
-# Compounding Wiki
+# Remember My Research
 
 **Make each research session useful to the next one.**
 
-Compounding Wiki is an agent skill for turning scattered sources into a durable Markdown knowledge base. It helps your agent find what you already know, incorporate new evidence, explain what changed, and keep uncertainty visible.
+Remember My Research is an agent skill for turning scattered sources into a durable Markdown knowledge base. It helps your agent find what you already know, incorporate new evidence, explain what changed, and keep uncertainty visible.
 
 Use it for technology research, scientific literature, product discovery, policy analysis, or any recurring research project. No database, paid API, or particular AI provider is required.
 
@@ -39,20 +39,20 @@ The included community-garden example is deliberately small and fictional: it de
 From the repository root, copy the fictional wiki into a **new, empty destination**:
 
 ```sh
-cp -R skills/compounding-wiki/examples/project-research ~/my-research-wiki
+cp -R skills/remember-my-research/examples/project-research ~/my-research-wiki
 ```
 
 Do not run this command against an existing directory: copying can merge content. The included documents are entirely synthetic, not actual project announcements.
 
 Ask your agent:
 
-> Use compounding-wiki on ~/my-research-wiki. Read README.md and SCHEMA.md, then answer: is the Northstar community garden approved? Cite the evidence and explain the remaining uncertainty. Do not change files yet.
+> Use remember-my-research on ~/my-research-wiki. Read README.md and SCHEMA.md, then answer: is the Northstar community garden approved? Cite the evidence and explain the remaining uncertainty. Do not change files yet.
 
 Expected answer: **No verified approval.** An early fictional announcement says the project is approved, but a later fictional status note says only the application was accepted for review. Treat the approval claim as unverified, preserve the discrepancy, and look for a formal permit decision. See [the walkthrough](examples/project-research/README.md).
 
 ### 3. Create your own wiki
 
-> Use compounding-wiki to initialize a new wiki at ~/my-policy-wiki about local transport policy. Use the supplied schema and scope templates. Keep sources immutable and everything private by default. Create the entry README, a manual index, a routing map, and a change log. Do not overwrite existing files or set up recurring jobs.
+> Use remember-my-research to initialize a new wiki at ~/my-policy-wiki about local transport policy. Use the supplied schema and scope templates. Keep sources immutable and everything private by default. Create the entry README, a manual index, a routing map, and a change log. Do not overwrite existing files or set up recurring jobs.
 
 Choose your own path and domain. Nothing in the skill assumes a financial portfolio or a specific folder on the author's machine.
 
@@ -72,7 +72,7 @@ Yes: the wiki can be maintained through recurring news/source checks. **The skil
 
 Start with a bounded, one-off run:
 
-> Use compounding-wiki on ~/my-company-wiki. Scan the companies already covered for material news since their last successful scan, with a small overlap to catch delayed stories. Prioritize official filings, earnings releases, company announcements, and regulator records. Check at most five pages and twenty candidate sources this run. Capture and deduplicate usable evidence, update existing pages only when it changes the facts, interpretation, or proof status, and preserve conflicting claims. Report material changes and coverage gaps. Do not add new companies, publish, trade, or create scheduled jobs.
+> Use remember-my-research on ~/my-company-wiki. Scan the companies already covered for material news since their last successful scan, with a small overlap to catch delayed stories. Prioritize official filings, earnings releases, company announcements, and regulator records. Check at most five pages and twenty candidate sources this run. Capture and deduplicate usable evidence, update existing pages only when it changes the facts, interpretation, or proof status, and preserve conflicting claims. Report material changes and coverage gaps. Do not add new companies, publish, trade, or create scheduled jobs.
 
 Once the one-off run works, choose a cadence appropriate to the subject—for example, weekly for a software shortlist, or more frequent around earnings/product releases. Prefer specific event triggers over repeatedly scanning everything. Ask your agent to propose the schedule, timezone, source/budget limits, permitted local writes, and delivery destination **before enabling recurrence**.
 

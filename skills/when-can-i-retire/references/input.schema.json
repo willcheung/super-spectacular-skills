@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Retirement dashboard input",
+  "title": "When Can I Retire? input",
   "description": "Generic planning variables. Cross-field constraints are additionally checked by scripts/model.mjs.",
   "type": "object",
   "properties": {

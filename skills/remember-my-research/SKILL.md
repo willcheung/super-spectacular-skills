@@ -1,16 +1,16 @@
 ---
-name: compounding-wiki
+name: remember-my-research
 description: Use when maintaining an evidence-backed research wiki.
-version: 0.1.1
-author: Compounding Wiki contributors
 license: MIT
 metadata:
+  version: "0.1.1"
+  author: "Remember My Research contributors"
   hermes:
     tags: [wiki, evidence, provenance, knowledge-base]
     related_skills: []
 ---
 
-# Compounding Wiki
+# Remember My Research
 
 ## Overview
 Maintain a domain-neutral, compounding Markdown knowledge base: immutable evidence, canonical synthesis, and an explicit operating contract. Use durable research memory rather than repeatedly deriving answers from raw sources.
@@ -36,7 +36,7 @@ Collectors, daily notes, derived JSON, dashboards, and public exports are interf
 ## Workflow
 
 ### 1. Orient and scope
-Resolve the explicit root, then configured `WIKI_PATH`; otherwise propose `~/compounding-wiki`. Never silently operate on another existing wiki. Read README, SCHEMA, routing map, index, and recent log; search before creating pages. Honor exclusions, privacy, canonical owners, and existing automation.
+Resolve the explicit root, then configured `WIKI_PATH`; otherwise propose `~/remember-my-research`. Never silently operate on another existing wiki. Read README, SCHEMA, routing map, index, and recent log; search before creating pages. Honor exclusions, privacy, canonical owners, and existing automation.
 
 For existing wikis inspect actual maintenance commands and record validation baseline. Preserve stable paths instead of reorganizing folders. For new wikis adapt the templates, create README/map/index/log and chosen content directories. Derive domain from the request; ask only if material ambiguity remains.
 
