@@ -1,6 +1,6 @@
 # Lessons from past edits
 
-General lessons that apply to anyone's video. Newest last. Format: date — rule — why. After each round of notes, add a line here if the lesson is general; if it's one creator's taste (a handle, music, a color preference), put it in that creator's profile instead (the owner's is brand-profile.md).
+General lessons that apply to anyone's video. Newest last. Format: date — rule — why. After each round of notes, add a line here if the lesson is general; if it's one creator's taste (a handle, music, a color preference), put it in that creator's profile instead (the owner's is brand-profile.md). Write the why as a general reason, without per-video stats, titles, or view counts; those stay in the creator's own private tracker.
 
 - 2026-10-08 — End on the CTA itself; cut lead-ins before it ("This is the kind of stuff I…"). — Warm-ups before the CTA lose viewers at the very end.
 - 2026-10-08 — Remove filler fragments at seams (a lone "during", "and, but") even when the transcript hides them; listen with energy.py. — They read as mistakes.
@@ -13,3 +13,5 @@ General lessons that apply to anyone's video. Newest last. Format: date — rule
 - 2026-10-09 — Before/after must be honest about timing: the "after" shown at a failure beat must be the failed output, not the eventual fix. — Showing the fixed result at "terrible" tells the opposite story.
 - 2026-10-09 — Numbered lessons build up in one card (1 → 1,2 → 1,2,3) instead of a separate card per lesson. — The growing list reads as a checklist and ends on a complete, save-worthy frame.
 - 2026-10-09 — Top cards start at y ≈ 165 (was ≈ 120). — Instagram's feed username/audio row covers about y 90–195; at 120 the chip was hidden and at 140 it still touched. ≈ 250 was tried and blocks the face.
+- 2026-10-10 — The first spoken words must be the hook itself; cut wind-ups like "I actually tried…" so the claim lands in the first second. — Most viewers decide in the first two seconds; a hook that opens on the claim holds more of them than a wind-up, even against heavier graphics.
+- 2026-10-10 — Aim for 35–50s on Shorts unless the story clearly earns more. — Full-watch rate drops sharply on longer cuts; only universal stakes keep people past a minute.

@@ -84,7 +84,7 @@ Run `npm run check` (fix every error; resolve contrast warnings), snapshot the m
 
 ### 7. Take notes, revise, learn
 
-The user reviews and gives notes, often with timestamps. Apply them. For any note that reflects a *preference* rather than a one-off fix ("I don't use sound", "captions too big", "my handle is…"), add it to the skill (dated, one line, with why): general lessons go in `references/lessons.md`; one creator's taste goes in their profile (the owner's is `references/brand-profile.md`). This feedback loop is the point of the skill: the same note should never be needed twice.
+The user reviews and gives notes, often with timestamps. Apply them. For any note that reflects a *preference* rather than a one-off fix ("I don't use sound", "captions too big", "my handle is…"), add it to the skill (dated, one line, with a general why; per-video stats stay in the creator's private tracker, not this public skill): general lessons go in `references/lessons.md`; one creator's taste goes in their profile (the owner's is `references/brand-profile.md`). This feedback loop is the point of the skill: the same note should never be needed twice.
 
 ### 8. Render and verify
 

@@ -24,3 +24,4 @@ The full design system, if available locally, lives in the owner's `videos/desig
 - 2026-10-08 — No music or sound effects unless asked.
 - 2026-10-09 — Slightly warm color (`"warmth": "light"` in edit.json).
 - 2026-10-09 — Handle is `@vibecodingdad` (no dot). Put it in edit.json as `"handle": "@vibecodingdad"`.
+- 2026-10-11 — Titles, hooks and cover text should be provocative and intentionally controversial, especially YouTube titles. Provocative but true: never put a quote in someone's mouth or claim more than the receipt shows.
