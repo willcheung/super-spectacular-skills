@@ -1,7 +1,7 @@
 ---
 name: compounding-wiki
 description: Use when maintaining an evidence-backed research wiki.
-version: 0.1.0
+version: 0.1.1
 author: Compounding Wiki contributors
 license: MIT
 metadata:
@@ -18,7 +18,7 @@ Maintain a domain-neutral, compounding Markdown knowledge base: immutable eviden
 Inspired by Andrej Karpathy's LLM Wiki pattern: https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f. This is a workflow extension, not an official product or endorsement. No third-party code or private corpus is bundled; check licensing separately before redistributing upstream material.
 
 ## When to Use
-Initialize a wiki; ingest sources; query prior knowledge; reconcile contradictions; audit freshness/navigation; adapt a private research workflow into a synthetic public demonstration.
+Initialize a wiki; ingest sources; query prior knowledge; reconcile contradictions; audit freshness/navigation; periodically scan scoped news and sources for material updates; adapt a private research workflow into a synthetic public demonstration.
 
 ## Prerequisites
 Resolve a writable wiki root and tools for source retrieval, file reading/search, hashing, and validation. No paid API, database, scheduler, broker, publishing service, or specific agent runtime is required. This release supplies instructions and templates, not an executable compiler.
@@ -63,7 +63,14 @@ Update navigation and append a concise material-change receipt to log. Run the c
 
 Read back the exact canonical change and, where a downstream consumer exists, independently verify its consumption; otherwise report downstream verification as not applicable. Lint is not handoff proof. Prefer routing maps to path churn. Archive with recovery copies and redirects; confirm broad/destructive migrations first. Do not add paid collectors or recurring jobs merely to test maintenance.
 
-### 7. Export safely
+### 7. Scan news and refresh periodically
+Read `references/periodic-refresh.md` when recurring or event-driven maintenance is requested. Derive a bounded watchlist from existing canonical pages, unresolved questions, and proof gates—not a new discovery universe. Search from the last successful checkpoint with an overlap for delayed indexing; prefer original sources. Capture/deduplicate usable evidence, reconcile material deltas into existing pages, and verify affected navigation or consumers.
+
+Record coverage and actual source times. Complete unchanged scans may advance operational scan checkpoints, never underlying evidence-as-of or editorial freshness. Partial/blocked scans retain the last successful checkpoint for affected subjects and expose gaps for retry. News headlines are leads, not verified conclusions. A no-change result creates no forced narrative, promotion, or public notification.
+
+Propose cadence/event triggers, explicit timezone, page/source limits, cost budget, permitted local writes, and delivery before enabling a scheduler. Reuse existing jobs where appropriate and obtain scheduling authorization; installing this skill creates no job. Report material deltas or actionable coverage failures, not repetitive all-clears. Research updates authorize no public actions. The package includes no collector, scheduler, or monitoring daemon.
+
+### 8. Export safely
 Default content to private. Adapt `templates/content-scope.json`; explicit eligibility, rights review, and validation are prerequisites. Unknown classes/paths and failed validators are ineligible. Public-candidate status is not publication approval.
 
 Build public examples from scratch using fictional evidence, not redacted private copies. Export reviewed generic instructions/tools and synthetic fixtures only. Exclude private identifiers, infrastructure, logs, credentials, personal data, full copyrighted sources, and private Git history. Confirm repository/branch/publication scope before external writes and verify remote state afterward. Follow `references/public-release.md`.
@@ -79,3 +86,4 @@ Machine handoffs identify owner, input IDs/hashes, observation/generated times, 
 - `templates/page.md`: canonical page template.
 - `references/acceptance-tests.md`: synthetic behavioral checks.
 - `references/public-release.md`: publication boundaries and gates.
+- `references/periodic-refresh.md`: bounded news scans, event-driven refresh, and schedule approval.

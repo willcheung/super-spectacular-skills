@@ -6,6 +6,17 @@ Compounding Wiki is an agent skill for turning scattered sources into a durable 
 
 Use it for technology research, scientific literature, product discovery, policy analysis, or any recurring research project. No database, paid API, or particular AI provider is required.
 
+## A real-world use case: keep company research current
+
+Suppose you follow several companies and keep a page for each one. You have already read their reports, mapped their competitors, and written down the questions that matter. Instead of researching from scratch every week:
+
+1. **Build the starting view:** capture public filings, earnings releases, product announcements, and other relevant sources. Each company gets one main page with the current interpretation, uncertainties, and evidence links.
+2. **Check for developments:** use your agent's browsing tools to periodically scan selected companies and themes for earnings, contract announcements, product launches, and regulatory decisions. Prefer original filings and announcements over repeated headlines.
+3. **Update only what changed:** a new release may show that a projected launch actually shipped, or that a reported deal is still only a pilot. Capture the evidence, revise the affected page, preserve the earlier view, and update related theme pages where justified.
+4. **Reuse the accumulated knowledge:** ask “What changed since my last review, and does it resolve any open questions?” The answer starts with your existing research rather than a blank chat.
+
+This is a realistic workflow, **not a claim about any particular company or current event**. The same pattern works for evaluating software tools (releases, pricing, security advisories), following scientific topics (new papers and replication results), or tracking public policy (proposals, amendments, and final decisions).
+
 ## What you get
 
 - `SKILL.md`: instructions your agent follows.
@@ -21,7 +32,9 @@ Use it for technology research, scientific literature, product discovery, policy
 
 Follow the [repository installation instructions](../../README.md#install), or tell your agent to read this folder's `SKILL.md`. If your agent does not discover skills automatically, explicitly load that file at the start of a session.
 
-### 2. Start with the example
+### 2. Optional: try the small practice wiki
+
+The included community-garden example is deliberately small and fictional: it demonstrates the difference between a claim and verified evidence without needing live sources. It is a practice exercise, not the main use case. You can skip it and create your own wiki in step 3.
 
 From the repository root, copy the fictional wiki into a **new, empty destination**:
 
@@ -52,6 +65,23 @@ Choose your own path and domain. Nothing in the skill assumes a financial portfo
 > Answer from the wiki first: what do we know about this proposal, what is still uncertain, and what evidence would change the conclusion? Verify current facts externally if the existing evidence is too old for the question.
 
 > Check the wiki for broken links, duplicate subject pages, missing provenance, and stale decisive evidence. Report issues before making broad changes. An unchanged check must not make old evidence look new.
+
+## Periodically scan news and refresh existing pages
+
+Yes: the wiki can be maintained through recurring news/source checks. **The skill defines the research workflow; your agent's scheduler and browsing tools run it.** Nothing is scheduled automatically by installing this package.
+
+Start with a bounded, one-off run:
+
+> Use compounding-wiki on ~/my-company-wiki. Scan the companies already covered for material news since their last successful scan, with a small overlap to catch delayed stories. Prioritize official filings, earnings releases, company announcements, and regulator records. Check at most five pages and twenty candidate sources this run. Capture and deduplicate usable evidence, update existing pages only when it changes the facts, interpretation, or proof status, and preserve conflicting claims. Report material changes and coverage gaps. Do not add new companies, publish, trade, or create scheduled jobs.
+
+Once the one-off run works, choose a cadence appropriate to the subject—for example, weekly for a software shortlist, or more frequent around earnings/product releases. Prefer specific event triggers over repeatedly scanning everything. Ask your agent to propose the schedule, timezone, source/budget limits, permitted local writes, and delivery destination **before enabling recurrence**.
+
+- **New material evidence:** capture it, update the affected page and relevant links, and explain the delta.
+- **Same evidence or repeated headline:** no new research conclusion or “fresh” evidence date. Keep a lightweight scan receipt, not another editorial summary.
+- **Unavailable or incomplete sources:** report partial/blocked coverage; absence of retrieved news is not proof that nothing happened.
+- **No material change:** stay quiet by default rather than send repetitive all-clear messages.
+
+See [the refresh playbook](references/periodic-refresh.md) for checkpoints, failure handling, and a schedule-ready prompt. News commentary is a lead to investigate, not automatically proof.
 
 ## How it works
 
