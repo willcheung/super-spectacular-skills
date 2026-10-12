@@ -1,0 +1,4 @@
+interface:
+  display_name: "Compounding Wiki"
+  short_description: "Turn sources into reusable, evidence-backed knowledge"
+  default_prompt: "Use $compounding-wiki to maintain my research wiki, preserve provenance and contradictions, and explain what changed."

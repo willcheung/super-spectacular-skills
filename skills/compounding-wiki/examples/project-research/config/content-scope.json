@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "default_privacy": "private",
+  "canonical_roots": ["entities", "topics", "comparisons", "queries", "maps"],
+  "evidence_roots": ["raw"],
+  "derived_roots": ["derived"],
+  "excluded_roots": ["_archive"],
+  "privacy_classes": ["private", "research", "operational", "public-candidate", "public-approved"],
+  "allowed_tags": ["entity", "topic", "comparison", "evidence", "hypothesis", "contested"],
+  "coverage_exclusions": [],
+  "artifact_contracts": [],
+  "public_projection": {
+    "enabled": false,
+    "allowed_paths": [],
+    "require_explicit_approval": true,
+    "require_rights_review": true,
+    "require_validation": true,
+    "unknown_is_ineligible": true
+  }
+}
