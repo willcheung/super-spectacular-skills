@@ -82,9 +82,9 @@ Plan overlays from the cut transcript's word times: each overlay lands on the wo
 
 Run `npm run check` (fix every error; resolve contrast warnings), snapshot the moment each overlay lands (`npx hyperframes snapshot --at t1,t2,…`) and actually look at the contact sheet, then open the Studio preview (`npx hyperframes preview --background`) for the user.
 
-### 7. Independent swipe review
+### 7. Independent roast
 
-For Shorts, run the `swipe-review` skill on `PROJECT_DIR` before the creator's first watch (or right after it, if they're already watching). It hands a fresh subagent only files (a frame every 1.5 s and the cut's word-timed transcript), so the reviewer judges the video instead of defending it. Don't brief it on what the edit is going for; that's the point.
+For Shorts, run the `roast-my-short` skill on `PROJECT_DIR` before the creator's first watch (or right after it, if they're already watching). It hands a fresh subagent only files (a frame every 1.5 s and the cut's word-timed transcript), so the reviewer judges the video instead of defending it. Don't brief it on what the edit is going for; that's the point.
 
 - **Apply the no-brainer fixes yourself:** collisions (captions over cards, text over the face or platform UI), empty or unreadable cards, stray fragments, frozen or black frames.
 - **Surface the judgment calls to the creator** (reorders, cutting their lines, dropping a gag, a different hook), each with your own recommendation.

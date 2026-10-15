@@ -1,4 +1,0 @@
-interface:
-  display_name: "Swipe Review"
-  short_description: "Independent review of a Short: predicts where viewers swipe"
-  default_prompt: "Use $swipe-review on this Short. Build the packet, run the review in a fresh session that never saw the edit, and show me the swipe map, the top 5 changes, and the score."

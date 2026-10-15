@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build a swipe-review packet and the exact prompt for a fresh reviewer.
+"""Build a roast-my-short packet and the exact prompt for a fresh reviewer.
 
 Usage:
   python3 prepare.py PROJECT_DIR   [options]   # HyperFrames project (edit mode)
@@ -70,7 +70,7 @@ def benchmarks(tracker):
     m = re.search(r"^## Results log\b.*?(?=^## |\Z)", text, re.S | re.M)
     if not m:
         return None
-    sec = re.sub(r"^### Swipe-review predictions\b.*?(?=^### |\Z)", "", m.group(0), flags=re.S | re.M)
+    sec = re.sub(r"^### Roast predictions\b.*?(?=^### |\Z)", "", m.group(0), flags=re.S | re.M)
     return sec.strip().rstrip("-").strip()
 
 
@@ -186,7 +186,7 @@ def main():
         sys.exit(f"don't know how to review {src}: pass a HyperFrames project dir, a video, or a .md script")
 
     name = src.stem if src.is_file() else src.name
-    pdir = Path(tempfile.gettempdir()) / "swipe-review" / f"{name}-{a.label}"
+    pdir = Path(tempfile.gettempdir()) / "roast-my-short" / f"{name}-{a.label}"
     pdir.mkdir(parents=True, exist_ok=True)
     pfile = pdir / "PROMPT.md"
     pfile.write_text(prompt(mode, src, packet, duration, mmva, profile, benchmarks(a.tracker), a.every))

@@ -1,4 +1,4 @@
-# Swipe Review
+# Roast My Short
 
 An [Agent Skill](https://agentskills.io) that gives your Short a blunt, independent review and predicts where viewers swipe away.
 
@@ -21,11 +21,11 @@ It also checks a script's hook before you film, and after you publish it compare
 ## Use it
 
 ```text
-Run swipe-review on ~/videos/my-short before I watch it.
+Roast my short in ~/videos/my-short before I watch it.
 ```
 
 ```text
-Swipe-review renders/final.mp4 against my results log in ~/notes/tracker.md.
+Roast renders/final.mp4 against my results log in ~/notes/tracker.md.
 ```
 
 ```text
@@ -33,7 +33,7 @@ Hook-check my shoot sheet plans/my-shoot-sheet.md before I film.
 ```
 
 ```text
-My last Short's 24-hour stats are in. Calibrate swipe-review.
+My last Short's 24-hour stats are in. Calibrate the roasts.
 ```
 
 ## What's inside

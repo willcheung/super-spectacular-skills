@@ -19,7 +19,7 @@ This profile belongs to the repository owner. Apply it only when the owner is th
 
 The full design system, if available locally, lives in the owner's `videos/design.md`.
 
-The owner's private tracker (retention benchmarks, results log, swipe-review predictions) is named in their workspace instructions (AGENTS.md). Pass it to `swipe-review` as `--tracker`.
+The owner's private tracker (retention benchmarks, results log, roast-my-short predictions) is named in their workspace instructions (AGENTS.md). Pass it to `roast-my-short` as `--tracker`.
 
 ## Owner preferences (from notes on past edits)
 

@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""Log swipe-review predictions in the creator's private tracker and score them later.
+"""Log roast-my-short predictions in the creator's private tracker and score them later.
 
 Usage:
   python3 predictions.py log TRACKER --video NAME --version V (--report REPORT.md | --pred 58/40 --score 6 --post no) [--len 56.7]
   python3 predictions.py actual TRACKER --video NAME --actual 61/44 [--version V]
   python3 predictions.py pending TRACKER
 
-The table lives in a "### Swipe-review predictions" subsection of the tracker's
+The table lives in a "### Roast predictions" subsection of the tracker's
 "## Results log" (created on first use). Per-video numbers stay in that private
 file; the skill's public calibration notes get only the generic pattern.
 
@@ -17,8 +17,8 @@ positive = the reviewer predicted too high.
 import argparse, datetime, re, sys
 from pathlib import Path
 
-HEAD = "### Swipe-review predictions"
-INTRO = ("Logged by the swipe-review skill before posting; actuals come from the 24 h pull. "
+HEAD = "### Roast predictions"
+INTRO = ("Logged by the roast-my-short skill before posting; actuals come from the 24 h pull. "
          "Misses become generic calibration notes in the skill's public references, never these numbers.")
 COLS = ["Date", "Video", "Version", "Len", "Score", "Post as-is", "Pred 2s / 5s", "Actual 2s / 5s (24h)", "Miss 2s / 5s"]
 EMPTY = {"", "–", "-"}

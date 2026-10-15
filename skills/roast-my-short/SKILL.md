@@ -1,9 +1,9 @@
 ---
-name: swipe-review
-description: Independent, blunt short-form strategist review of a Short (TikTok, Reels, YouTube Shorts) that predicts where viewers swipe away. Snapshots the edit every 1.5 s, exports the cut's word-timed transcript, and hands only those files to a fresh subagent that never saw the edit being made, so it judges the video instead of defending it. Returns a hook verdict with predicted 2 s / 5 s retention against the creator's own benchmarks, a second-by-second swipe map, exact cuts quoted from the creator's words, a top-5 change list, a score /10, and post-as-is yes/no. Also checks a script or shoot sheet's hook before filming, and calibrates its predictions against real stats after publishing. Use whenever an edit is ready for a first watch, the user asks "would people swipe?", "review this short", "is the hook strong enough?", "rate this video", or wants a second opinion on a cut or a script, even if they never say "swipe-review".
+name: roast-my-short
+description: Independent, blunt short-form strategist review of a Short (TikTok, Reels, YouTube Shorts) that predicts where viewers swipe away. Snapshots the edit every 1.5 s, exports the cut's word-timed transcript, and hands only those files to a fresh subagent that never saw the edit being made, so it judges the video instead of defending it. Returns a hook verdict with predicted 2 s / 5 s retention against the creator's own benchmarks, a second-by-second swipe map, exact cuts quoted from the creator's words, a top-5 change list, a score /10, and post-as-is yes/no. Also checks a script or shoot sheet's hook before filming, and calibrates its predictions against real stats after publishing. Use whenever an edit is ready for a first watch, the user asks "roast my short", "would people swipe?", "review this short", "is the hook strong enough?", "rate this video", or wants a second opinion on a cut or a script, even if they never say "roast-my-short".
 ---
 
-# Swipe Review
+# Roast My Short
 
 A second pair of eyes that has never seen the edit being made. The editor knows why every beat is there, so they forgive it; a viewer doesn't. This skill builds a review packet from files only, gives it to a fresh reviewer with no edit context, and gets back a blunt prediction of where people swipe.
 
@@ -49,7 +49,7 @@ The report ends with a `PREDICTION:` line. Log it in the creator's private track
 python3 scripts/predictions.py log TRACKER --video "My hook title" --version v3 --report PROJECT/reviews/YYYY-MM-DD-v3.md
 ```
 
-This adds a row to a `### Swipe-review predictions` table inside the tracker's Results log (creating it the first time). Per-video numbers live there and nowhere else: never in this public skill. Hook checks log too (version `script`), so the pre-filming call can be scored later.
+This adds a row to a `### Roast predictions` table inside the tracker's Results log (creating it the first time). Per-video numbers live there and nowhere else: never in this public skill. Hook checks log too (version `script`), so the pre-filming call can be scored later.
 
 ## 4. Act on it
 
