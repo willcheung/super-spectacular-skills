@@ -151,3 +151,21 @@ His spoken voice (Shorts, YouTube) is looser and faster than the blog. See video
 - Quotes himself giving the AI plain instructions ("make me more money, be a better analyst").
 - Real life drops in mid-story while the agent runs.
 - Signs off with "follow along for more builds and more AI tips."
+
+## Video scripts: sarcastic, exaggerated, entertaining (Will, 2026-10-13)
+
+For Will's video scripts (Shorts, YouTube, shoot sheets), this section overrides the humor limits above: "one specific joke," "do not add sarcasm," and "not more cynical than the source." Blog posts keep the rules above. His reference is Fireship: super sarcastic, controversial, and still educational. The videos are meant to entertain as well as teach, so a generic or cautious line is the failure, not the safe choice.
+
+- **A joke every 10–15 seconds.** Every beat gets at least one line written to land: a deflating aside, an absurd comparison, or mock seriousness.
+- **Deadpan fact, then a comparison wildly out of proportion.** Tell the news straight, then compare it to something absurd from ordinary life, history, or pop culture.
+- **Mock-sincere irony about incentives.** State the obvious conflict of interest as if it weren't one (the company selling GPUs announces that AGI has arrived).
+- **Lists of three where the third goes off the rails.**
+- **Inflate the stakes, then undercut them:** "every desk job is obsolete, for the fifth time this year."
+- **Puncture hype with the fact the announcement left out.** This is where the education lives.
+- **Roast up and roast himself:** big tech, hype bros, benchmarks, his own agents, his own laziness. Not the viewer, and not private people.
+- **Builder slang for the in-crowd:** slop, cooked, mogs, trust-me-bro benchmarks, tokenmaxxing.
+- **End on a callback.** The last line pays off a joke from the setup, then the CTA.
+- **Hyperbole must read as a joke; facts stay exact.** Exaggerate feelings, stakes, and comparisons, never numbers, quotes, or results. Every factual claim still needs a source.
+- **Write the punchlines word for word.** Jokes depend on wording, so the shoot sheet gives each clip 1–2 written lines he can say as written or riff on.
+- **PG-13 by default:** edgy takes and sarcasm yes, sexual or gross-out jokes no, unless Will asks.
+- Borrow Fireship's moves, never its jokes, catchphrases, or sign-off. Write new jokes from Will's own material.

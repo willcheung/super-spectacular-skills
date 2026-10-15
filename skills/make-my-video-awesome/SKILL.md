@@ -34,9 +34,14 @@ For each clip: duration, orientation (a `rotation=-90` side-data tag means a lan
 
 ### 2. Transcribe each clip separately
 
+Use Parakeet, not Whisper. Check with `npx hyperframes models list`; if Parakeet isn't installed, install it once (about 640 MB):
+
 ```bash
+npx hyperframes models install parakeet
 python3 scripts/transcribe.py clips RAW_DIR WORK_DIR/t
 ```
+
+`transcribe.py` picks Parakeet automatically once it's installed. Whisper smears word times across pauses (one word can span several seconds of silence), which makes takes hard to cut cleanly. Both still mishear words now and then ("should yours" as "show"), so read the cut's transcript before the captions go out.
 
 `hyperframes transcribe` writes `transcript.json` into whatever directory it runs in, so batch-transcribing into one folder silently keeps only the last clip. The script gives each clip its own folder and prints word timings.
 
@@ -64,7 +69,7 @@ python3 scripts/cut.py PROJECT_DIR/edit.json
 python3 scripts/transcribe.py cut PROJECT_DIR
 ```
 
-Read the cut's transcript start to finish. Look for stray fragments at segment seams ("and, but if…", a half "during"). Whisper word times drift 0.4–0.6 s, so when a seam is dirty, find real silence with `python3 scripts/energy.py CLIP FROM TO` and move the boundary into it. Trust the energy bars over the transcript. Re-cut until the transcript reads clean.
+Read the cut's transcript start to finish. Look for stray fragments at segment seams ("and, but if…", a half "during"). Transcript word times can still drift (Whisper by 0.4–0.6 s or more; Parakeet less), so when a seam is dirty, find real silence with `python3 scripts/energy.py CLIP FROM TO` and move the boundary into it. Trust the energy bars over the transcript. Re-cut until the transcript reads clean.
 
 ### 5. Build the dress
 
@@ -75,6 +80,8 @@ python3 scripts/sync_data.py PROJECT_DIR
 ```
 
 Before designing graphics, list the moments where **real material** would beat a generated graphic (the creator's screenshots, screen recordings, dashboards, chat threads, posts they're reacting to, their blog post's images) and ask for them, or pull them from sources the creator points you to. Real footage of the thing reads as genuine; recreated UI reads as AI-generated, and short-form audiences notice. Generate a graphic only when nothing real exists or the point is conceptual (a thesis line, a counter, a meme beat). See style.md, "Real material first".
+
+Also scan the transcript for claims about companies, people, or public numbers ("Meta laid off 600 people", "it's 100× cheaper"). For each one, find the original source, capture the page, and show it with the backing sentence highlighted (style.md, "Articles and news"). If you can't find a source, or the source says less than the line does, tell the creator before building; don't put it on screen as fact.
 
 Plan overlays from the cut transcript's word times: each overlay lands on the word that motivates it (a "3 HOURS" timer starts on "three hours"; a stamp slams on "terrible"). See style.md for which beat gets which treatment.
 

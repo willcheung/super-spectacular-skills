@@ -27,3 +27,7 @@ The owner's private tracker (retention benchmarks, results log, roast-my-short p
 - 2026-10-09 — Slightly warm color (`"warmth": "light"` in edit.json).
 - 2026-10-09 — Handle is `@vibecodingdad` (no dot). Put it in edit.json as `"handle": "@vibecodingdad"`.
 - 2026-10-11 — Titles, hooks and cover text should be provocative and intentionally controversial, especially YouTube titles. Provocative but true: never put a quote in someone's mouth or claim more than the receipt shows.
+- 2026-10-12 — Frame the face larger (head fills about half the frame width; scale up wider takes) and keep camera moves subtle: jump-cut framing changes around 4%, only 2–3 gentle push-ins (≈1.05×, 0.35 s) per Short. Big zoom swings read as distracting.
+- 2026-10-12 — Eye contact matters: prefer takes where he's looking into the lens, even over a slightly better line read from a take where he isn't.
+- 2026-10-12 — B-roll sparingly: stock only where the line describes the viewer's life (one quick shot per word, ~1 s each), never for his own claims. Real screenshots/photos he took: show the whole shot first, then push in. Authentic beats polished.
+- 2026-10-13 — Scripts are now Fireship-style (sarcastic, a joke every 10–15 s), so give the punchlines meme beats freely: meme text, a punch-in, a reaction image. B-roll still stays rare: a stock or cutaway clip only when the clip itself is the joke (the absurd comparison made literal), never as filler under a normal line.

@@ -21,6 +21,7 @@ Rules:
 - Say numbers the way you'd say them: "three hours", "ten more hours", "a whole month of tokens in one weekend".
 - Mark visuals for the editor in brackets on their own line: `[ON SCREEN: usage chart, highlight the spike]`, `[MEME: everyone's job is safe]`, `[CARD: Lesson 1]`. Only reference screenshots or data that exist or that the creator will capture.
 - Sarcasm needs a beat: give the joke line its own line so the edit can land a meme on it.
+- For Will, write to the "Video scripts: sarcastic, exaggerated, entertaining" section of writer-voice-profile.md: a joke every 10–15 s, absurd comparisons, and a callback before the CTA.
 
 Return format:
 
