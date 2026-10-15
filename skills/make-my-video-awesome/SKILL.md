@@ -82,11 +82,19 @@ Plan overlays from the cut transcript's word times: each overlay lands on the wo
 
 Run `npm run check` (fix every error; resolve contrast warnings), snapshot the moment each overlay lands (`npx hyperframes snapshot --at t1,t2,…`) and actually look at the contact sheet, then open the Studio preview (`npx hyperframes preview --background`) for the user.
 
-### 7. Take notes, revise, learn
+### 7. Independent swipe review
+
+For Shorts, run the `swipe-review` skill on `PROJECT_DIR` before the creator's first watch (or right after it, if they're already watching). It hands a fresh subagent only files (a frame every 1.5 s and the cut's word-timed transcript), so the reviewer judges the video instead of defending it. Don't brief it on what the edit is going for; that's the point.
+
+- **Apply the no-brainer fixes yourself:** collisions (captions over cards, text over the face or platform UI), empty or unreadable cards, stray fragments, frozen or black frames.
+- **Surface the judgment calls to the creator** (reorders, cutting their lines, dropping a gag, a different hook), each with your own recommendation.
+- **Creator notes override the reviewer.** It never saw them. If the creator asked for a full-size article excerpt and the reviewer wants it smaller, keep it full-size and say so in one line.
+
+### 8. Take notes, revise, learn
 
 The user reviews and gives notes, often with timestamps. Apply them. For any note that reflects a *preference* rather than a one-off fix ("I don't use sound", "captions too big", "my handle is…"), add it to the skill (dated, one line, with a general why; per-video stats stay in the creator's private tracker, not this public skill): general lessons go in `references/lessons.md`; one creator's taste goes in their profile (the owner's is `references/brand-profile.md`). This feedback loop is the point of the skill: the same note should never be needed twice.
 
-### 8. Render and verify
+### 9. Render and verify
 
 ```bash
 npm run render -- --output renders/NAME.mp4
