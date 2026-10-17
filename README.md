@@ -7,6 +7,7 @@ A collection of portable [Agent Skills](https://agentskills.io) for writing, vid
 | Skill | What it does |
 |---|---|
 | [no-ai-slop-writing](skills/no-ai-slop-writing/) | Blog posts, newsletters, and video scripts (Shorts and YouTube) that sound like you, not AI. Ships with Will's (Vibe Coding Dad) voice profile |
+| [script-my-video](skills/script-my-video/) | Plan a Short or YouTube video before you film: interview, provocative-but-true hooks, sourced claims, a shoot sheet with bridge lines and punchlines, and the screens to capture |
 | [make-my-video-awesome](skills/make-my-video-awesome/) | Turn raw talking-head clips into an edited Short or YouTube video: story, jump cuts, color, zooms, captions, cards, render |
 | [roast-my-short](skills/roast-my-short/) | A blunt, independent review of a Short that predicts where viewers swipe away, from a reviewer that never saw the edit. Checks script hooks before filming and calibrates against your real stats |
 | [when-can-i-retire](skills/when-can-i-retire/) | See when you could retire, how much you would need from savings each month, and what might remain after college and retirement. Compare spending, taxes, inflation, and market downturns in an editable dashboard. All examples are fictional. |

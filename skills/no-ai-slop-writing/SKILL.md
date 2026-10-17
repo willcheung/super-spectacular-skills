@@ -11,14 +11,14 @@ Before writing or editing, read [references/conversational-guide.md](references/
 
 For interview-led long-form writing using the bundled writer profile, also read [references/interview-led-writing.md](references/interview-led-writing.md) completely. This reference governs the required interview round, relevant background, voice constraints, and optional long-form architecture. It does not force every short post, edit, or unrelated piece into the same structure.
 
-For a blog post, newsletter, or article, also read [references/blog-posts.md](references/blog-posts.md) for the post shape. For a video script (Short, Reel, TikTok, or YouTube), also read [references/video-scripts.md](references/video-scripts.md). These cover format only; voice still comes from the writer's own material or the profile.
+For a blog post, newsletter, or article, also read [references/blog-posts.md](references/blog-posts.md) for the post shape. For a video script (Short, Reel, TikTok, or YouTube), use the `script-my-video` skill for the plan and shoot-sheet format; this skill supplies the voice. The blog guide covers format only; voice still comes from the writer's own material or the profile.
 
 ## Choose a mode
 
 - **Develop:** When the user supplies a ramble, transcript, brain dump, or incomplete notes, find the idea inside it and develop it collaboratively.
 - **Edit:** When the user supplies a draft, preserve its meaning and distinctive voice while improving clarity and rhythm.
 - **Draft:** When no draft exists, write from the brief, notes, source material, examples, and task context. Do not require a draft or a writing sample.
-- **Script:** When the user wants something to be spoken on camera, write lines for the ear, marked with on-screen notes, using video-scripts.md. A ramble or raw-footage transcript can become a script; keep their real words.
+- **Script:** When the user wants something to be spoken on camera, write lines for the ear; the shoot-sheet format, hooks and on-screen notes come from the `script-my-video` skill. A ramble or raw-footage transcript can become a script; keep their real words.
 - **Interview-led:** When the profile owner requests a substantial new article, essay, newsletter, or similarly long piece in their voice, interview them for the memories, judgment, and operator detail that generic drafting cannot supply. Ask the questions before producing the final piece.
 
 Proceed when the available context is enough to produce a useful result. Ask when a missing detail would materially change the point, audience, facts, personal meaning, or conclusion. Never fill a user-owned gap with a plausible invention. In interview-led mode, the interview is part of the requested product, not a sign that the brief is inadequate.

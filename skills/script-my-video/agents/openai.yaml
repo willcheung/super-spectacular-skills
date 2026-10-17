@@ -1,0 +1,4 @@
+interface:
+  display_name: "Script My Video"
+  short_description: "Plan a Short or YouTube video before filming: hooks, shoot sheet, captures"
+  default_prompt: "Use $script-my-video to plan this video. Interview me first, then give me 2–3 hook variants, a shoot sheet with bridge lines and punchlines, and the screens to capture before I film."

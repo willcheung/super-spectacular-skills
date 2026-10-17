@@ -15,7 +15,7 @@ It catches the usual AI-writing habits: fake insights, tidy rhetorical formulas,
 - Protects supplied names, numbers, dates, results, and limitations
 - Avoids inventing personal experiences, opinions, or endorsements
 - Flags claims the supplied material does not support
-- Writes video scripts for Shorts, Reels, TikTok, and long-form YouTube, with on-screen notes the `make-my-video-awesome` skill can use
+- Supplies the voice for video scripts; the plan and shoot-sheet format live in [script-my-video](../script-my-video/)
 - Shapes Substack-style build logs and takes: title, plain headings, pro tips, an honest verdict
 - Works with essays, articles, newsletters, social posts, notes, emails, and similar copy
 
@@ -117,7 +117,6 @@ The `agents/openai.yaml` file adds optional OpenAI interface metadata. It does n
 - `references/conversational-guide.md` contains detailed voice guidance and examples.
 - `references/writer-voice-profile.md` contains Will Cheung's voice profile: recurring language decisions from his blog and on-camera delivery, not copies of his articles.
 - `references/blog-posts.md` contains the shape of a blog post or newsletter.
-- `references/video-scripts.md` contains Short and long-form YouTube script formats.
 - `references/interview-led-writing.md` contains the interview-first long-form workflow, background, voice constraints, and optional article architecture.
 - `agents/openai.yaml` provides optional OpenAI display metadata.
 

@@ -143,7 +143,7 @@ Habits, not a template. Use when the material supports them; blog-posts.md has t
 
 ### How he talks on camera
 
-His spoken voice (Shorts, YouTube) is looser and faster than the blog. See video-scripts.md for script format.
+His spoken voice (Shorts, YouTube) is looser and faster than the blog. Script format lives in the `script-my-video` skill.
 
 - Opens with a question the video answers, or a bold verdict.
 - Signposts out loud: "Here's what I mean." "So I gave it a job." "The first lesson is… The second… Finally…"
