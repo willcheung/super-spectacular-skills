@@ -10,6 +10,7 @@ edit.json (paths relative to the file; the # comments are for illustration only,
   "width": 1080, "height": 1920,       # 1080x1920 for Shorts, 1920x1080 for long-form
   "fps": 30,
   "warmth": "light",                   # none | light | medium (taste grade on top)
+  "voice": "none",                     # none | clean (phone mic in an echoey room: cut rumble, hiss, echo tails)
   "handle": "@yourhandle",             # optional; sync_data.py puts it on the end card
   "segments": [                        # [label, clip, start_s, end_s] on the source clip
     ["hook", "IMG_7825", 14.66, 25.70]
@@ -59,6 +60,20 @@ def is_hlg(path):
                          capture_output=True, text=True).stdout
     # csv output can carry a trailing comma from side data (e.g. iPhone rotation)
     return out.strip().split(",")[0] == "arib-std-b67"
+
+
+# Speech cleanup before loudness. "clean" is for a phone mic in an untreated room:
+# rumble cut, FFT denoise, a soft gate that trims echo tails between words, a mud
+# cut and presence lift, gentle compression, de-essing. It reduces echo; it can't
+# remove it the way an ML dereverb model can.
+VOICE = {
+    "none": "",
+    "clean": ("highpass=f=90,afftdn=nr=14:nf=-40:tn=1,"
+              "agate=threshold=0.02:ratio=3:attack=5:release=120:range=0.25,"
+              "equalizer=f=300:t=q:w=1.2:g=-4,equalizer=f=3200:t=q:w=1.5:g=3,"
+              "equalizer=f=7000:t=q:w=2:g=-2,"
+              "acompressor=threshold=-22dB:ratio=3:attack=8:release=150:makeup=4,deesser,"),
+}
 
 
 def color_chain(path, w, h, warmth):
@@ -125,6 +140,7 @@ def main(cfg_path):
     out = (base / cfg.get("out_dir", "assets")).resolve()
     w, h, fps = cfg.get("width", 1080), cfg.get("height", 1920), cfg.get("fps", 30)
     warmth = cfg.get("warmth", "light")
+    voice = VOICE[cfg.get("voice", "none")]
     out.mkdir(parents=True, exist_ok=True)
 
     cache, pieces, timeline, t = {}, [], [], 0.0
@@ -150,7 +166,7 @@ def main(cfg_path):
                  f"afade=t=in:d=0.012,afade=t=out:st={max(0, d - 0.012):.3f}:d=0.012[a{n}]")
     f.append("".join(f"[v{n}][a{n}]" for n in range(len(pieces))) +
              f"concat=n={len(pieces)}:v=1:a=1[vc][ac]")
-    f.append("[ac]loudnorm=I=-14:TP=-1.5:LRA=11,aresample=48000[ao]")
+    f.append(f"[ac]{voice}loudnorm=I=-14:TP=-1.5:LRA=11,aresample=48000[ao]")
     cmd = ["ffmpeg", "-v", "error", "-y"]
     for p in clips:
         cmd += ["-i", str(p)]
