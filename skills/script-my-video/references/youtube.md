@@ -16,6 +16,10 @@ A long video is a build or a deep story told in chapters. It has to be evergreen
 4. **Recap:** only if the video is long enough that viewers need it. Decisions or tips, not a summary of what they just watched.
 5. **End screen (last 20 s):** what to watch next, plus the follow line.
 
+## The challenge format
+
+A strong shape for a build video: **a person, a transformation, a time limit** ("a total beginner ships an app in 7 days"). Chapters follow the days or stages, each ending on the next open question ("we'll check the numbers tomorrow"). Plan a real low point before the win (the first result is bad, someone wants to quit) and don't skip it in the edit: the comeback only lands if the setback was shown. Never stage a setback that didn't happen.
+
 ## Plan extras
 
 - **Research notes:** what you read and what it changed, separate from the sources table.

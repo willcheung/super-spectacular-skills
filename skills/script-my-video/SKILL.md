@@ -46,6 +46,11 @@ Who it's for · the one idea · what the viewer walks away with · the main rece
 
 One idea per video. If the brief needs two ideas, it's two videos.
 
+**Three idea tests before writing anything.** If one fails, fix the idea or pick another; scripting won't rescue it.
+1. **Zero context:** a stranger scrolling past gets it without knowing the niche, the tool, or the news. Insider ideas can still work as search-led YouTube titles, but they rarely travel in a swipe feed.
+2. **A setback and a comeback:** something goes wrong before the payoff (it failed, it got the message wrong, the number looked bad), then the recovery. Hook → build-up → payoff alone is predictable, and predictable is when people leave.
+3. **An open loop:** the hook can leave a question the video answers.
+
 ### 3. Title and hooks
 
 Write **2–3 hook variants, word for word**, and the creator films all of them.
@@ -54,9 +59,10 @@ Write **2–3 hook variants, word for word**, and the creator films all of them.
 - **Each variant is a different shape**, so the takes test something: an outcome or number, a failure, a contrarian claim. Fill each shape with one of the creator's specific facts; a shape with no fact is filler.
 - **Provocative, even controversial, and true.** A cautious hook is the failure mode. But never claim more than the receipt shows, and never put words in someone's mouth.
 - **Lead with the human stakes; name the tool second.** "My AI works while I sleep" needs no context; a product name does.
+- **Open a loop, don't close it.** The hook plants a question the video answers ("why would you kill it?", "how did it do that?"). It doesn't have to be phrased as a question; a statement with an obvious "why?" works as well. A hook that gives away the result ("This YouTuber turned 100 cans into powder") leaves no reason to stay.
 - **Each hook names its first frame:** what's on screen besides the face, and the 3–6 word cover text. Line, visual and text land together in the first second.
 
-Add the upload title and cover text. For long-form, the thumbnail text must add to the title, not repeat it.
+Add the cover text and **one title or caption per platform**: the same video is found differently on each. Swipe feeds (TikTok, Reels) rank on watch behavior, so the caption and cover carry the human stakes. YouTube also surfaces Shorts through search and topic, so the YouTube title leads with the words people actually search for (the tool, the topic), then the stakes. Pull those words from YouTube Studio's search insights when the creator has them. For long-form, the thumbnail text must add to the title, not repeat it.
 
 ### 4. Sources
 

@@ -8,7 +8,7 @@ One idea, one receipt, 35–50 seconds. Longer only when the story clearly earns
 |---|---|---|
 | Hook | 0–3 s | The claim, number or verdict, as the first spoken words. First frame and cover text land with it. |
 | Setup | 3–10 s | The one idea in one sentence, or the situation that makes the hook true. A short signpost into the story ("Here's what I mean."). |
-| Proof | 10–35 s | What happened, shown on the real screen. One concrete moment beats three vague ones. This is where most of the on-screen work goes. |
+| Proof | 10–35 s | What happened, shown on the real screen. One concrete moment beats three vague ones. When the story has a setback (it broke, it got it wrong, the first number was bad), put it here and then the comeback: it keeps the arc from being predictable. This is where most of the on-screen work goes. |
 | Payoff | 35–45 s | What it means for the viewer: a decision rule, a lesson, or the twist. Must pay off the hook's promise. |
 | Close | last 3–5 s | A callback or a question for the comments, then the CTA. No "this is the kind of stuff I…" warm-up. |
 

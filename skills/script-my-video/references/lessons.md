@@ -10,3 +10,6 @@ General lessons that apply to anyone's script. Newest last. Format: date — rul
 - 2026-10-12 — Plan one visual thread that runs the whole video and a transition out of every beat. — A new card on every beat resets the viewer every few seconds, even when the lines flow.
 - 2026-10-13 — Write 1–2 punchlines per clip word for word. — Jokes depend on exact wording; a talking point like "make a joke about X" rarely lands when riffed.
 - 2026-10-13 — Screen captures come before filming, and the script follows what they show. — A capture can contradict the plan (a status that reads "degraded", a timestamp later than claimed); finding that after filming means reshooting the line.
+- 2026-10-18 — Run three idea tests before scripting: zero context, a setback and comeback, an open loop. — Most weak videos are weak ideas; no hook or edit fixes an idea a stranger can't follow or a story with no tension.
+- 2026-10-18 — A hook opens a loop; it doesn't have to be a question. — Statements with an obvious "why?" hold viewers as well as questions do; what loses them is a hook that already gives away the result.
+- 2026-10-18 — Write a separate title or caption per platform. — The same video can win in a swipe feed and flop in search, or the reverse; swipe feeds reward human stakes and YouTube rewards the words people search for.
