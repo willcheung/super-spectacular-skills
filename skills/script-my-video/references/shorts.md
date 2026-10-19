@@ -19,6 +19,8 @@ One idea, one receipt, 35–50 seconds. Longer only when the story clearly earns
 - **Lines of 5–12 words.** Each line should survive being cut on its own; short lines give the edit more cut points.
 - **Say numbers the way you'd say them out loud:** "three hours", "a whole month of tokens in one weekend".
 - **Joke cadence follows the creator's voice.** For a high-energy sarcastic style, one written punchline every 10–15 seconds, each on its own line so the edit can land a meme beat on it.
+- **Deliver the value fast.** Name the framework, the number or the result by about 5 s; every extra second before the payoff starts tilts the retention line down.
+- **Never recap.** A summary at the end is where viewers leave; end on the payoff or a callback.
 - **The close earns the comment.** A specific question the viewer can answer in a few words ("What job would you give it?") beats "let me know what you think".
 - **Cover text = the hook in 3–6 big words.** The caption repeats the promise and ends with a question.
 

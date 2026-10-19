@@ -47,7 +47,7 @@ Also look for collisions: captions over cards or text, text over the face, anyth
 
 **3. Length.** Actual length vs the creator's target. Is it earned? If not, the exact cuts (quoted, timestamped, seconds saved) and the new length.
 
-**4. Payoff and ending.** Does the video pay off the hook with something concrete? Does the last line land, loop, or trail off? Does it end on the question/CTA, not a sign-off?
+**4. Payoff and ending.** Does the video pay off the hook with something concrete? Does the last line land, loop, or trail off? Does it end on the question/CTA, not a sign-off? Flag any end-of-video recap (viewers leave at summaries). Then the signal: is there one moment a viewer would share, save or answer in the comments? If they'd watch it all and do nothing, say so.
 
 **5. Visuals.** Readability at phone size, collisions, anything empty, cropped, frozen, or half-loaded, face time vs takeover time. Timestamp every issue.
 

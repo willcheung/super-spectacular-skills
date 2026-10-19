@@ -26,6 +26,16 @@ Depth follows what the video *does*, not its length: any claim stated as fact on
 - **Voice.** Spoken lines come from the creator's own material. Use the `no-ai-slop-writing` skill for anything written word for word. If the creator is that skill's profiled writer, load its `references/writer-voice-profile.md`, including the "How he talks on camera" and "Video scripts" sections (they set the humor level for scripts).
 - **The creator's own setup.** Look in their project instructions (`AGENTS.md`/`CLAUDE.md`) for where plans are saved, their tracker (ideas, status, results log), and their benchmarks. Use those paths; don't invent them. With no setup, save `plans/<video-name>.md` next to their notes and say where it went.
 
+## Where ideas come from
+
+When the creator asks what to make (not how to script a given idea), source ideas from the audience before brainstorming:
+
+- **Earned the right to explain:** only topics they've actually done or are a few steps ahead on. The test: could they talk 30 minutes about it with zero prep? That's also what makes the video impossible for a generic creator to copy.
+- **A swipe file:** the top posts in their niche on the platform they care most about. Note each hook and topic. Borrow the hook's *shape*, never the content, and fill it with the creator's own receipt.
+- **Unanswered comments:** read the comments under popular videos in the niche (and the creator's own) for questions nobody answered. Those are next videos.
+- **The viewer's words:** keep a list of problems in the exact words viewers use ("I don't have the money and I'm scared I'll look stupid"), and use those words in hooks and titles instead of the creator's jargon.
+- **Repeatable formats:** a creator who repeats a few named formats and a recurring phrase gets recognized faster than one who invents a new shape every time. Prefer an idea that fits one of their existing formats.
+
 ## Workflow
 
 ### 1. Interview (one round, before writing anything)
