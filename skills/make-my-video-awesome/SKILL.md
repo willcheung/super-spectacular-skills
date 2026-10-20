@@ -53,6 +53,8 @@ Read every transcript before choosing anything. Raw talking-head footage has ret
 - **One take per beat.** When a line was recorded twice, keep the cleaner, more energetic one.
 - **Cut asides that don't serve the arc** (a coffee run, a detail only the speaker cares about). Mention what you dropped so the user can veto.
 - **Keep the speaker's words.** You choose and order; you never paraphrase or invent lines.
+- **Obey spoken edit cues.** Creators who record one long take often direct the edit out loud: "cut that out", "let me do that again", "that one's good", "take two". Search the transcripts for them first. Cut the cue itself, drop what it rejects, prefer what it approves.
+- **One edit, several lengths.** The edit plan is plain text, so a shorter cutdown (a 15–20 s version that keeps the hook, the one best beat and the payoff) or a landscape version is just another segment list. Offer one when a platform or an ad test would use it.
 
 Scaffold the project first, into a new folder (`init` refuses a folder that already has files):
 

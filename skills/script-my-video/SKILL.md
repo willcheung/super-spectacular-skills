@@ -33,6 +33,7 @@ When the creator asks what to make (not how to script a given idea), source idea
 - **Earned the right to explain:** only topics they've actually done or are a few steps ahead on. The test: could they talk 30 minutes about it with zero prep? That's also what makes the video impossible for a generic creator to copy.
 - **A swipe file:** the top posts in their niche on the platform they care most about. Note each hook and topic. Borrow the hook's *shape*, never the content, and fill it with the creator's own receipt.
 - **Unanswered comments:** read the comments under popular videos in the niche (and the creator's own) for questions nobody answered. Those are next videos.
+- **The creator's own winners:** transcribe their best-performing past videos and read them next to their comments. That shows how their hooks, timing and jokes actually work, which beats guessing at their style, and the comments become the next ideas.
 - **The viewer's words:** keep a list of problems in the exact words viewers use ("I don't have the money and I'm scared I'll look stupid"), and use those words in hooks and titles instead of the creator's jargon.
 - **Repeatable formats:** a creator who repeats a few named formats and a recurring phrase gets recognized faster than one who invents a new shape every time. Prefer an idea that fits one of their existing formats.
 
