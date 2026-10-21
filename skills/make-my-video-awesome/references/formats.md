@@ -23,3 +23,7 @@ A 64 s Short renders in ~2 minutes through HyperFrames. A 15-minute video render
 4. Composite them onto the A-roll at their timestamps with FFmpeg `overlay` / concat.
 
 A note then re-renders only the piece that changed. This path is described, not yet battle-tested: verify the first long-form edit carefully (sync, alpha edges, color match between A-roll and takeovers) and record what you learn in lessons.md.
+
+## Separate screen and face recordings
+
+When the creator records the screen silently and the face-cam separately, the face-cam audio is the master track. Cut the A-roll from the face-cam transcript first, then place each screen clip on the words that describe it (the creator usually filmed while watching the recording, so the spoken cue tells you which file and which moment). Layouts, in order of preference: full-screen takeover with the face in a small corner bubble during demos; straight cuts between face and screen for short proofs. Trim dead cursor time inside a screen clip instead of speeding up the whole clip, and match the screen clip's length to the line, not the other way round. Ask for a re-record rather than stretching a clip that's too short.
