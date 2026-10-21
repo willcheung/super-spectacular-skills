@@ -73,23 +73,33 @@ python3 scripts/transcribe.py cut PROJECT_DIR
 
 Read the cut's transcript start to finish. Look for stray fragments at segment seams ("and, but if…", a half "during"). Transcript word times can still drift (Whisper by 0.4–0.6 s or more; Parakeet less), so when a seam is dirty, find real silence with `python3 scripts/energy.py CLIP FROM TO` and move the boundary into it. Trust the energy bars over the transcript. Re-cut until the transcript reads clean.
 
-### 5. Build the dress
-
-Copy [templates/short-example.html](templates/short-example.html) to `PROJECT_DIR/index.html`: a complete, working Short (camera engine, caption engine, card/stamp/counter/takeover/meme components) with `__WORDS__`/`__CUTS__`/`__HANDLE__` placeholders. Its overlays are the worked example's content; they reference `assets/usage.png`, which isn't bundled, so swap in this video's proof or delete that section. Replace its overlay content with this video's beats; keep the engines. Then:
-
-```bash
-python3 scripts/sync_data.py PROJECT_DIR
-```
+### 5. Plan the beats, then build the dress
 
 Before designing graphics, list the moments where **real material** would beat a generated graphic (the creator's screenshots, screen recordings, dashboards, chat threads, posts they're reacting to, their blog post's images) and ask for them, or pull them from sources the creator points you to. Real footage of the thing reads as genuine; recreated UI reads as AI-generated, and short-form audiences notice. Generate a graphic only when nothing real exists or the point is conceptual (a thesis line, a counter, a meme beat). See style.md, "Real material first".
 
 Also scan the transcript for claims about companies, people, or public numbers ("Meta laid off 600 people", "it's 100× cheaper"). For each one, find the original source, capture the page, and show it with the backing sentence highlighted (style.md, "Articles and news"). If you can't find a source, or the source says less than the line does, tell the creator before building; don't put it on screen as fact.
 
-Plan overlays from the cut transcript's word times: each overlay lands on the word that motivates it (a "3 HOURS" timer starts on "three hours"; a stamp slams on "terrible"). See style.md for which beat gets which treatment.
+Plan overlays from the cut transcript's word times: each overlay lands on the word that motivates it (a "3 HOURS" timer starts on "three hours"; a stamp slams on "terrible"). See style.md for which beat gets which treatment and the layouts (camera, punch, card, split, takeover, meme).
+
+**Show the beat plan and wait for a go.** One line per beat, in order: time, layout, what's on screen, and the words spoken there. For example:
+
+```text
+0:00–2.6   card      hook card "3 HOURS" over the face            "I gave the AI a three-hour job."
+2.6–5.5    split     the agent's "done" message on top, me below  "It said it was done."
+5.5–7.9    takeover  my bug report, scrolling, captions on        "Here's everything it broke."
+```
+
+Under it, list the real material you still need from the creator and the source link for each claim. A note here costs a line of text; the same note after the build costs a rebuild. Build once they say go (a reordered or dropped beat is a go with changes).
+
+Then copy [templates/short-example.html](templates/short-example.html) to `PROJECT_DIR/index.html`: a complete, working Short (camera engine, caption engine, card/stamp/counter/takeover/meme components) with `__WORDS__`/`__CUTS__`/`__HANDLE__` placeholders. Its overlays are the worked example's content; they reference `assets/usage.png`, which isn't bundled, so swap in this video's proof or delete that section. Replace its overlay content with this video's beats; keep the engines. Then:
+
+```bash
+python3 scripts/sync_data.py PROJECT_DIR
+```
 
 ### 6. Check, snapshot, preview
 
-Run `npm run check` (fix every error; resolve contrast warnings), snapshot the moment each overlay lands (`npx hyperframes snapshot --at t1,t2,…`) and actually look at the contact sheet, then open the Studio preview (`npx hyperframes preview --background`) for the user.
+Run `npm run check` (fix every error; resolve contrast warnings), snapshot the moment each overlay lands (`npx hyperframes snapshot --at t1,t2,…`) and actually look at the contact sheet. Run the "In the frames" half of the final check (end of step 9) on those snapshots and fix what fails, so the creator's notes go to taste, not mistakes. Then open the Studio preview (`npx hyperframes preview --background`) for the user.
 
 ### 7. Independent roast
 
@@ -111,6 +121,28 @@ python3 scripts/verify.py renders/NAME.mp4
 ```
 
 Render only after the user approves the preview. Then check the verify output: bt709 tags (an HDR tag means players will wash it out), zero frozen spans, sensible luma levels. Look at the contact sheet before saying it's done.
+
+Make a 720p copy for phones, chat and email (a few MB instead of tens) in `renders/share/`. For long-form, use `scale=-2:720`.
+
+```bash
+mkdir -p renders/share && ffmpeg -i renders/NAME.mp4 -vf scale=720:-2 -c:v libx264 -crf 26 -preset medium -pix_fmt yuv420p -c:a aac -b:a 128k -movflags +faststart renders/share/NAME.mp4
+```
+
+**Final check before handing over.** Answer each yes or no from the render's contact sheet and snapshots; fix any no first, and tell the creator about anything you couldn't check. Most of these are rules from style.md and lessons.md, gathered in one place because a miss on any of them costs views.
+
+In the frames:
+- The first 3 seconds make the claim with the sound off (hook card, captions, face or the strongest visual).
+- Captions stay clear of the mouth and chin on every framing, and of cards and platform UI.
+- No subtitled clip plays under our captions.
+- Nothing off-camera sits still: every takeover or split has motion (a push, a drift, highlights or boxes landing on the words).
+- Every line of on-screen text is whole and readable at phone size.
+
+In the edit:
+- The hook's promise is paid off with something concrete before the end.
+- Every number and claim on screen comes from the footage, the creator's data, or a linked source.
+- Logos come from official files.
+- The creator approved the beat plan and every note since has been applied.
+- No clipped word or stray fragment at any cut (read the cut transcript once more).
 
 ## Things that went wrong before (and why the scripts exist)
 

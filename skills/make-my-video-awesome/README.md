@@ -9,6 +9,7 @@ You record and give notes. The agent does the rest:
 - fixes iPhone HDR footage so it doesn't look washed out
 - adds punch-in zooms, word-by-word captions, kinetic cards, counters, stamps, full-screen screenshot takeovers, and meme beats with [HyperFrames](https://hyperframes.heygen.com)
 - renders an MP4 and checks it (color tags, still/frozen spans, levels, contact sheet)
+- shows you the beat plan before building, so changes land before anything is built
 - writes every preference from your notes into `references/lessons.md`, so the next edit already knows
 
 ## Requirements
@@ -53,3 +54,7 @@ Use make-my-video-awesome to turn these 12 clips into a 10-minute YouTube video 
 | `templates/short-example.html` | A complete working Short composition to start from |
 
 Tip: turn off **Settings → Camera → Record Video → HDR Video** on iPhone for footage meant for this pipeline. Color then needs no conversion at all.
+
+## Credits
+
+The beat-plan check before building, the final check in step 9, and a few Shorts rules in `references/style.md` (the split layout, sound-off openings, moving off-camera visuals, captions clear of the mouth, whole lines of text, official logos, no subtitled clips under the captions) are adapted from [video-short](https://github.com/petergyang/video-short) by Peter Yang (MIT License).
