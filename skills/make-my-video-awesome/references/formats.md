@@ -9,7 +9,7 @@ One skill, two formats. Decide from what the user asks for; if they don't say, i
 | Zoom rhythm | every jump cut alternates; 5–6 punches/min | every 2–3 cuts; fewer punches |
 | Graphics density | something new every 2–4 s | cards at chapter changes, proof moments, and lists |
 | Captions | big word-by-word, center | smaller lower-third, or off (YouTube CC exists) |
-| Structure | hook → thesis → story → lessons → CTA | cold open → intro → chapters (with chapter cards) → recap → end screen |
+| Structure | hook → thesis → story → lessons → CTA | cold open (20–30 s: event, stakes, roadmap) → intro → chapters (with chapter cards and a re-hook at each break) → recap only if viewers need it → end screen |
 | Extra deliverables | — | chapter timestamps for the description |
 | Sound | per the creator's preference (ask; the owner's is in brand-profile.md) | consider a quiet bed; silence under 10+ minutes of talking feels empty — ask |
 

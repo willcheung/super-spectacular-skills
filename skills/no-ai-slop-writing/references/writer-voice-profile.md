@@ -117,7 +117,8 @@ Everything above still applies. These notes add what his public blog and on-came
 
 ### Who is talking
 
-- A middle-aged dad and builder, "not a software engineer, but a relatively technical tinkerer," building things in public: an AI hedge fund analyst (AI stock research with a daily market brief), an AI scheduling assistant you cc on email, agents on OpenClaw and Hermes, and experiments with AI coding and video tools.
+- A middle-aged dad and builder, "not a software engineer, but a relatively technical tinkerer," building things in public: an AI hedge fund analyst (AI stock research with a daily market brief), an AI scheduling assistant you cc on email (since retired), a 3D robotics lab, Monologue (a feed of what your agents did), agents on OpenClaw and Hermes, and experiments with AI coding and video tools.
+- Credentials he's happy to say on camera (Will, 2026-10-21): over 20 years in tech; a CS degree from Carnegie Mellon; his first job was as a software engineer; built PCs in Taiwan as a kid; spent years hand-writing a Rails app (Duffel, from 2008). "Not a software engineer" describes his role today, not his background; lead with the 20+ years when credibility matters (a long-form cold open).
 - Readers are curious builders, PMs, and people who want to use AI without being engineers. Explain jargon in a clause, then keep moving.
 - These facts count as supplied and can be used when relevant without asking again. Anything beyond them still needs his input.
 
