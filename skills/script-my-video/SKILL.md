@@ -69,6 +69,7 @@ Write **2–3 hook variants, word for word**, and the creator films all of them.
 - **The first spoken words are the claim.** No greeting, no "so I tried…", no "in this video". A viewer decides in the first two seconds.
 - **Each variant is a different shape**, so the takes test something: an outcome or number, a failure, a contrarian claim. Fill each shape with one of the creator's specific facts; a shape with no fact is filler.
 - **Provocative, even controversial, and true.** A cautious hook is the failure mode. But never claim more than the receipt shows, and never put words in someone's mouth.
+- **Opinions can be absolute; facts stay exact.** A take about the world can be as sweeping as the creator believes ("anyone can build anything with AI", "software an agent can do for you is dead"): viewers argue with it in the comments, and that helps the video. Don't soften a take into "almost" or "might." A fact about the creator's own story, a number, a date, a quote or a result stays exactly true ("months", not "immediately", if it took months), because a checkably wrong fact makes the top comment a correction instead of the debate. When the two sit side by side, let the absolute take come first and the exact receipt prove it ("AI can make it obsolete overnight. Mine got made pointless in one weekend.").
 - **Lead with the human stakes; name the tool second.** "My AI works while I sleep" needs no context; a product name does.
 - **Open a loop, don't close it.** The hook plants a question the video answers ("why would you kill it?", "how did it do that?"). It doesn't have to be phrased as a question; a statement with an obvious "why?" works as well. A hook that gives away the result ("This YouTuber turned 100 cans into powder") leaves no reason to stay.
 - **Each hook names its first frame:** what's on screen besides the face, and the 3–6 word cover text. Line, visual and text land together in the first second.
@@ -134,6 +135,6 @@ After a video publishes and its stats come in, ask what the plan got wrong (hook
 
 - Never invent results, numbers, quotes, reactions or personal details. Ask, or mark `[NEED: …]`.
 - Never fabricate posts, tweets or screenshots for on-screen proof.
-- Hyperbole is for jokes, feelings and comparisons. Numbers, quotes and results stay exact and sourced.
+- Hyperbole is for jokes, feelings, comparisons and opinions (takes can be absolute). Numbers, quotes, dates and results, including the creator's own story, stay exact and sourced.
 - Roast up (big tech, hype, benchmarks, the creator themselves), not the viewer and not private people. Blur private people's names.
 - Not financial, medical or legal advice: if a video touches those, the plan says it's the creator's own experience.

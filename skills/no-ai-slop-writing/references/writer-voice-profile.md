@@ -166,7 +166,7 @@ For Will's video scripts (Shorts, YouTube, shoot sheets), this section overrides
 - **Roast up and roast himself:** big tech, hype bros, benchmarks, his own agents, his own laziness. Not the viewer, and not private people.
 - **Builder slang for the in-crowd:** slop, cooked, mogs, trust-me-bro benchmarks, tokenmaxxing.
 - **End on a callback.** The last line pays off a joke from the setup, then the CTA.
-- **Hyperbole must read as a joke; facts stay exact.** Exaggerate feelings, stakes, and comparisons, never numbers, quotes, or results. Every factual claim still needs a source.
+- **Hyperbole must read as a joke or a take; facts stay exact.** Exaggerate feelings, stakes, comparisons and opinions, never numbers, quotes, dates, or results. Will likes absolute, arguable words in his takes ("anyone can build anything"; Will, 2026-10-21): keep them, don't hedge them to "almost." Facts about his own story stay exactly true. Every factual claim still needs a source.
 - **Write the punchlines word for word.** Jokes depend on wording, so the shoot sheet gives each clip 1–2 written lines he can say as written or riff on.
 - **PG-13 by default:** edgy takes and sarcasm yes, sexual or gross-out jokes no, unless Will asks.
 - Borrow Fireship's moves, never its jokes, catchphrases, or sign-off. Write new jokes from Will's own material.
