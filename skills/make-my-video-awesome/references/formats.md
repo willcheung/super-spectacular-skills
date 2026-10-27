@@ -10,7 +10,7 @@ One skill, two formats. Decide from what the user asks for; if they don't say, i
 | Graphics density | something new every 2–4 s | cards at chapter changes, proof moments, and lists |
 | Captions | big word-by-word, center | smaller lower-third, or off (YouTube CC exists) |
 | Structure | hook → thesis → story → lessons → CTA | cold open (20–30 s: event, stakes, roadmap) → intro → chapters (with chapter cards and a re-hook at each break) → recap only if viewers need it → end screen |
-| Extra deliverables | — | chapter timestamps for the description |
+| Extra deliverables | — | the post package: a title plus an A/B title; two covers that test different ideas, paired so neither repeats its title; a description (below); chapter timestamps; a source link for every on-screen claim; the creator's links; a pinned comment that asks a question; an English .srt built from the cut's word timings with proper nouns corrected |
 | Sound | per the creator's preference (ask; the owner's is in brand-profile.md) | consider a quiet bed; silence under 10+ minutes of talking feels empty — ask |
 
 ## How long-form is built differently
@@ -23,6 +23,10 @@ A 64 s Short renders in ~2 minutes through HyperFrames. A 15-minute video render
 4. Composite them onto the A-roll at their timestamps with FFmpeg `overlay` / concat.
 
 A note then re-renders only the piece that changed. This path is described, not yet battle-tested: verify the first long-form edit carefully (sync, alpha edges, color match between A-roll and takeovers) and record what you learn in lessons.md.
+
+What actually worked on a 12-minute edit (2026-10-26): one HyperFrames composition over the chunked A-roll (cut and transcribe in chapter-sized chunks, then join), about 100 clips. A full render took about 25 minutes, so iterate in the Studio preview and `snapshot`, render once after approval, and budget one re-render for what `verify.py` finds. The per-piece overlay path above wasn't needed.
+
+**Long-form description:** the first two lines carry the search phrases (the title is for the home feed) and the creator's credential. Don't answer the question the cover asks; list what the video covers instead. Then chapters, the creator's links, the sources, and disclosures (re-created chats, not investment advice, not sponsored). Set the video language (it turns on auto-captions), "not made for kids", and upload the .srt.
 
 ## Separate screen and face recordings
 

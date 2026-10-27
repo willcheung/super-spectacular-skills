@@ -11,15 +11,20 @@ edit.json (paths relative to the file; the # comments are for illustration only,
   "fps": 30,
   "warmth": "light",                   # none | light | medium (taste grade on top)
   "voice": "none",                     # none | clean (phone mic in an echoey room: cut rumble, hiss, echo tails)
+  "pauses": [0.30, 0.14],              # optional [max, keep]: pauses longer than max shrink to keep.
+                                       # Shorts default; long-form sounds natural at [0.65, 0.40]
   "handle": "@yourhandle",             # optional; sync_data.py puts it on the end card
+  "clip_grade": {"IMG_8005": "curves=master='0/0 0.25/0.31 0.5/0.6 0.75/0.83 1/1'"},
+                                       # optional per-clip FFmpeg filter, after the color chain:
+                                       # e.g. lift a reshoot filmed in dimmer light to match
   "segments": [                        # [label, clip, start_s, end_s] on the source clip
     ["hook", "IMG_7825", 14.66, 25.70]
   ]
 }
 
 Per segment: boundaries snap to the quietest nearby audio frame, and pauses longer
-than MAX_GAP shrink to KEEP_GAP (jump cuts). iPhone HDR (HLG) clips are converted
-to SDR with the bundled LUT; SDR clips pass through. Output is labelled BT.709.
+than MAX_GAP shrink to KEEP_GAP (jump cuts; set per video with "pauses"). iPhone HDR
+(HLG) clips are converted to SDR with the bundled LUT; SDR clips pass through. Output is labelled BT.709.
 Writes <out_dir>/cut.mp4 and cuts.json (segment times + every cut point).
 """
 import array, json, subprocess, sys
@@ -28,7 +33,7 @@ from pathlib import Path
 SKILL = Path(__file__).resolve().parent.parent
 LUT = SKILL / "assets" / "iphone_hlg_to_sdr.cube"
 SR, HOP = 16000, 160              # 10ms analysis frames
-MAX_GAP, KEEP_GAP = 0.30, 0.14    # pauses longer than MAX_GAP shrink to KEEP_GAP
+MAX_GAP, KEEP_GAP = 0.30, 0.14    # default: pauses longer than MAX_GAP shrink to KEEP_GAP (Shorts pace)
 MIN_PIECE = 0.25                  # shorter pieces flash on screen; merge them into a neighbour
 SNAP = 0.15                       # search window (s) for snapping boundaries
 WARMTH = {
@@ -99,7 +104,7 @@ def snap(rms, t):
     return (best + 1) / 100
 
 
-def keep_ranges(rms, start, end):
+def keep_ranges(rms, start, end, max_gap=MAX_GAP, keep_gap=KEEP_GAP):
     s, e = int(start * 100), int(end * 100)
     seg = sorted(rms[s:e])
     thresh = max(seg[int(len(seg) * 0.9)] * 0.12, 60)
@@ -108,8 +113,8 @@ def keep_ranges(rms, start, end):
         if rms[i] < thresh:
             quiet = i if quiet is None else quiet
         else:
-            if quiet is not None and (i - quiet) / 100 > MAX_GAP:
-                pad = KEEP_GAP / 2
+            if quiet is not None and (i - quiet) / 100 > max_gap:
+                pad = keep_gap / 2
                 ranges.append((cur / 100, quiet / 100 + pad))
                 cur = int((i / 100 - pad) * 100)
             quiet = None
@@ -125,7 +130,7 @@ def keep_ranges(rms, start, end):
         ranges.pop()
     merged = []
     for a, b in ranges:
-        if merged and (short((a, b)) or short(merged[-1])) and a - merged[-1][1] <= MAX_GAP:
+        if merged and (short((a, b)) or short(merged[-1])) and a - merged[-1][1] <= max_gap:
             merged[-1] = (merged[-1][0], b)
         else:
             merged.append((a, b))
@@ -141,6 +146,7 @@ def main(cfg_path):
     w, h, fps = cfg.get("width", 1080), cfg.get("height", 1920), cfg.get("fps", 30)
     warmth = cfg.get("warmth", "light")
     voice = VOICE[cfg.get("voice", "none")]
+    max_gap, keep_gap = cfg.get("pauses", [MAX_GAP, KEEP_GAP])
     out.mkdir(parents=True, exist_ok=True)
 
     cache, pieces, timeline, t = {}, [], [], 0.0
@@ -148,7 +154,7 @@ def main(cfg_path):
         path = find_clip(raw, clip)
         rms = cache.setdefault(path, rms_frames(path))
         start, end = snap(rms, start), snap(rms, end)
-        rs = keep_ranges(rms, start, end)
+        rs = keep_ranges(rms, start, end, max_gap, keep_gap)
         dur = sum(b - a for a, b in rs)
         timeline.append({"label": label, "clip": clip, "src": [start, end],
                          "start": round(t, 3), "end": round(t + dur, 3)})
@@ -157,7 +163,8 @@ def main(cfg_path):
 
     clips = sorted({p for p, _, _ in pieces})
     idx = {p: i for i, p in enumerate(clips)}
-    chains = {p: color_chain(p, w, h, warmth) for p in clips}
+    grade = cfg.get("clip_grade", {})
+    chains = {p: color_chain(p, w, h, warmth) + (f",{grade[p.stem]}" if p.stem in grade else "") for p in clips}
     f = []
     for n, (p, a, b) in enumerate(pieces):
         i, d = idx[p], b - a
