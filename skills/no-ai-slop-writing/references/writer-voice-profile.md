@@ -171,3 +171,15 @@ For Will's video scripts (Shorts, YouTube, shoot sheets), this section overrides
 - **Write the punchlines word for word.** Jokes depend on wording, so the shoot sheet gives each clip 1–2 written lines he can say as written or riff on.
 - **PG-13 by default:** edgy takes and sarcasm yes, sexual or gross-out jokes no, unless Will asks.
 - Borrow Fireship's moves, never its jokes, catchphrases, or sign-off. Write new jokes from Will's own material.
+
+## Social posts: LinkedIn and X (Will, 2026-10-29)
+
+Options to reach for, not a template. Will rewrote a drafted LinkedIn post himself, cutting a ~150-word paragraph post to under 40 words after asking twice for shorter. His version suggests some moves for social copy that promotes a video or post; use the ones that fit and vary the shape:
+
+- **A few stacked short lines on what's happening**, with the last one adding a twist.
+- **A one-line verdict about himself**, with credentials folded into a phrase ("my 20-year tech career") instead of a bio paragraph.
+- **A teaser that sends people onward** ("My take in comments"), leaving the take and the link for the first comment.
+- **One signature idea from the video, compressed to a line**, so the video still has more to give.
+- **Blunt, absolute takes** ("AI is eating …"); numbers still stay exact and sourced.
+- **Self-aware jokes tend to work better aimed at the platform than at the post itself.**
+- **Lean short.** A draft that explains the whole idea leaves less reason to click.
