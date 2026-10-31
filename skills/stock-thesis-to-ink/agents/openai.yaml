@@ -1,0 +1,4 @@
+interface:
+  display_name: "Stock Thesis to Ink"
+  short_description: "Turn investment research into an evidence-backed newsletter"
+  default_prompt: "Use $stock-thesis-to-ink to turn this research into a readable newsletter with sources, a countercase, and a linked evidence appendix."
