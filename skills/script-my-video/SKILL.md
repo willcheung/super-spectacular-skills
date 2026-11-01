@@ -51,11 +51,17 @@ Ask 3–5 short questions, only what their notes, posts and tracker can't answer
 
 Their answers are source material. Never fill a gap with a plausible invention; mark it `[NEED: …]` and keep going.
 
-### 2. Brief (five lines)
+### 2. Brief: start with the viewer
 
-Who it's for · the one idea · what the viewer walks away with · the main receipt (the single best piece of proof) · what's *not* in this one (the idea that belongs in a different video).
+Before writing titles or hooks, complete this sentence in the plan:
 
-One idea per video. If the brief needs two ideas, it's two videos.
+> Someone watches this because they want ___; by the end, they get ___.
+
+Use the viewer's language. Name one specific desire and a payoff the material can deliver: a usable answer, a better-informed decision, a discovery, recognition, perspective, or an entertaining experience. Treat the viewer's motive as a hypothesis unless audience evidence supports it. A topic or a tool name alone leaves the reason to watch unanswered; replace vague benefits such as "learn about AI" with the actual question or outcome. An open question can earn perspective without a tidy solution.
+
+Complete the brief with who it's for, the one idea, the main receipt, one intended emotional movement, the beat that delivers the promised payoff, and what's *not* in this video. The creator's story and evidence must earn that payoff. Use curiosity, tension, surprise, recognition or humor where the material supports them; preserve sincere moments and the creator's actual feelings.
+
+One idea per video. If the brief needs two ideas, it's two videos. If the evidence cannot support the viewer sentence, narrow the promise or mark the missing proof before scripting.
 
 **Three idea tests before writing anything.** If one fails, fix the idea or pick another; scripting won't rescue it.
 1. **Zero context:** a stranger scrolling past gets it without knowing the niche, the tool, or the news. Insider ideas can still work as search-led YouTube titles, but they rarely travel in a swipe feed.
@@ -117,6 +123,8 @@ Length check: about 2.5 spoken words per second (≈150 a minute).
 - **Questions before filming:** every `[NEED]` in one list.
 
 ### 8. Hook check, then approval
+
+Re-read the viewer sentence against the title, opening and payoff beat. Confirm that they promise and deliver the same experience, and that the payoff is present in the planned story and proof. Revise an unsupported promise before handing over the plan.
 
 For a Short, run the `roast-my-short` skill in hook-check mode on the shoot sheet (pass the creator's tracker so it scores against their real benchmarks) and fold its hook and length notes in. Then the creator approves or leaves notes. Then they film.
 

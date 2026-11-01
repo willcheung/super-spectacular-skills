@@ -4,6 +4,10 @@
 
 **How to use it:** say the hooks, bridge lines, punchlines and close word for word, 2–3 takes of each hook. For everything else, read the question and answer it to camera in your own words; the talking points are reminders, not lines. Film the clips in order in one recording. If you flub one, restart it from its bridge line. Ramble if you want; it gets cut.
 
+**Viewer brief (planning only; not spoken):** Someone watches this because they want <specific viewer desire>; by the end, they get <one payoff this story can deliver>.
+
+**Intended viewer feeling:** <starting feeling → earned destination> · **Payoff delivered in:** <clip/chapter and the story moment or proof that earns it>
+
 **Title:** <upload title> · **Cover text:** <3–6 words>
 
 ---
