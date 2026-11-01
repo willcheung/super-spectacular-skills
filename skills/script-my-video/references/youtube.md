@@ -59,3 +59,4 @@ A build usually produces 1–3 Shorts as well. Lines pulled from the middle of a
 - **Give each Short its own hook variants,** word for word, filmed in the same session as standalone takes.
 - **Give each its own close and CTA.** A chapter's takeaway line is rarely a good Short ending.
 - Write each Short's clips with [shorts.md](shorts.md) rules, and mark which long-video footage it reuses.
+- **Skip stories already published as a Short.** A long video often retells a story the channel already posted; a Short of that story is a rerun even with a new angle or a new ending, and followers notice. Check the published list before ranking candidates, and pick the chapters no Short has told yet.
