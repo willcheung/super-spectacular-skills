@@ -17,6 +17,11 @@ edit.json (paths relative to the file; the # comments are for illustration only,
   "clip_grade": {"IMG_8005": "curves=master='0/0 0.25/0.31 0.5/0.6 0.75/0.83 1/1'"},
                                        # optional per-clip FFmpeg filter, after the color chain:
                                        # e.g. lift a reshoot filmed in dimmer light to match
+  "exact_start": ["hook"],             # optional, by segment label: keep this in-point as written. For a line that runs
+                                       # into a word you're cutting ("And I started…"), find the dip and skip snapping.
+  "face_x": {"hook": 0.56},            # optional, by segment label: the face's horizontal centre in the
+                                       # source (0-1). A landscape clip in a portrait cut crops around it;
+                                       # without it the crop is centred on the frame
   "segments": [                        # [label, clip, start_s, end_s] on the source clip
     ["hook", "IMG_7825", 14.66, 25.70]
   ]
@@ -81,13 +86,16 @@ VOICE = {
 }
 
 
-def color_chain(path, w, h, warmth):
+def color_chain(path, w, h, warmth, face_x=None):
+    # Fill the frame and crop, so a landscape source in a portrait cut isn't stretched.
+    crop = f"crop={w}:{h}" if face_x is None else f"crop={w}:{h}:'min(iw-ow,max(0,iw*{face_x}-ow/2))':(ih-oh)/2"
     if is_hlg(path):
-        base = (f"scale={w}:{h}:in_color_matrix=bt2020:in_range=tv:out_range=pc,format=gbrp,"
+        base = (f"scale={w}:{h}:force_original_aspect_ratio=increase:in_color_matrix=bt2020:in_range=tv:out_range=pc,"
+                f"{crop},format=gbrp,"
                 f"lut3d=file='{ff_escape(LUT)}':interp=tetrahedral,"
                 f"scale=out_color_matrix=bt709:in_range=pc:out_range=tv,format=yuv420p,{SDR_TAGS}")
     else:
-        base = f"scale={w}:{h},format=yuv420p,{SDR_TAGS}"
+        base = f"scale={w}:{h}:force_original_aspect_ratio=increase,{crop},format=yuv420p,{SDR_TAGS}"
     return base + (f",{WARMTH[warmth]}" if WARMTH[warmth] else "")
 
 
@@ -153,22 +161,25 @@ def main(cfg_path):
     for label, clip, start, end in cfg["segments"]:
         path = find_clip(raw, clip)
         rms = cache.setdefault(path, rms_frames(path))
-        start, end = snap(rms, start), snap(rms, end)
+        exact = cfg.get("exact_start", [])
+        start, end = (start if label in exact else snap(rms, start)), snap(rms, end)
         rs = keep_ranges(rms, start, end, max_gap, keep_gap)
         dur = sum(b - a for a, b in rs)
         timeline.append({"label": label, "clip": clip, "src": [start, end],
                          "start": round(t, 3), "end": round(t + dur, 3)})
         t += dur
-        pieces += [(path, a, b) for a, b in rs]
+        fx = cfg.get("face_x", {}).get(label)
+        pieces += [(path, a, b, fx) for a, b in rs]
 
-    clips = sorted({p for p, _, _ in pieces})
+    clips = sorted({p for p, _, _, _ in pieces})
     idx = {p: i for i, p in enumerate(clips)}
     grade = cfg.get("clip_grade", {})
-    chains = {p: color_chain(p, w, h, warmth) + (f",{grade[p.stem]}" if p.stem in grade else "") for p in clips}
+    chains = {(p, fx): color_chain(p, w, h, warmth, fx) + (f",{grade[p.stem]}" if p.stem in grade else "")
+              for p, _, _, fx in pieces}
     f = []
-    for n, (p, a, b) in enumerate(pieces):
+    for n, (p, a, b, fx) in enumerate(pieces):
         i, d = idx[p], b - a
-        f.append(f"[{i}:v]trim={a}:{b},setpts=PTS-STARTPTS,{chains[p]},fps={fps},setsar=1[v{n}]")
+        f.append(f"[{i}:v]trim={a}:{b},setpts=PTS-STARTPTS,{chains[p, fx]},fps={fps},setsar=1[v{n}]")
         f.append(f"[{i}:a]atrim={a}:{b},asetpts=PTS-STARTPTS,"
                  f"afade=t=in:d=0.012,afade=t=out:st={max(0, d - 0.012):.3f}:d=0.012[a{n}]")
     f.append("".join(f"[v{n}][a{n}]" for n in range(len(pieces))) +
@@ -185,7 +196,7 @@ def main(cfg_path):
     subprocess.run(cmd, check=True)
 
     cut_points, acc = [], 0.0
-    for _, a, b in pieces:
+    for _, a, b, _ in pieces:
         cut_points.append(round(acc, 3))
         acc += b - a
     (base / "cuts.json").write_text(json.dumps({"segments": timeline, "cuts": cut_points}, indent=2))
