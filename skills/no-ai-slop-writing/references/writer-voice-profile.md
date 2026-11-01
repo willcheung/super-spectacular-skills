@@ -156,6 +156,8 @@ His spoken voice (Shorts, YouTube) is looser and faster than the blog. Script fo
 
 ## Video scripts: sarcastic, exaggerated, entertaining (Will, 2026-10-13)
 
+Current application, reconciled 2026-10-31: keep this voice, with joke cadence as a creative default rather than a stopwatch. Let sincere turns and readable proof breathe, especially in long-form. A callback, payoff or relevant next watch can end the video; the observed sign-off above is not compulsory. The project and latest creator instructions determine the particular ending.
+
 For Will's video scripts (Shorts, YouTube, shoot sheets), this section overrides the humor limits above: "one specific joke," "do not add sarcasm," and "not more cynical than the source." Blog posts keep the rules above. His reference is Fireship: super sarcastic, controversial, and still educational. The videos are meant to entertain as well as teach, so a generic or cautious line is the failure, not the safe choice.
 
 - **A joke every 10–15 seconds.** Every beat gets at least one line written to land: a deflating aside, an absurd comparison, or mock seriousness.

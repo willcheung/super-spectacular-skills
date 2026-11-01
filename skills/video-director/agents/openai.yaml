@@ -1,0 +1,4 @@
+interface:
+  display_name: "Video Director"
+  short_description: "Choose, package and learn from viewer-first videos"
+  default_prompt: "Use $video-director to help with this video’s next step, starting from the viewer’s reason to watch and our existing plan and evidence."

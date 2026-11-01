@@ -22,7 +22,7 @@ Depth follows what the video *does*, not its length: any claim stated as fact on
 
 ## Before you start
 
-- **Read [references/lessons.md](references/lessons.md).** General lessons from past scripts; obey them.
+- **Read [references/lessons.md](references/lessons.md).** Preserve dated reasoning and exceptions; its current-guidance note identifies superseded defaults. Apply the creator's latest instructions and format-specific guidance.
 - **Voice.** Spoken lines come from the creator's own material. Use the `no-ai-slop-writing` skill for anything written word for word. If the creator is that skill's profiled writer, load its `references/writer-voice-profile.md`, including the "How he talks on camera" and "Video scripts" sections (they set the humor level for scripts).
 - **The creator's own setup.** Look in their project instructions (`AGENTS.md`/`CLAUDE.md`) for where plans are saved, their tracker (ideas, status, results log), and their benchmarks. Use those paths; don't invent them. With no setup, save `plans/<video-name>.md` next to their notes and say where it went.
 
@@ -59,20 +59,32 @@ Before writing titles or hooks, complete this sentence in the plan:
 
 Use the viewer's language. Name one specific desire and a payoff the material can deliver: a usable answer, a better-informed decision, a discovery, recognition, perspective, or an entertaining experience. Treat the viewer's motive as a hypothesis unless audience evidence supports it. A topic or a tool name alone leaves the reason to watch unanswered; replace vague benefits such as "learn about AI" with the actual question or outcome. An open question can earn perspective without a tidy solution.
 
+Use this menu to find the main desire; motives overlap and are not a measured ranking or a requirement to cover all seven:
+
+| What viewers want | What they are asking |
+| --- | --- |
+| Entertainment and escape | Make this enjoyable. Give me a break. |
+| Learning and solving problems | Help me understand or do something. |
+| Curiosity and discovery | Show me something surprising. What happens next? |
+| Progress and opportunity | Help me earn more, build something, or get ahead. |
+| Security and avoiding mistakes | Help me protect my job, money, or time. |
+| Connection and recognition | Does anyone else feel this way? |
+| Perspective and meaning | Help me make sense of what is happening. |
+
 Complete the brief with who it's for, the one idea, the main receipt, one intended emotional movement, the beat that delivers the promised payoff, and what's *not* in this video. The creator's story and evidence must earn that payoff. Use curiosity, tension, surprise, recognition or humor where the material supports them; preserve sincere moments and the creator's actual feelings.
 
 One idea per video. If the brief needs two ideas, it's two videos. If the evidence cannot support the viewer sentence, narrow the promise or mark the missing proof before scripting.
 
 **Three idea tests before writing anything.** If one fails, fix the idea or pick another; scripting won't rescue it.
 1. **Zero context:** a stranger scrolling past gets it without knowing the niche, the tool, or the news. Insider ideas can still work as search-led YouTube titles, but they rarely travel in a swipe feed.
-2. **A setback and a comeback:** something goes wrong before the payoff (it failed, it got the message wrong, the number looked bad), then the recovery. Hook → build-up → payoff alone is predictable, and predictable is when people leave.
+2. **A reason to stay:** a real setback, reversal, uncertain result or useful question advances toward the payoff. Preserve a setback when it happened; a clear demonstration or explanation can work without a manufactured failure or forced comeback.
 3. **An open loop:** the hook can leave a question the video answers.
 
 ### 3. Title and hooks
 
 Write **2–3 hook variants, word for word**, and the creator films all of them.
 
-- **The first spoken words are the claim.** No greeting, no "so I tried…", no "in this video". A viewer decides in the first two seconds.
+- **Start on the consequence, claim or question.** Remove greetings and wind-up. If the contrast only matters because of who is speaking, supply the minimum true credential with it. Long-form needs an opening that establishes its actual event, stakes and promise; a two-second Shorts test is not its rubric.
 - **Each variant is a different shape**, so the takes test something: an outcome or number, a failure, a contrarian claim. Fill each shape with one of the creator's specific facts; a shape with no fact is filler.
 - **Provocative, even controversial, and true.** A cautious hook is the failure mode. But never claim more than the receipt shows, and never put words in someone's mouth.
 - **Opinions can be absolute; facts stay exact.** A take about the world can be as sweeping as the creator believes ("anyone can build anything with AI", "software an agent can do for you is dead"): viewers argue with it in the comments, and that helps the video. Don't soften a take into "almost" or "might." A fact about the creator's own story, a number, a date, a quote or a result stays exactly true ("months", not "immediately", if it took months), because a checkably wrong fact makes the top comment a correction instead of the debate. When the two sit side by side, let the absolute take come first and the exact receipt prove it ("AI can make it obsolete overnight. Mine got made pointless in one weekend.").
@@ -80,7 +92,7 @@ Write **2–3 hook variants, word for word**, and the creator films all of them.
 - **Open a loop, don't close it.** The hook plants a question the video answers ("why would you kill it?", "how did it do that?"). It doesn't have to be phrased as a question; a statement with an obvious "why?" works as well. A hook that gives away the result ("This YouTuber turned 100 cans into powder") leaves no reason to stay.
 - **Each hook names its first frame:** what's on screen besides the face, and the 3–6 word cover text. Line, visual and text land together in the first second.
 
-Add the cover text and **one title or caption per platform**: the same video is found differently on each. Swipe feeds (TikTok, Reels) rank on watch behavior, so the caption and cover carry the human stakes. YouTube also surfaces Shorts through search and topic, so the YouTube title leads with the words people actually search for (the tool, the topic), then the stakes. Pull those words from YouTube Studio's search insights when the creator has them. For long-form, the thumbnail text must add to the title, not repeat it.
+Add the cover text and **one title or caption per requested platform**, choosing for its discovery surface. A search-led title makes the task or query clear; a feed-led title makes the result, story and viewer stake clear. Include tool names where useful; keywords alone do not explain distribution. Treat title, thumbnail and opening as one promise. The full upload package is owned by [video-director's packaging reference](../video-director/references/packaging.md); read it when preparing that deliverable.
 
 ### 4. Sources
 
@@ -95,6 +107,8 @@ Add the cover text and **one title or caption per platform**: the same video is 
 ### 5. One story, in order
 
 Before writing clips, decide the spine: what happens first, what it causes, where it lands. Then:
+
+Mark likely drop-off risks in a small table: **beat → why a viewer might leave → the story, proof or question that earns continued attention**. Use it to fix delayed proof, repetition or confusing transitions before filming. These are editorial hypotheses to check later, not predicted retention percentages. A sincere moment can hold without an interruption or joke.
 
 - **Every clip opens with a bridge line, word for word,** that hands off from the clip before ("So when I wake up…", "That's why…"). This is what makes the cut flow instead of feeling like random scenes strung together.
 - **Pick one visual thread** that runs the whole video (an object, a clock, a running count) and changes from beat to beat, instead of a new card on every beat.
@@ -127,6 +141,8 @@ Length check: about 2.5 spoken words per second (≈150 a minute).
 Re-read the viewer sentence against the title, opening and payoff beat. Confirm that they promise and deliver the same experience, and that the payoff is present in the planned story and proof. Revise an unsupported promise before handing over the plan.
 
 For a Short, run the `roast-my-short` skill in hook-check mode on the shoot sheet (pass the creator's tracker so it scores against their real benchmarks) and fold its hook and length notes in. Then the creator approves or leaves notes. Then they film.
+
+For long-form, check the promised experience, opening, chapter progression, proof and payoff using [the long-form guide](references/youtube.md). Review each Short in a mixed shoot separately. Send long-form review requests to [video-director](../video-director/SKILL.md), rather than applying Shorts swipe metrics.
 
 When footage arrives, the edit follows the plan, and **what the creator actually said on camera wins over the plan's wording.**
 

@@ -6,6 +6,8 @@
 
 **Viewer brief (planning only; not spoken):** Someone watches this because they want <specific viewer desire>; by the end, they get <one payoff this story can deliver>.
 
+**Format / platform / discovery surface:** <Short or long-form> · <destination> · <feed, Home, Suggested or Search>
+
 **Intended viewer feeling:** <starting feeling → earned destination> · **Payoff delivered in:** <clip/chapter and the story moment or proof that earns it>
 
 **Title:** <upload title> · **Cover text:** <3–6 words>
@@ -59,6 +61,14 @@
 **B-roll (phone, ~2 s each):** <real actions>
 
 **Captured by the agent:** <public pages, articles, docs>
+
+## Viewer drop-off check
+
+| Beat | Why a viewer might leave | Story, proof or question that earns attention |
+| --- | --- | --- |
+| <clip/chapter> | <specific editorial risk> | <real material that addresses it> |
+
+These are planning hypotheses. Review Shorts with the Shorts rubric; review long-form for its opening promise, chapter progression and earned payoff.
 
 ## Questions before filming
 

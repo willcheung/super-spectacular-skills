@@ -2,6 +2,10 @@
 
 General lessons that apply to anyone's script. Newest last. Format: date — rule — why. After each round of notes, add a line here if the lesson is general; if it's one creator's taste (their sign-off, humor level), put it in their voice profile instead. Write the why as a general reason, without per-video stats, titles, or view counts; those stay in the creator's own private tracker.
 
+## Current guidance (reconciled 2026-10-31)
+
+The dated entries below remain the learning history. Current instructions in `SKILL.md`, `shorts.md` and `youtube.md` qualify earlier blanket rules: a useful demonstration does not require an invented setback; title wording depends on the discovery surface; a one-word thumbnail or a feeling-only title is an option rather than a requirement; length and joke timing are starting choices. Keep explicit creator preferences separate from performance hypotheses. Review long-form with its own rubric, never Shorts 2-second/5-second predictions.
+
 - 2026-10-10 — The first spoken words are the hook itself; no wind-up like "I actually tried…". — Most viewers decide in the first two seconds, and a hook that opens on the claim holds more of them than a wind-up, even against heavier graphics.
 - 2026-10-10 — Lead with the human stakes; name the tool second. — Universal stakes need no context; a product or model name only lands with people who follow the news.
 - 2026-10-11 — Write questions and talking points for the middle clips, not lines to read; only the hook and close are word for word. — Creators who riff sound natural answering a question and stiff reciting, and the edit only uses what they actually say.
@@ -27,3 +31,4 @@ General lessons that apply to anyone's script. Newest last. Format: date — rul
 - 2026-10-26 — Every question the cold open asks ("Is software dead? Should you be scared?") gets answered on camera by name before the close, in its own line. — In the edit the creator had to ask whether the video ever answered its hook; the fix was stitching callbacks from scattered lines, which a planned answer clip avoids.
 - 2026-10-26 — Plan the cover with the script: the question on the cover is the one the cold open asks and the video answers, and the shoot includes a few seconds of the matching expression (worried, skeptical) held to camera with the mouth closed. — A real frame with the right emotion beat AI-edited faces, and mid-sentence frames rarely have both the expression and a closed mouth.
 - 2026-10-31 — Planning practice: complete the viewer want/payoff sentence in the Brief step before writing hooks, then locate the beat that earns it. — A concrete viewer desire keeps the promise, story and proof aligned; entertainment, recognition and perspective can be valid payoffs alongside practical instruction.
+- 2026-10-31 — Keep the viewer want, title/thumbnail promise, proof and payoff aligned, and mark likely drop-off beats before filming. — A specific editorial risk is actionable; a fixed interruption timer or Shorts benchmark applied to long-form is not.

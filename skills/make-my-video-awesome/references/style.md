@@ -1,15 +1,15 @@
 # Style rules
 
-These are the defaults that came out of real edits and real notes. They aim at one thing: a viewer who would otherwise scroll keeps watching. When a rule here conflicts with `lessons.md`, lessons win (they're newer and more specific). For the owner's own videos, `brand-profile.md` preferences win over both.
+These are current defaults informed by real edits and dated notes. Read `lessons.md` for scope, reasoning and later exceptions; its current-guidance note identifies superseded defaults. The creator's latest instructions and applicable `brand-profile.md` preferences take priority. Use `formats.md` to choose the format before applying a pacing or layout default.
 
 ## Pacing
 
-- **Tight jump cuts.** Pauses over 0.30 s shrink to 0.14 s (`cut.py` does this). Talking-head content dies in the gaps.
-- **Change the framing on every cut.** Alternate scale 1.00 / 1.12 at each jump cut (skip cuts closer than 0.6 s together). The zoom change hides the jump.
-- **Punch in on the word that matters.** A 0.16 s push to 1.18–1.38 on the emotional word ("disappointing", "terrible", "safe"). Five or six per minute, not more; punches lose force when everything punches.
-- **Something new on screen every 2–4 seconds** in a Short: a card, a counter tick, a stamp, a caption keyword. Long-form relaxes this (see formats.md).
+- **Cut pauses for the format and moment.** `cut.py`'s Shorts starting setting is 0.30 → 0.14 s; the recorded long-form starting setting is `"pauses": [0.65, 0.40]`. Preserve meaningful breath, emphasis and reactions, then listen through seams. Timing is an edit choice, not a retention guarantee.
+- **Use framing changes deliberately.** A small change can soften a jump or emphasize a thought; use the creator's profile for scale and cadence. Avoid automatic large alternations, especially in long-form.
+- **Punch in when emphasis earns it.** Prefer subtle moves for a restrained style and let strong reactions hold. Read the profile before choosing amplitude or frequency.
+- **Each visual change should do a job:** show proof, explain, orient, advance the story or land a joke. A 2–4 second change was an early Shorts heuristic; it is not a quota, and long-form can hold a calm face or readable proof.
 - **The opening makes sense with the sound off.** Most phone viewers start muted. In the first 3 seconds the hook card, the captions, and the face or the strongest visual must carry the claim on their own; if the first frame only works with audio, rework it.
-- **Nothing off-camera sits dead.** When the face is off screen or shrunk, the visual moves: a slow push toward the line that matters, a slow drift down a page, rows building, outline boxes or highlights landing on the spoken words. Never a plain still held under captions. Lessons win on how: a full article excerpt stays whole and unzoomed, and its motion is the highlights landing as spoken; a receipt zooms slowly to its one line rather than fast-scrolling.
+- **Give proof enough time to read.** A highlight, measured crop or slow move can guide attention; a legible held frame can also work. Keep an article's publisher, date and backing excerpt identifiable. Avoid decorative motion that fights reading.
 
 ## Layout (9:16, 1080×1920)
 

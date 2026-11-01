@@ -1,6 +1,6 @@
 # Shorts (TikTok, Reels, YouTube Shorts)
 
-One idea, one receipt, 35–50 seconds. Longer only when the story clearly earns it: full-watch rate drops sharply past a minute unless the stakes are universal.
+One idea, one receipt. Start with a 35–50 second scope where useful; shorter demonstrations and longer stories can earn their duration. Treat timing below as a planning example, not a platform threshold. Compare actual results with similar lengths and audiences.
 
 ## Shape
 
@@ -16,12 +16,12 @@ One idea, one receipt, 35–50 seconds. Longer only when the story clearly earns
 
 - **One idea.** If you're explaining two things, it's two Shorts. Put the second in the brief's "not in this one" line and tease it in the close if it's next.
 - **Proof early.** Show the real thing (screen, result, object) by about 5 s. Description without proof loses people.
-- **Lines of 5–12 words.** Each line should survive being cut on its own; short lines give the edit more cut points.
+- **Speak in connected thoughts.** Short clauses can offer clean cut points, but retain the reason, transition and sentence payoff rather than recording isolated fragments.
 - **Say numbers the way you'd say them out loud:** "three hours", "a whole month of tokens in one weekend".
 - **Joke cadence follows the creator's voice.** For a high-energy sarcastic style, one written punchline every 10–15 seconds, each on its own line so the edit can land a meme beat on it.
-- **Deliver the value fast.** Name the framework, the number or the result by about 5 s; every extra second before the payoff starts tilts the retention line down.
+- **Deliver useful proof early.** Around five seconds is a starting target for a short demo; make the promised experience begin before asking for extended context.
 - **Never recap.** A summary at the end is where viewers leave; end on the payoff or a callback.
-- **The close earns the comment.** A specific question the viewer can answer in a few words ("What job would you give it?") beats "let me know what you think".
+- **Choose an earned ending.** Use a concrete payoff, callback, relevant next watch or specific viewer question. A comment request and generic follow line are optional, not compulsory endings.
 - **Cover text = the hook in 3–6 big words.** The caption repeats the promise and ends with a question.
 
 ## Several Shorts from one session

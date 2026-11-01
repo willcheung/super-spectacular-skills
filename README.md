@@ -6,6 +6,7 @@ A collection of portable [Agent Skills](https://agentskills.io) for writing, vid
 
 | Skill | What it does |
 |---|---|
+| [video-director](skills/video-director/) | Choose viewer-first topics, route the existing production skills, prepare coherent upload packages, and learn from results |
 | [no-ai-slop-writing](skills/no-ai-slop-writing/) | Blog posts, newsletters, and video scripts (Shorts and YouTube) that sound like you, not AI. Ships with Will's (Vibe Coding Dad) voice profile |
 | [script-my-video](skills/script-my-video/) | Plan a Short or YouTube video before you film: interview, provocative-but-true hooks, sourced claims, a shoot sheet with bridge lines and punchlines, and the screens to capture |
 | [make-my-video-awesome](skills/make-my-video-awesome/) | Turn raw talking-head clips into an edited Short or YouTube video: story, jump cuts, color, zooms, captions, cards, render |
@@ -16,7 +17,7 @@ A collection of portable [Agent Skills](https://agentskills.io) for writing, vid
 
 ## Install
 
-Clone once, then link the skills you want into your agent's skills directory. The loops below assume the clone lives at `~/super-spectacular-skills`; change the path if you clone elsewhere. If a skill folder with the same name already exists there as a real directory (not a link), remove or rename it first, or `ln` will put the link inside it.
+Clone once, then link the skills you want into your agent's skills directory. The loops below assume the clone lives at `~/super-spectacular-skills`; change the path if you clone elsewhere. If a same-named real directory already exists, compare its contents, preserve unique changes and move it to a backup outside the skill-discovery directories before linking. Otherwise `ln` can put a link inside the old directory.
 
 ```sh
 git clone https://github.com/willcheung/super-spectacular-skills.git ~/super-spectacular-skills
@@ -36,7 +37,11 @@ mkdir -p ~/.agents/skills
 for s in ~/super-spectacular-skills/skills/*/; do ln -sfn "${s%/}" ~/.agents/skills/"$(basename "$s")"; done
 ```
 
-Linking (instead of copying) means `git pull` updates every installed skill, and lessons a skill learns are saved back into the repo.
+Linking (instead of copying) means both agents read the same files and lessons are saved back into the repo. Before replacing an existing real skill directory, compare it with the repository, preserve any unique changes, and move a recovery copy outside the agent's skill-discovery directories. Do not create nested links inside an existing directory. If Codex also has a copy under `~/.codex/skills`, reconcile that copy too so it cannot shadow the canonical skill. A running chat may need a fresh session to rediscover a new skill.
+
+## Video workflow
+
+Start with `video-director` when choosing the next step, packaging, or reviewing results. It uses `script-my-video` for planning, `make-my-video-awesome` for editing, and `roast-my-short` for independent Shorts review. These specialists remain directly usable. `no-ai-slop-writing` owns voice; each creator's project keeps its private tracker and research. All stages use the existing format and creator preferences rather than importing one pacing formula for every video.
 
 ## Add a skill
 

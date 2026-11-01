@@ -1,6 +1,6 @@
 ---
 name: roast-my-short
-description: Independent, blunt short-form strategist review of a Short (TikTok, Reels, YouTube Shorts) that predicts where viewers swipe away. Snapshots the edit every 1.5 s, exports the cut's word-timed transcript, and hands only those files to a fresh subagent that never saw the edit being made, so it judges the video instead of defending it. Returns a hook verdict with predicted 2 s / 5 s retention against the creator's own benchmarks, a second-by-second swipe map, exact cuts quoted from the creator's words, a top-5 change list, a score /10, and post-as-is yes/no. Also checks a script or shoot sheet's hook before filming, and calibrates its predictions against real stats after publishing. Use whenever an edit is ready for a first watch, the user asks "roast my short", "would people swipe?", "review this short", "is the hook strong enough?", "rate this video", or wants a second opinion on a cut or a script, even if they never say "roast-my-short".
+description: Independent review of a standalone Short (TikTok, Reels or YouTube Shorts), its render, or its pre-filming hook. Builds a frame/transcript packet for a fresh reviewer, identifies likely swipe points and exact cuts, and retains speculative scores and predictions for calibration. Use for roast my short, review this Short, would people swipe, or a Shorts hook check. Long-form and mixed-format reviews belong to video-director; review their standalone Shorts separately.
 ---
 
 # Roast My Short
@@ -8,6 +8,8 @@ description: Independent, blunt short-form strategist review of a Short (TikTok,
 A second pair of eyes that has never seen the edit being made. The editor knows why every beat is there, so they forgive it; a viewer doesn't. This skill builds a review packet from files only, gives it to a fresh reviewer with no edit context, and gets back a blunt prediction of where people swipe.
 
 Three modes, picked from the input:
+
+**Format check first:** all three modes below are for a standalone Short. Route long-form and mixed-format plans to [video-director's long-form check](../video-director/SKILL.md#long-form-check); review their Shorts separately. Never score a long-form opening against Shorts 2-second/5-second benchmarks. Predicted percentages and scores are speculative editorial estimates, not validated forecasts or publishing gates; keep their existing history for calibration.
 
 | Input | Mode | What the reviewer gets |
 |---|---|---|
@@ -36,7 +38,7 @@ The prompt also points the reviewer at make-my-video-awesome's `references/lesso
 Independence is the point. The reviewer must not share the session that made the edit.
 
 - **Claude Code:** `Agent` tool, `general-purpose`, prompt = the contents of `PROMPT.md` verbatim, or just "Your full instructions are in PROMPT_PATH. Read it first and follow it exactly." Don't add a word about what the edit is going for, what changed since last version, or what you're worried about. If you want a second opinion on a specific worry, leave it out anyway; a good reviewer finds it, and if it doesn't, viewers might not either.
-- **No subagent tool** (Codex, others): start a fresh headless session with the same prompt, e.g. `claude -p "$(cat PROMPT.md)"` or `codex exec "$(cat PROMPT.md)"`.
+- **Other hosts, including Codex:** use an available fresh subagent with the same file-only packet. If none is available, use a fresh authorized session; if that cannot run, report that independent review was not performed. The editing session's own opinion is not an independent review.
 - Don't resume or message an earlier reviewer for a new version. Each version gets a new reviewer, so it isn't anchored on its last score.
 
 Save the reviewer's report verbatim to `PROJECT/reviews/YYYY-MM-DD-<label>.md` (render mode: next to the packet). Not inside `snapshots/review/`: the next snapshot run clears that folder.

@@ -26,6 +26,8 @@ Read these as you reach each stage, not all up front:
 
 Before writing composition HTML, load the `hyperframes` skill and follow its composition contract. This skill decides *what* goes on screen; HyperFrames decides *how* a composition must be built.
 
+Read the existing project plan and viewer payoff before choosing takes. Current creator preferences and format-specific guidance take priority over historical defaults; retain the dated lessons and their exceptions. For topic selection, upload packaging or post-release analysis, use [video-director](../video-director/SKILL.md). This skill owns the actual edit and verification.
+
 ## Workflow
 
 ### 1. Inspect the footage
@@ -134,7 +136,7 @@ In the frames:
 - The first 3 seconds make the claim with the sound off (hook card, captions, face or the strongest visual).
 - Captions stay clear of the mouth and chin on every framing, and of cards and platform UI.
 - No subtitled clip plays under our captions.
-- Nothing off-camera sits still: every takeover or split has motion (a push, a drift, highlights or boxes landing on the words).
+- Proof is readable for long enough to understand; motion or highlighting guides attention only where useful.
 - Every line of on-screen text is whole and readable at phone size.
 
 In the edit:

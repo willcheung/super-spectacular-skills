@@ -2,6 +2,10 @@
 
 General lessons that apply to anyone's video. Newest last. Format: date — rule — why. After each round of notes, add a line here if the lesson is general; if it's one creator's taste (a handle, music, a color preference), put it in that creator's profile instead (the owner's is brand-profile.md). Write the why as a general reason, without per-video stats, titles, or view counts; those stay in the creator's own private tracker.
 
+## Current guidance (reconciled 2026-10-31)
+
+The dated entries below remain the learning history. Current `style.md`, `formats.md` and the applicable creator profile qualify earlier blanket rules: use format-appropriate pause settings; choose framing changes and motion for a purpose; hold proof long enough to read; keep the owner's long-form frame calm, without burned-in captions, and honor the existing raw-audio preference. Thumbnail text, YouTube keyword placement and CTA endings depend on the actual promise and destination. A single export or retention incident remains an observation to investigate, not a universal platform rule.
+
 - 2026-10-08 — End on the CTA itself; cut lead-ins before it ("This is the kind of stuff I…"). — Warm-ups before the CTA lose viewers at the very end.
 - 2026-10-08 — Remove filler fragments at seams (a lone "during", "and, but") even when the transcript hides them; listen with energy.py. — They read as mistakes.
 - 2026-10-08 — When the creator says they'll add their own overlay for a moment, leave that slot clear instead of filling it with invented reactions. — Real material beats illustrative filler.
@@ -54,3 +58,4 @@ General lessons that apply to anyone's video. Newest last. Format: date — rule
 - 2026-10-26 — Build covers as HTML in the video's own font and card style, render 1280×720 with headless Chrome, and check them at 320 px wide (feed size): text off the face and clear of the duration badge in the bottom-right. — HTML keeps the cover on-brand and makes a wording change a one-line edit; a cover that reads at full size can still fail in the feed.
 - 2026-10-26 — A/B covers should test two ideas (a question in words versus a real proof object), not two wordings, and each cover should add to its paired title rather than repeat it. — YouTube's test picks by watch-time share and often calls no winner when the variants look alike; breakout thumbnails rarely repeat their titles.
 - 2026-10-26 — Never give away the answer to the cover's question in the description. — The description shows in search and on desktop before the click; a take that answers the hook closes the loop that makes people watch.
+- 2026-10-31 — Apply the format and creator profile before historical pacing defaults, and verify readability in actual frames. — A calm long-form story and a dense Short need different cuts, captions and proof duration; preserve the history without forcing one treatment on both.

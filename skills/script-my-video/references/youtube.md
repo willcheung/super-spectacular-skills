@@ -1,6 +1,6 @@
-# Long-form YouTube (8–20 minutes)
+# Long-form YouTube
 
-A long video is a build or a deep story told in chapters. It has to be evergreen: still worth watching in a year. A news peg is fine as a hook if the core still holds when the news is old; pure news stays a Short.
+A long video is a build, explanation or story told in chapters. Choose duration for the promised experience; 8–20 minutes is a starting scope, not a required range. Prefer a lasting question and firsthand evidence when the project's strategy calls for evergreen work. A timely event can introduce that question.
 
 ## Shape
 
@@ -25,8 +25,8 @@ A strong shape for a build video: **a person, a transformation, a time limit** (
 Another strong shape, used only when the creator has a true story with real life stakes (a career turn, a product they shut down, a choice about their kids). It's one option, not a default; never bend a tutorial or tool video into it, and never invent feelings or events.
 
 - **The stakes are the creator's life, tied to a fear the audience already has** (their job, AI, time with family). Viewers click to feel seen, not to learn a tool.
-- **The title names feelings plus one big true number** ("…After 25 Years…: The Anxiety… No One Talks About"). No tool name needed.
-- **The thumbnail is one word over a calm, real face in a real room.**
+- **The title names a real event, consequence or feeling that matters to this viewer.** Use a number only when it is supported and useful. A feeling-led title is one option, not a universal Home rule.
+- **The thumbnail adds something to the title.** Use a real expression or proof object where it serves the story; choose text length by actual feed-size legibility and the creator's preferences.
 - **The first 15 seconds give the event and the named feelings.** No wind-up, no channel intro.
 - **Concrete memories carry it:** one specific moment per chapter (a person, a place, a number), not abstractions.
 - **Hold the best twist until near the end.** The title's open loop ("how did it happen?") carries the middle; the twist pays it off.
@@ -40,7 +40,7 @@ Sarcasm and sincerity can coexist: keep the creator's humor in the asides, and l
 - **Research notes:** what you read and what it changed, separate from the sources table.
 - **Chapter list with rough timestamps,** written for the description.
 - **A still of the biggest visual moment** (one or two), rendered before filming so the creator can see the look.
-- **Title and thumbnail:** the title is provocative and true; the thumbnail adds a second hook (the result, the number, the stakes) instead of repeating the title. **For clicks from the home feed, the title names a feeling the viewer already has** ("I can't edit videos", "laid off after 25 years"); a how-to or keyword title gets found in search but rarely clicked while browsing. Put the search phrase in the description's first line and the chapter titles instead. Check phrases against YouTube's search autocomplete, and use YouTube's title test (Test & Compare) when two titles are close.
+- **Title and thumbnail:** choose for Search, Home or Suggested and check the pair against the opening and payoff. Compare supportable packages with a stated hypothesis; changing both title and image tests a package. Use [the packaging method](../../video-director/references/packaging.md) for final upload preparation.
 - **Clips of other people's talks or videos:** keep them short and comment on them (fair use). Never re-upload a talk.
 - **Sources go in the description.**
 
