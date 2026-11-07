@@ -145,7 +145,7 @@ def keep_ranges(rms, start, end, max_gap=MAX_GAP, keep_gap=KEEP_GAP):
     return merged
 
 
-def main(cfg_path):
+def main(cfg_path, audio_only=False):
     cfg_path = Path(cfg_path).resolve()
     cfg = json.loads(cfg_path.read_text())
     base = cfg_path.parent
@@ -182,18 +182,58 @@ def main(cfg_path):
         f.append(f"[{i}:v]trim={a}:{b},setpts=PTS-STARTPTS,{chains[p, fx]},fps={fps},setsar=1[v{n}]")
         f.append(f"[{i}:a]atrim={a}:{b},asetpts=PTS-STARTPTS,"
                  f"afade=t=in:d=0.012,afade=t=out:st={max(0, d - 0.012):.3f}:d=0.012[a{n}]")
-    f.append("".join(f"[v{n}][a{n}]" for n in range(len(pieces))) +
-             f"concat=n={len(pieces)}:v=1:a=1[vc][ac]")
-    f.append(f"[ac]{voice}loudnorm=I=-14:TP=-1.5:LRA=11,aresample=48000[ao]")
-    cmd = ["ffmpeg", "-v", "error", "-y"]
+    inputs = []
     for p in clips:
-        cmd += ["-i", str(p)]
-    cmd += ["-filter_complex", ";".join(f), "-map", "[vc]", "-map", "[ao]",
-            "-c:v", "libx264", "-crf", "17", "-preset", "medium", "-pix_fmt", "yuv420p",
-            "-g", str(fps), "-color_primaries", "bt709", "-color_trc", "bt709",
-            "-colorspace", "bt709", "-color_range", "tv",
-            "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", str(out / "cut.mp4")]
-    subprocess.run(cmd, check=True)
+        inputs += ["-i", str(p)]
+    # Loudness: one static gain to -14 LUFS, then a peak limiter. Single-pass loudnorm is an AGC: it lifted the
+    # quiet room tone at the head of every jump cut by ~30 dB, which played as a low hum/buzz before each cut.
+    afs = [x for x in f if x.startswith("[") and ":a]" in x.split("]")[0] + "]"]
+    acat = "".join(f"[a{n}]" for n in range(len(pieces))) + f"concat=n={len(pieces)}:v=0:a=1[ac]"
+    pre = f"[ac]{voice}highpass=f=80"
+    def lufs(chain):
+        err = subprocess.run(["ffmpeg", "-v", "info", "-nostats", *inputs, "-filter_complex",
+                              ";".join(afs + [acat, chain + ",ebur128=framelog=quiet[am]"]), "-map", "[am]", "-f", "null", "-"],
+                             capture_output=True, text=True).stderr
+        li = [l for l in err.splitlines() if l.strip().startswith("I:")]
+        return float(li[-1].split()[1]) if li else -14.0
+    lim = "alimiter=limit=0.84:level=false"
+    # Level each source clip on its own first, so a pickup from another session (or a TV clip) doesn't jump in volume.
+    if cfg.get("match_sources", True) and len(clips) > 1:
+        for c in clips:
+            ns = [n for n, (pp, _, _, _) in enumerate(pieces) if pp == c]
+            if sum(pieces[n][2] - pieces[n][1] for n in ns) < 1.5:
+                continue
+            sub = [afs[n] for n in ns] + ["".join(f"[a{n}]" for n in ns) + f"concat=n={len(ns)}:v=0:a=1,highpass=f=80,ebur128=framelog=quiet[am]"]
+            err = subprocess.run(["ffmpeg", "-v", "info", "-nostats", *inputs, "-filter_complex", ";".join(sub), "-map", "[am]", "-f", "null", "-"],
+                                 capture_output=True, text=True).stderr
+            li = [l for l in err.splitlines() if l.strip().startswith("I:")]
+            if li and float(li[-1].split()[1]) > -60:
+                g = max(-12.0, min(12.0, -14.0 - float(li[-1].split()[1])))
+                for n in ns:
+                    afs[n] = afs[n].replace(f"[a{n}]", f",volume={g:.2f}dB[a{n}]")
+                    f[f.index(next(x for x in f if x.endswith(f"[a{n}]") or x.endswith(f"dB[a{n}]")))] = afs[n]
+    gain = -14.0 - lufs(pre)
+    gain += -14.0 - lufs(f"{pre},volume={gain:.2f}dB,{lim}")   # second pass makes up what the limiter shaved off
+    achain = f"{pre},volume={gain:.2f}dB,{lim},aresample=48000[ao]"
+    if audio_only:
+        tmp, a_out = out / "cut.tmp.mp4", out / "cut.audio.m4a"
+        subprocess.run(["ffmpeg", "-v", "error", "-y", *inputs, "-filter_complex", ";".join(afs + [acat, achain]),
+                        "-map", "[ao]", "-c:a", "aac", "-b:a", "192k", str(a_out)], check=True)
+        subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(out / "cut.mp4"), "-i", str(a_out), "-map", "0:v", "-map", "1:a",
+                        "-c:v", "copy", "-c:a", "copy", "-movflags", "+faststart", str(tmp)], check=True)
+        tmp.replace(out / "cut.mp4"); a_out.unlink()
+    else:
+        f.append("".join(f"[v{n}][a{n}]" for n in range(len(pieces))) +
+                 f"concat=n={len(pieces)}:v=1:a=1[vc][ac]")
+        f.append(achain)
+        cmd = ["ffmpeg", "-v", "error", "-y", *inputs]
+        cmd += ["-filter_complex", ";".join(f), "-map", "[vc]", "-map", "[ao]",
+                "-c:v", "libx264", "-crf", "17", "-preset", "medium", "-pix_fmt", "yuv420p",
+                "-g", str(fps), "-color_primaries", "bt709", "-color_trc", "bt709",
+                "-colorspace", "bt709", "-color_range", "tv",
+                "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", str(out / "cut.mp4")]
+        subprocess.run(cmd, check=True)
+    print(f"audio: static gain {gain:+.1f} dB to -14 LUFS, 80 Hz high-pass, limiter")
 
     cut_points, acc = [], 0.0
     for _, a, b, _ in pieces:
@@ -207,6 +247,7 @@ def main(cfg_path):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) != 2:
+    args = [a for a in sys.argv[1:] if a != "--audio-only"]
+    if len(args) != 1:
         sys.exit(__doc__)
-    main(sys.argv[1])
+    main(args[0], audio_only="--audio-only" in sys.argv)  # --audio-only: rebuild the sound on an existing cut.mp4

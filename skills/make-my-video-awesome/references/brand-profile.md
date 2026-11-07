@@ -41,3 +41,4 @@ The owner's private tracker (retention benchmarks, results log, roast-my-short p
 - 2026-10-25 — His agent screenshots keep the agent's identity visible (the "Bro" dog avatar on top), so viewers see it's his own agent, not a generic chat.
 - 2026-10-26 — Thumbnails: his face should show the cover's emotion, and a real frame wins. He rejected AI-edited expressions of his own photo (worried, stunned, deadpan, smirk and others) and picked a real mid-sentence frame with a genuinely worried brow. Search the footage for the real expression first, sampling densely around the emotional lines.
 - 2026-10-26 — His credential is "20 years in tech", not "in software": titles, descriptions, cover text and intros. It speaks to everyone in tech, not only engineers.
+- 2026-11-05 — Lower thirds show the credential ("20 years in tech"), not his name. — He asked to drop "Will Cheung" from the on-screen label; the channel and voice already say who he is.
